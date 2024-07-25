@@ -30,6 +30,21 @@ Guido van Rossum had a penchant for humor, and he was a huge fan of the British 
 
 In his quest for a name, Van Rossum wanted something short, distinctive, and a little offbeat—something that would stand out in the world of programming languages. In a stroke of inspiration, he decided to name his new language "Python," in tribute to the Monty Python series. This choice reflected his sense of humor and added a touch of personality to the language he was creating.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ### The Birth of Python
 
 Python was officially released to the public in February 1991. From its inception, the language emphasized code readability and simplicity. It featured significant whitespace, which helped to improve the clarity and structure of code. This design philosophy made Python accessible to beginners while also appealing to experienced developers.
@@ -39,6 +54,21 @@ The name "Python" soon became synonymous with these qualities. The playful choic
 ### A Cultural Legacy
 
 The influence of Monty Python’s humor extends beyond the language’s name. The Python community has embraced this connection, often referencing Monty Python sketches in tutorials, documentation, and even language features. The playful spirit of Monty Python is evident in the community's approach to programming, fostering a culture of creativity and fun.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ### About Me
 
