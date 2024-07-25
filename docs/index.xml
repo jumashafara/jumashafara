@@ -8,7 +8,7 @@
 <title>Juma Shafara</title>
 <link>https://jumashafara.dataidea.org/</link>
 <atom:link href="https://jumashafara.dataidea.org/index.xml" rel="self" type="application/rss+xml"/>
-<description></description>
+<description>Juma Shafara&#39;s Blog</description>
 <generator>quarto-1.4.554</generator>
 <lastBuildDate>Wed, 24 Jul 2024 21:00:00 GMT</lastBuildDate>
 <item>
@@ -79,7 +79,7 @@ What’s on your mind? Put it in the comments!
 
 </section>
 
- ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <guid>https://jumashafara.dataidea.org/posts/2024/why-python-is-called-so/</guid>
   <pubDate>Wed, 24 Jul 2024 21:00:00 GMT</pubDate>
 </item>

@@ -5,6 +5,10 @@ project:
 website:
   title: "Juma Shafara"
   site-url: https://jumashafara.dataidea.org/
+  bread-crumbs: false
+  page-navigation: true
+  back-to-top-navigation: true
+  description: "Juma Shafara's Blog"
   favicon: assets/profile.jpg
   navbar:
     right:
@@ -15,6 +19,8 @@ website:
         href: https://twitter.com/juma_shafara
 format:
   html:
+    toc: true
+    toc-title: Table of Contents
     theme:
       light: flatly
       dark: darkly

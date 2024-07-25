@@ -4,6 +4,7 @@ author: Juma Shafara
 date: "2024-07-25"
 description: Let me tell you the story behind Python’s moniker.
 keywords: [The Beginning of Python, A Cultural Legacy, A Nod to Monty Python]
+
 ---
 
 ![Photo by DATAIDEA](./thumbnail.jpg)
