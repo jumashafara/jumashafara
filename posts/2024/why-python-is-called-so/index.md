@@ -1,5 +1,5 @@
 ---
-title: The Origins of Python How a Comedy Show Inspired a Programming Language
+title: How a Comedy Show Inspired a Programming Language
 author: Juma Shafara
 date: "2024-07-25"
 description: Let me tell you the story behind Python’s moniker.
