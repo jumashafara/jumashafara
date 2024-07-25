@@ -10,7 +10,65 @@
 <atom:link href="https://jumashafara.dataidea.org/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Sun, 19 Feb 2023 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 31 Jan 2024 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Origins of Python How a Comedy Show Inspired a Programming Language</title>
+  <dc:creator>Juma Shafara</dc:creator>
+  <link>https://jumashafara.dataidea.org/posts/2024/why-python-is-called-so/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/why-python-is-called-so/thumbnail.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by DATAIDEA</figcaption>
+</figure>
+</div>
+<p>While most programming languages are named after concepts, acronyms, or technical jargon, Python has a name that is both unique and intriguing. So, how did this powerful and popular language get its name? Let me tell you the story behind Python’s moniker.</p>
+<section id="the-beginning-of-python" class="level3">
+<h3 class="anchored" data-anchor-id="the-beginning-of-python">The Beginning of Python</h3>
+<div class="mb-3">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/why-python-is-called-so/guido_van_rossum.jpeg" width="100%"></p>
+</div>
+<p>The tale begins with Guido van Rossum, a Dutch programmer who was working at Centrum Wiskunde &amp; Informatica (CWI) in the Netherlands in December 1989. Van Rossum, an accomplished programmer with a deep interest in creating user-friendly programming languages, was seeking a project to engage in during the Christmas holidays. He wanted to create a language that would overcome some of the limitations he saw in ABC, a language developed at CWI that he admired but found lacking in certain areas, particularly extensibility.</p>
+<p>Van Rossum’s new language was designed to be both powerful and easy to use, incorporating features he valued and aiming to address ABC’s shortcomings. As he embarked on this project, one crucial element remained: choosing a name.</p>
+</section>
+<section id="a-nod-to-monty-python" class="level3">
+<h3 class="anchored" data-anchor-id="a-nod-to-monty-python">A Nod to Monty Python</h3>
+<div class="mb-3">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/why-python-is-called-so/monty_python.jpg" width="100%"></p>
+</div>
+<p>Guido van Rossum had a penchant for humor, and he was a huge fan of the British comedy troupe Monty Python. Monty Python’s Flying Circus, a television show that aired from 1969 to 1974, is renowned for its surreal and absurd humor. The show had a significant cultural impact, and its quirky, unconventional style resonated with Van Rossum.</p>
+<p>In his quest for a name, Van Rossum wanted something short, distinctive, and a little offbeat—something that would stand out in the world of programming languages. In a stroke of inspiration, he decided to name his new language “Python,” in tribute to the Monty Python series. This choice reflected his sense of humor and added a touch of personality to the language he was creating.</p>
+</section>
+<section id="the-birth-of-python" class="level3">
+<h3 class="anchored" data-anchor-id="the-birth-of-python">The Birth of Python</h3>
+<p>Python was officially released to the public in February 1991. From its inception, the language emphasized code readability and simplicity. It featured significant whitespace, which helped to improve the clarity and structure of code. This design philosophy made Python accessible to beginners while also appealing to experienced developers.</p>
+<p>The name “Python” soon became synonymous with these qualities. The playful choice of name also contributed to Python’s identity, setting it apart from more traditionally named languages and endearing it to a broad audience.</p>
+</section>
+<section id="a-cultural-legacy" class="level3">
+<h3 class="anchored" data-anchor-id="a-cultural-legacy">A Cultural Legacy</h3>
+<p>The influence of Monty Python’s humor extends beyond the language’s name. The Python community has embraced this connection, often referencing Monty Python sketches in tutorials, documentation, and even language features. The playful spirit of Monty Python is evident in the community’s approach to programming, fostering a culture of creativity and fun.</p>
+</section>
+<section id="about-me" class="level3">
+<h3 class="anchored">About Me</h3>
+<p>Hi, My name is Juma Shafara. Am a Data Scientist and Instructor at DATAIDEA. I have taught hundreds of peope Programming, Data Analysis and Machine Learning. I also enjoy developing innovative algorithms and models that can drive insights and value. I regularly share some content that I find useful throughout my learning/teaching journey to simplify concepts in Machine Learning, Mathematics, Programming, and related topics. Besides these technical stuff, I enjoy watching soccer, movies and reading mystery books.</p>
+<h2 class="anchored" data-anchor-id="about-me">
+What’s on your mind? Put it in the comments!
+</h2>
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://jumashafara.dataidea.org/posts/2024/why-python-is-called-so/</guid>
+  <pubDate>Wed, 31 Jan 2024 21:00:00 GMT</pubDate>
+</item>
 <item>
   <title>All Software used in Mr. Robot</title>
   <dc:creator>Juma Shafara</dc:creator>
