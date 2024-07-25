@@ -5,12 +5,13 @@ project:
 website:
   title: "Juma Shafara"
   site-url: https://jumashafara.dataidea.org/
+  favicon: assets/profile.jpg
   navbar:
     right:
       - about.qmd
       - icon: github
         href: https://github.com/jumashafara
-      - icon: twitter
+      - icon: twitter-x
         href: https://twitter.com/juma_shafara
 format:
   html:

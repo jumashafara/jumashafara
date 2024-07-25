@@ -1,11 +1,11 @@
 ---
 title: "About"
-image: profile.jpg
+image: assets/profile.jpg
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
+    - icon: twitter-x
+      text: X(Twitter)
       href: https://twitter.com/juma_shafara
     - icon: linkedin
       text: LinkedIn
@@ -13,7 +13,12 @@ about:
     - icon: github
       text: Github
       href: https://github.com/jumashafara
-
+    - icon: youtube
+      text: YouTube
+      href: https://youtube.com/@jumashafara
+    - icon: tiktok
+      text: Tik Tok
+      href: https://www.tiktok.com/@jumashafara
 ---
 
 Hi, My name is Juma Shafara. Am a Data Scientist and Instructor at DATAIDEA. 
