@@ -27,9 +27,12 @@
 <figcaption>Linux Mint Cinnamon</figcaption>
 </figure>
 </div>
-<p>If you’re new to the world of Linux or looking for a robust, user-friendly operating system, Linux Mint might just be your perfect match. This popular Linux distribution has earned its reputation for being accessible, reliable, and packed with features. I recently started using Linux Mint and in this blog, we’ll explore what makes Linux Mint special and why it might be the ideal choice for your next operating system. ## A User-Friendly Interface</p>
+<p>If you’re new to the world of Linux or looking for a robust, user-friendly operating system, Linux Mint might just be your perfect match. This popular Linux distribution has earned its reputation for being accessible, reliable, and packed with features. I recently started using Linux Mint and in this blog, we’ll explore what makes Linux Mint special and why it might be the ideal choice for your next operating system.</p>
+<section id="a-user-friendly-interface" class="level2">
+<h2 class="anchored" data-anchor-id="a-user-friendly-interface">A User-Friendly Interface</h2>
 <p><strong>Cinnamon Desktop:</strong> Linux Mint’s flagship edition features the Cinnamon desktop environment, designed to provide a familiar and intuitive user experience. If you’re coming from Windows, you’ll find the transition smooth and straightforward. The interface is clean, modern, and highly customizable, ensuring that both new and seasoned users feel right at home.</p>
 <p><strong>Alternative Desktops:</strong> For those with different preferences or hardware requirements, Linux Mint also offers MATE and Xfce editions. MATE provides a classic desktop experience, while Xfce is lightweight and optimized for older or less powerful hardware.</p>
+</section>
 <section id="out-of-the-box-experience" class="level2">
 <h2 class="anchored" data-anchor-id="out-of-the-box-experience">Out-of-the-Box Experience</h2>
 <p><strong>Pre-installed Software:</strong> One of the standout features of Linux Mint is its comprehensive suite of pre-installed software. From office applications to multimedia tools and system utilities, Linux Mint comes ready to use right after installation. You won’t have to spend time hunting for basic applications, making your transition smoother.</p>
