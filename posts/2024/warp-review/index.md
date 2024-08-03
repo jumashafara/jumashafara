@@ -14,6 +14,21 @@ In the rapidly evolving tech landscape, having tools that streamline the develop
 
 I first heard about Warp through various tech blogs and was intrigued by its strong opinions on how a terminal should function. After requesting an invite on their [official site](https://www.warp.dev), I received an email a few weeks later inviting me to download it. From the moment I opened Warp, it was clear that this was not your typical terminal emulator. The clean, modern interface and the intuitive Command Palette set the stage for a unique experience.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ### Key Features I Loved
 
 <div>
@@ -32,6 +47,21 @@ Sharing workflows has never been easier. Warp allows you to generate links to sp
 **4. Modern Editing Capabilities:**
 Warp brings modern editing features to the terminal, akin to working within an IDE. It supports default keybindings and Vim, catering to both keyboard-centric users and those who prefer using a mouse. The Command Palette is a fast and efficient way to access all the commands you need.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <div>
 <img src="./warp_edit.webp" width="100%">
 </div>
@@ -39,6 +69,21 @@ Warp brings modern editing features to the terminal, akin to working within an I
 ### Daily Usage and Performance
 
 Testing Warp on my 16-inch MacBook Pro with 32 GB of RAM, I found its performance to be on par with iTerm2, handling even heavy loads and complex setups with ease. Warp is just as fast, if not faster, and offers a level of stability that is impressive for such a new tool.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ### Areas for Improvement
 
