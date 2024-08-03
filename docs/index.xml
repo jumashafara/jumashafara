@@ -50,7 +50,7 @@
 <p>Testing Warp on my 16-inch MacBook Pro with 32 GB of RAM, I found its performance to be on par with iTerm2, handling even heavy loads and complex setups with ease. Warp is just as fast, if not faster, and offers a level of stability that is impressive for such a new tool.</p>
 </section>
 <section id="areas-for-improvement" class="level3">
-<h3 class="anchored" data-anchor-id="areas-for-improvement">Areas for Improvement</h3>
+<h3 class="anchored">Areas for Improvement</h3>
 <p>While I have enjoyed using Warp, there are a few areas where it could improve:</p>
 <p><strong>1. Space Utilization:</strong> The block-based interface, while innovative, does take up more screen space compared to traditional terminals. Even with “compact mode” enabled, I sometimes miss the more streamlined view of other terminals like iTerm2.</p>
 <p><strong>2. Customization:</strong> Warp offers a selection of themes and fonts, but the options are limited. As someone who likes to tweak and customize my tools extensively, I found the lack of deeper customization options a bit disappointing. Additionally, the absence of support for custom plugins is a drawback for those looking to extend Warp’s functionality further.</p>
@@ -58,6 +58,11 @@
 <p>If you’re interested in trying Warp, you can find more detailed insights and reviews on <a href="https://matduggan.com/warp-terminal-emulator-review/">Mat Duggan’s blog</a> and <a href="https://dev.to/bartzalewski/review-of-warp-the-ai-powered-terminal-2j5e">DEV Community</a>.</p>
 <hr>
 <p>This review is based on my personal experience with Warp. My aim is to share valuable tools that have significantly impacted my productivity as a developer.</p>
+<h2 class="anchored" data-anchor-id="areas-for-improvement">
+What’s on your mind? Put it in the comments!
+</h2>
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 
 
 </section>

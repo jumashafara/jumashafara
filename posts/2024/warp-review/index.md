@@ -58,3 +58,12 @@ If you’re interested in trying Warp, you can find more detailed insights and r
 ---
 
 This review is based on my personal experience with Warp. My aim is to share valuable tools that have significantly impacted my productivity as a developer.
+
+<h2>What's on your mind? Put it in the comments!</h2>
+<script src="https://utteranc.es/client.js"
+        repo="jumashafara/jumashafara"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
