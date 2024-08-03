@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Juma Shafara">
+<meta name="dcterms.date" content="2024-08-03">
+<meta name="description" content="Here’s my personal take on Warp after incorporating it into my daily workflow.">
 
-<title>Juma Shafara</title>
+<title>Warp, The AI-Powered Terminal – Juma Shafara</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/profile.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/profile.jpg" rel="icon" type="image/jpeg">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,68 +72,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Juma Shafara" href="index.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../../styles.css">
+</head>
 
 <body class="nav-fixed">
 
@@ -141,7 +84,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Juma Shafara</span>
     </a>
   </div>
@@ -152,7 +95,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,200 +119,101 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Juma Shafara</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Warp, The AI-Powered Terminal</h1>
+                  <div>
+        <div class="description">
+          Here’s my personal take on Warp after incorporating it into my daily workflow.
+        </div>
+      </div>
+                </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Juma Shafara </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 3, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="2023">2023 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Software">Software <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#first-impressions" id="toc-first-impressions" class="nav-link active" data-scroll-target="#first-impressions">First Impressions</a></li>
+  <li><a href="#key-features-i-loved" id="toc-key-features-i-loved" class="nav-link" data-scroll-target="#key-features-i-loved">Key Features I Loved</a></li>
+  <li><a href="#daily-usage-and-performance" id="toc-daily-usage-and-performance" class="nav-link" data-scroll-target="#daily-usage-and-performance">Daily Usage and Performance</a></li>
+  <li><a href="#areas-for-improvement" id="toc-areas-for-improvement" class="nav-link" data-scroll-target="#areas-for-improvement">Areas for Improvement</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./thumbnail.jpg" class="img-fluid figure-img"></p>
+<figcaption>Warp Terminal</figcaption>
+</figure>
+</div>
+<p>In the rapidly evolving tech landscape, having tools that streamline the development process is key to staying productive and focused. Recently, I decided to dive into Warp, a modern terminal emulator built with Rust, which has been making waves for its innovative features and AI integration. Here’s my personal take on Warp after incorporating it into my daily workflow.</p>
+<section id="first-impressions" class="level3">
+<h3 class="anchored" data-anchor-id="first-impressions">First Impressions</h3>
+<p>I first heard about Warp through various tech blogs and was intrigued by its strong opinions on how a terminal should function. After requesting an invite on their <a href="https://www.warp.dev">official site</a>, I received an email a few weeks later inviting me to download it. From the moment I opened Warp, it was clear that this was not your typical terminal emulator. The clean, modern interface and the intuitive Command Palette set the stage for a unique experience.</p>
+</section>
+<section id="key-features-i-loved" class="level3">
+<h3 class="anchored" data-anchor-id="key-features-i-loved">Key Features I Loved</h3>
+<div>
+<p><img src="./warp_ai.webp" width="100%"></p>
+</div>
+<p><strong>1. AI Integration:</strong> One of Warp’s standout features is its AI-powered functionality. The AI offers smart completions, command suggestions, and even programming guidance. This has significantly reduced my need to search for commands or debug errors externally, making my workflow smoother and more efficient.</p>
+<p><strong>2. Command Blocks:</strong> Warp’s approach to handling commands in distinct blocks was a game-changer for me. Each command runs as an independent unit that you can manipulate through the UI. This organization makes it easier to manage and interact with command history and outputs. The visual separation between commands helps keep everything tidy and easy to navigate.</p>
+<p><strong>3. Collaboration Tools:</strong> Sharing workflows has never been easier. Warp allows you to generate links to specific command blocks, which you can then share with colleagues or use during coding meetups and classes. This feature is particularly useful for collaborative projects and teaching scenarios.</p>
+<p><strong>4. Modern Editing Capabilities:</strong> Warp brings modern editing features to the terminal, akin to working within an IDE. It supports default keybindings and Vim, catering to both keyboard-centric users and those who prefer using a mouse. The Command Palette is a fast and efficient way to access all the commands you need.</p>
+<div>
+<p><img src="./warp_edit.webp" width="100%"></p>
+</div>
+</section>
+<section id="daily-usage-and-performance" class="level3">
+<h3 class="anchored" data-anchor-id="daily-usage-and-performance">Daily Usage and Performance</h3>
+<p>Testing Warp on my 16-inch MacBook Pro with 32 GB of RAM, I found its performance to be on par with iTerm2, handling even heavy loads and complex setups with ease. Warp is just as fast, if not faster, and offers a level of stability that is impressive for such a new tool.</p>
+</section>
+<section id="areas-for-improvement" class="level3">
+<h3 class="anchored" data-anchor-id="areas-for-improvement">Areas for Improvement</h3>
+<p>While I have enjoyed using Warp, there are a few areas where it could improve:</p>
+<p><strong>1. Space Utilization:</strong> The block-based interface, while innovative, does take up more screen space compared to traditional terminals. Even with “compact mode” enabled, I sometimes miss the more streamlined view of other terminals like iTerm2.</p>
+<p><strong>2. Customization:</strong> Warp offers a selection of themes and fonts, but the options are limited. As someone who likes to tweak and customize my tools extensively, I found the lack of deeper customization options a bit disappointing. Additionally, the absence of support for custom plugins is a drawback for those looking to extend Warp’s functionality further.</p>
+<p><strong>3. Feature Completeness:</strong> Some of the game-changing features, such as advanced collaborative tools and approval workflows, are still in development. While the current features are impressive, I’m looking forward to these additions that promise to make Warp even more powerful.</p>
+<p>If you’re interested in trying Warp, you can find more detailed insights and reviews on <a href="https://matduggan.com/warp-terminal-emulator-review/">Mat Duggan’s blog</a> and <a href="https://dev.to/bartzalewski/review-of-warp-the-ai-powered-terminal-2j5e">DEV Community</a>.</p>
+<hr>
+<p>This review is based on my personal experience with Warp. My aim is to share valuable tools that have significantly impacted my productivity as a developer.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1722632400000" data-listing-file-modified-sort="1722694417299" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="575">
-<div class="thumbnail">
-<p><a href="./posts/2024/warp-review/index.html" class="no-external"></a></p><a href="./posts/2024/warp-review/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/2024/warp-review/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2024/warp-review/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024/warp-review/index.html" class="no-external">Warp, The AI-Powered Terminal</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024/warp-review/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2024/warp-review/index.html" class="no-external">Here’s my personal take on Warp after incorporating it into my daily workflow.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2024/warp-review/index.html" class="no-external">
-<div class="listing-date">
-Aug 3, 2024
-</div>
-<div class="listing-author">
-Juma Shafara
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1722200400000" data-listing-file-modified-sort="1722259308941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="872">
-<div class="thumbnail">
-<p><a href="./posts/2024/linux-mint/index.html" class="no-external"></a></p><a href="./posts/2024/linux-mint/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/2024/linux-mint/linux_mint_cinnamon.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2024/linux-mint/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024/linux-mint/index.html" class="no-external">Linux Mint, A Comprehensive Overview</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024/linux-mint/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2024/linux-mint/index.html" class="no-external">I recently started using Linux Mint and in this blog, we’ll explore what makes Linux Mint special and why it might be the ideal choice for your next operating system.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2024/linux-mint/index.html" class="no-external">
-<div class="listing-date">
-Jul 29, 2024
-</div>
-<div class="listing-author">
-Juma Shafara
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1721854800000" data-listing-file-modified-sort="1722257123749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="646">
-<div class="thumbnail">
-<p><a href="./posts/2024/why-python-is-called-so/index.html" class="no-external"></a></p><a href="./posts/2024/why-python-is-called-so/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/2024/why-python-is-called-so/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2024/why-python-is-called-so/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024/why-python-is-called-so/index.html" class="no-external">How a Comedy Show Inspired a Programming Language</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024/why-python-is-called-so/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2024/why-python-is-called-so/index.html" class="no-external">Let me tell you the story behind Python’s moniker.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2024/why-python-is-called-so/index.html" class="no-external">
-<div class="listing-date">
-Jul 25, 2024
-</div>
-<div class="listing-author">
-Juma Shafara
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Software,2023" data-listing-date-sort="1676840400000" data-listing-file-modified-sort="1722255850169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1059">
-<div class="thumbnail">
-<p><a href="./posts/mr-robot-softwares/index.html" class="no-external"></a></p><a href="./posts/mr-robot-softwares/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/mr-robot-softwares/mr_robot.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/mr-robot-softwares/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/mr-robot-softwares/index.html" class="no-external">All Software used in Mr.&nbsp;Robot</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/mr-robot-softwares/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Software'); return false;">
-Software
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('2023'); return false;">
-2023
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/mr-robot-softwares/index.html" class="no-external">Here’s a list of the most popular softwares used by the hackers in the Emmy and Golden Globe award winning drama/thriller series Mr.&nbsp;Robot.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/mr-robot-softwares/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2023
-</div>
-<div class="listing-author">
-Juma Shafara
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Software,2023" data-listing-date-sort="1673298000000" data-listing-file-modified-sort="1722255850170" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="846">
-<div class="thumbnail">
-<p><a href="./posts/top-5-operating-systems/index.html" class="no-external"></a></p><a href="./posts/top-5-operating-systems/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/top-5-operating-systems/operating_systems.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/top-5-operating-systems/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/top-5-operating-systems/index.html" class="no-external">To 5 Operating Systems</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/top-5-operating-systems/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Software'); return false;">
-Software
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('2023'); return false;">
-2023
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/top-5-operating-systems/index.html" class="no-external">Operating systems are the backbone of modern computing, providing the fundamental software foundation for computers, smartphones, servers, and more. Here’s a comprehensive…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/top-5-operating-systems/index.html" class="no-external">
-<div class="listing-date">
-Jan 10, 2023
-</div>
-<div class="listing-author">
-Juma Shafara
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
