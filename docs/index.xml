@@ -187,9 +187,9 @@ Before we continue, I have a humble request, to be among the first to hear about
 <h2 class="anchored" data-anchor-id="stay-inspired">10. Stay Inspired</h2>
 <p><strong>Success Stories:</strong> Read about successful projects and developers to draw inspiration. Learning about others’ achievements can motivate you to strive for success.</p>
 <p><strong>Quotes:</strong> Keep motivational quotes or success stories around your workspace. A little inspiration can go a long way in maintaining your drive.</p>
-<p>At DATAIDEA, we believe in the power of community and continuous learning. By implementing these strategies, you can stay motivated and thrive in your programming journey. Remember, every small step forward is progress, and staying motivated is key to long-term success.</p>
-<hr>
-<p>Feel free to share your own tips and experiences in the comments. Let’s keep each other motivated and inspired!</p>
+<h2 class="anchored">
+What’s on your mind? Put it in the comments!
+</h2>
 <script src="https://utteranc.es/client.js" repo="dataideaorg/dataidea-science" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 

@@ -2,7 +2,7 @@
 title: How to Stay Motivated as a Programmer
 author: Juma Shafara
 date: "2024-08-03"
-description: Here’s my personal take on Warp after incorporating it into my daily workflow.
+description: Here are some tips to help you stay motivated and enthusiastic about your work.
 keywords: []
 ---
 
@@ -115,12 +115,7 @@ Before we continue, I have a humble request, to be among the first to hear about
 
 **Quotes:** Keep motivational quotes or success stories around your workspace. A little inspiration can go a long way in maintaining your drive.
 
-At DATAIDEA, we believe in the power of community and continuous learning. By implementing these strategies, you can stay motivated and thrive in your programming journey. Remember, every small step forward is progress, and staying motivated is key to long-term success.
-
----
-
-Feel free to share your own tips and experiences in the comments. Let's keep each other motivated and inspired!
-
+<h2>What's on your mind? Put it in the comments!</h2>
 <script src="https://utteranc.es/client.js"
         repo="dataideaorg/dataidea-science"
         issue-term="pathname"
