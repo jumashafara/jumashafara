@@ -8,7 +8,7 @@ keywords: []
 
 ![Set Clear Goals](./thumbnail.jpg)
 
-Programming is a rewarding and fulfilling career, but staying motivated can sometimes be a challenge. As a programmer myself, I understand the ups and downs of a programmer's journey. Whether you're a seasoned developer or just starting your coding adventure, here are some tips to help you stay motivated and enthusiastic about your work.
+Programming is a rewarding and fulfilling career, but staying motivated can sometimes be a challenge. As a programmer myself, I understand the ups and downs of a programmer's journey. Here, I have some tips to help you stay motivated and enthusiastic about your work.
 
 ## 1. Set Clear Goals
 
