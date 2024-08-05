@@ -1,7 +1,7 @@
 ---
 title: How to Stay Motivated as a Programmer
 author: Juma Shafara
-date: "2024-08-03"
+date: "2024-08-05"
 description: Here are some tips to help you stay motivated and enthusiastic about your work.
 keywords: []
 ---

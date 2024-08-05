@@ -10,88 +10,7 @@
 <atom:link href="https://jumashafara.dataidea.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Juma Shafara&#39;s Blog</description>
 <generator>quarto-1.5.55</generator>
-<lastBuildDate>Fri, 02 Aug 2024 21:00:00 GMT</lastBuildDate>
-<item>
-  <title>Warp, The AI-Powered Terminal</title>
-  <dc:creator>Juma Shafara</dc:creator>
-  <link>https://jumashafara.dataidea.org/posts/2024/warp-review/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://jumashafara.dataidea.org/posts/2024/warp-review/thumbnail.jpg" class="img-fluid figure-img"></p>
-<figcaption>Warp Terminal</figcaption>
-</figure>
-</div>
-<p>In the rapidly evolving tech landscape, having tools that streamline the development process is key to staying productive and focused. Recently, I decided to dive into Warp, a modern terminal emulator built with Rust, which has been making waves for its innovative features and AI integration. Here’s my personal take on Warp after incorporating it into my daily workflow.</p>
-<section id="first-impressions" class="level3">
-<h3 class="anchored" data-anchor-id="first-impressions">First Impressions</h3>
-<p>I first heard about Warp through various tech blogs and was intrigued by its strong opinions on how a terminal should function. After requesting an invite on their <a href="https://www.warp.dev">official site</a>, I received an email a few weeks later inviting me to download it. From the moment I opened Warp, it was clear that this was not your typical terminal emulator. The clean, modern interface and the intuitive Command Palette set the stage for a unique experience.</p>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
-<!-- inline-square -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</section>
-<section id="key-features-i-loved" class="level3">
-<h3 class="anchored" data-anchor-id="key-features-i-loved">Key Features I Loved</h3>
-<div>
-<p><img src="https://jumashafara.dataidea.org/posts/2024/warp-review/warp_ai.webp" width="100%"></p>
-</div>
-<p><strong>1. AI Integration:</strong> One of Warp’s standout features is its AI-powered functionality. The AI offers smart completions, command suggestions, and even programming guidance. This has significantly reduced my need to search for commands or debug errors externally, making my workflow smoother and more efficient.</p>
-<p><strong>2. Command Blocks:</strong> Warp’s approach to handling commands in distinct blocks was a game-changer for me. Each command runs as an independent unit that you can manipulate through the UI. This organization makes it easier to manage and interact with command history and outputs. The visual separation between commands helps keep everything tidy and easy to navigate.</p>
-<p><strong>3. Collaboration Tools:</strong> Sharing workflows has never been easier. Warp allows you to generate links to specific command blocks, which you can then share with colleagues or use during coding meetups and classes. This feature is particularly useful for collaborative projects and teaching scenarios.</p>
-<p><strong>4. Modern Editing Capabilities:</strong> Warp brings modern editing features to the terminal, akin to working within an IDE. It supports default keybindings and Vim, catering to both keyboard-centric users and those who prefer using a mouse. The Command Palette is a fast and efficient way to access all the commands you need.</p>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
-<!-- inline-square -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<div>
-<p><img src="https://jumashafara.dataidea.org/posts/2024/warp-review/warp_edit.webp" width="100%"></p>
-</div>
-</section>
-<section id="daily-usage-and-performance" class="level3">
-<h3 class="anchored" data-anchor-id="daily-usage-and-performance">Daily Usage and Performance</h3>
-<p>Testing Warp on my 16-inch MacBook Pro with 32 GB of RAM, I found its performance to be on par with iTerm2, handling even heavy loads and complex setups with ease. Warp is just as fast, if not faster, and offers a level of stability that is impressive for such a new tool.</p>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
-<!-- inline-square -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</section>
-<section id="areas-for-improvement" class="level3">
-<h3 class="anchored">Areas for Improvement</h3>
-<p>While I have enjoyed using Warp, there are a few areas where it could improve:</p>
-<p><strong>1. Space Utilization:</strong> The block-based interface, while innovative, does take up more screen space compared to traditional terminals. Even with “compact mode” enabled, I sometimes miss the more streamlined view of other terminals like iTerm2.</p>
-<p><strong>2. Customization:</strong> Warp offers a selection of themes and fonts, but the options are limited. As someone who likes to tweak and customize my tools extensively, I found the lack of deeper customization options a bit disappointing. Additionally, the absence of support for custom plugins is a drawback for those looking to extend Warp’s functionality further.</p>
-<p><strong>3. Feature Completeness:</strong> Some of the game-changing features, such as advanced collaborative tools and approval workflows, are still in development. While the current features are impressive, I’m looking forward to these additions that promise to make Warp even more powerful.</p>
-<p>If you’re interested in trying Warp, you can find more detailed insights and reviews on <a href="https://matduggan.com/warp-terminal-emulator-review/">Mat Duggan’s blog</a> and <a href="https://dev.to/bartzalewski/review-of-warp-the-ai-powered-terminal-2j5e">DEV Community</a>.</p>
-<hr>
-<p>This review is based on my personal experience with Warp. My aim is to share valuable tools that have significantly impacted my productivity as a developer.</p>
-<h2 class="anchored" data-anchor-id="areas-for-improvement">
-What’s on your mind? Put it in the comments!
-</h2>
-<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
-</script>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <guid>https://jumashafara.dataidea.org/posts/2024/warp-review/</guid>
-  <pubDate>Fri, 02 Aug 2024 21:00:00 GMT</pubDate>
-</item>
+<lastBuildDate>Sun, 04 Aug 2024 21:00:00 GMT</lastBuildDate>
 <item>
   <title>How to Stay Motivated as a Programmer</title>
   <dc:creator>Juma Shafara</dc:creator>
@@ -198,6 +117,87 @@ What’s on your mind? Put it in the comments!
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <guid>https://jumashafara.dataidea.org/posts/2024/staying-motivated-as-a-programmer/</guid>
+  <pubDate>Sun, 04 Aug 2024 21:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Warp, The AI-Powered Terminal</title>
+  <dc:creator>Juma Shafara</dc:creator>
+  <link>https://jumashafara.dataidea.org/posts/2024/warp-review/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/warp-review/thumbnail.jpg" class="img-fluid figure-img"></p>
+<figcaption>Warp Terminal</figcaption>
+</figure>
+</div>
+<p>In the rapidly evolving tech landscape, having tools that streamline the development process is key to staying productive and focused. Recently, I decided to dive into Warp, a modern terminal emulator built with Rust, which has been making waves for its innovative features and AI integration. Here’s my personal take on Warp after incorporating it into my daily workflow.</p>
+<section id="first-impressions" class="level3">
+<h3 class="anchored" data-anchor-id="first-impressions">First Impressions</h3>
+<p>I first heard about Warp through various tech blogs and was intrigued by its strong opinions on how a terminal should function. After requesting an invite on their <a href="https://www.warp.dev">official site</a>, I received an email a few weeks later inviting me to download it. From the moment I opened Warp, it was clear that this was not your typical terminal emulator. The clean, modern interface and the intuitive Command Palette set the stage for a unique experience.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+<section id="key-features-i-loved" class="level3">
+<h3 class="anchored" data-anchor-id="key-features-i-loved">Key Features I Loved</h3>
+<div>
+<p><img src="https://jumashafara.dataidea.org/posts/2024/warp-review/warp_ai.webp" width="100%"></p>
+</div>
+<p><strong>1. AI Integration:</strong> One of Warp’s standout features is its AI-powered functionality. The AI offers smart completions, command suggestions, and even programming guidance. This has significantly reduced my need to search for commands or debug errors externally, making my workflow smoother and more efficient.</p>
+<p><strong>2. Command Blocks:</strong> Warp’s approach to handling commands in distinct blocks was a game-changer for me. Each command runs as an independent unit that you can manipulate through the UI. This organization makes it easier to manage and interact with command history and outputs. The visual separation between commands helps keep everything tidy and easy to navigate.</p>
+<p><strong>3. Collaboration Tools:</strong> Sharing workflows has never been easier. Warp allows you to generate links to specific command blocks, which you can then share with colleagues or use during coding meetups and classes. This feature is particularly useful for collaborative projects and teaching scenarios.</p>
+<p><strong>4. Modern Editing Capabilities:</strong> Warp brings modern editing features to the terminal, akin to working within an IDE. It supports default keybindings and Vim, catering to both keyboard-centric users and those who prefer using a mouse. The Command Palette is a fast and efficient way to access all the commands you need.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div>
+<p><img src="https://jumashafara.dataidea.org/posts/2024/warp-review/warp_edit.webp" width="100%"></p>
+</div>
+</section>
+<section id="daily-usage-and-performance" class="level3">
+<h3 class="anchored" data-anchor-id="daily-usage-and-performance">Daily Usage and Performance</h3>
+<p>Testing Warp on my 16-inch MacBook Pro with 32 GB of RAM, I found its performance to be on par with iTerm2, handling even heavy loads and complex setups with ease. Warp is just as fast, if not faster, and offers a level of stability that is impressive for such a new tool.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+<section id="areas-for-improvement" class="level3">
+<h3 class="anchored">Areas for Improvement</h3>
+<p>While I have enjoyed using Warp, there are a few areas where it could improve:</p>
+<p><strong>1. Space Utilization:</strong> The block-based interface, while innovative, does take up more screen space compared to traditional terminals. Even with “compact mode” enabled, I sometimes miss the more streamlined view of other terminals like iTerm2.</p>
+<p><strong>2. Customization:</strong> Warp offers a selection of themes and fonts, but the options are limited. As someone who likes to tweak and customize my tools extensively, I found the lack of deeper customization options a bit disappointing. Additionally, the absence of support for custom plugins is a drawback for those looking to extend Warp’s functionality further.</p>
+<p><strong>3. Feature Completeness:</strong> Some of the game-changing features, such as advanced collaborative tools and approval workflows, are still in development. While the current features are impressive, I’m looking forward to these additions that promise to make Warp even more powerful.</p>
+<p>If you’re interested in trying Warp, you can find more detailed insights and reviews on <a href="https://matduggan.com/warp-terminal-emulator-review/">Mat Duggan’s blog</a> and <a href="https://dev.to/bartzalewski/review-of-warp-the-ai-powered-terminal-2j5e">DEV Community</a>.</p>
+<hr>
+<p>This review is based on my personal experience with Warp. My aim is to share valuable tools that have significantly impacted my productivity as a developer.</p>
+<h2 class="anchored" data-anchor-id="areas-for-improvement">
+What’s on your mind? Put it in the comments!
+</h2>
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <guid>https://jumashafara.dataidea.org/posts/2024/warp-review/</guid>
   <pubDate>Fri, 02 Aug 2024 21:00:00 GMT</pubDate>
 </item>
 <item>
