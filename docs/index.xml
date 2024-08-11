@@ -12,7 +12,7 @@
 <generator>quarto-1.5.55</generator>
 <lastBuildDate>Sat, 10 Aug 2024 21:00:00 GMT</lastBuildDate>
 <item>
-  <title>SQL vs. NoSQL, Understanding the Differences, Uses, Advantages, and Disadvantages</title>
+  <title>SQL vs. NoSQL</title>
   <dc:creator>Juma Shafara</dc:creator>
   <link>https://jumashafara.dataidea.org/posts/2024/sql-vs-nosql-dabases/</link>
   <description><![CDATA[ 
@@ -39,9 +39,9 @@
 <h2 class="anchored" data-anchor-id="differences-between-sql-and-nosql">2. Differences Between SQL and NoSQL</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 21%">
-<col style="width: 38%">
-<col style="width: 39%">
+<col style="width: 14%">
+<col style="width: 48%">
+<col style="width: 37%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -112,8 +112,8 @@ Before we continue, I have a humble request, to be among the first to hear about
 <h3 class="anchored" data-anchor-id="sql">SQL</h3>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 51%">
-<col style="width: 48%">
+<col style="width: 47%">
+<col style="width: 52%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -141,8 +141,8 @@ Before we continue, I have a humble request, to be among the first to hear about
 <h3 class="anchored" data-anchor-id="nosql">NoSQL</h3>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 51%">
-<col style="width: 48%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -178,8 +178,8 @@ Before we continue, I have a humble request, to be among the first to hear about
 <h2 class="anchored" data-anchor-id="which-should-i-choose">5. Which Should I Choose?</h2>
 <p>In my experience, the choice between SQL and NoSQL depends on the specific needs of the project:</p>
 <ul>
-<li><p><strong>Use SQL</strong> if the project demands strong consistency, complex queries, and structured data with clear relationships.</p></li>
-<li><p><strong>Use NoSQL</strong> if the project requires high scalability, flexibility, and the ability to handle large volumes of unstructured data.</p></li>
+<li><strong>Use SQL</strong> if the project demands strong consistency, complex queries, and structured data with clear relationships.</li>
+<li><strong>Use NoSQL</strong> if the project requires high scalability, flexibility, and the ability to handle large volumes of unstructured data.</li>
 </ul>
 <p>Each option has its place, and sometimes, using a combination of both in a polyglot persistence architecture might be the best approach.</p>
 <p>Understanding the trade-offs helps me make an informed decision, ensuring that the database choice aligns with the project’s goals and requirements.</p>
