@@ -158,7 +158,7 @@ I'm excited about the potential of this squad and look forward to navigating the
 
 <h2>What's on your mind? Put it in the comments!</h2>
 <script src="https://utteranc.es/client.js"
-        repo="dataideaorg/dataidea-science"
+        repo="jumashafara/jumashafara"
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"

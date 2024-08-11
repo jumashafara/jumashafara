@@ -10,49 +10,64 @@ categories: [Software, 2023]
 Operating systems are the backbone of modern computing, providing the fundamental software foundation for computers, smartphones, servers, and more. Here's a comprehensive overview of five prominent operating systems that have made significant impacts in various domains.
 
 <div class="table-responsive">
-    <table class="table table-striped table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th>Name</th>
-            <th>Supported Architecture</th>
-            <th>Supported Platforms</th>
-            <th>Official Website</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Windows</td>
-            <td>x86, x64, ARM</td>
-            <td>PC, Server, IoT, etc.</td>
-            <td><a href="https://www.microsoft.com">Microsoft Windows</a></td>
-        </tr>
-        <tr>
-            <td>macOS</td>
-            <td>x86, ARM</td>
-            <td>Mac Computers</td>
-            <td><a href="https://www.apple.com/macos">Apple macOS</a></td>
-        </tr>
-        <tr>
-            <td>Linux</td>
-            <td>x86, ARM, PowerPC, etc.</td>
-            <td>Various</td>
-            <td><a href="https://www.linuxfoundation.org">Linux Foundation</a></td>
-        </tr>
-        <tr>
-            <td>Android</td>
-            <td>ARM</td>
-            <td>Mobile, Tablets, IoT</td>
-            <td><a href="https://www.android.com">Android</a></td>
-        </tr>
-        <tr>
-            <td>iOS/iPadOS</td>
-            <td>ARM</td>
-            <td>iPhone, iPad, iPod</td>
-            <td><a href="https://www.apple.com/ios">Apple iOS/iPadOS</a></td>
-        </tr>
-    </tbody>
+<table class="table table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+<th>Name</th>
+<th>Supported Architecture</th>
+<th>Supported Platforms</th>
+<th>Official Website</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>x86, x64, ARM</td>
+<td>PC, Server, IoT, etc.</td>
+<td><a href="https://www.microsoft.com">Microsoft Windows</a></td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>x86, ARM</td>
+<td>Mac Computers</td>
+<td><a href="https://www.apple.com/macos">Apple macOS</a></td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>x86, ARM, PowerPC, etc.</td>
+<td>Various</td>
+<td><a href="https://www.linuxfoundation.org">Linux Foundation</a></td>
+</tr>
+<tr>
+<td>Android</td>
+<td>ARM</td>
+<td>Mobile, Tablets, IoT</td>
+<td><a href="https://www.android.com">Android</a></td>
+</tr>
+<tr>
+<td>iOS/iPadOS</td>
+<td>ARM</td>
+<td>iPhone, iPad, iPod</td>
+<td><a href="https://www.apple.com/ios">Apple iOS/iPadOS</a></td>
+</tr>
+</tbody>
 </table>
 </div>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ## Windows
 
@@ -90,6 +105,21 @@ Linux is an open-source operating system available in various distributions (dis
 - **Variety**: Diverse distributions catering to different needs.
 - **Stability**: Known for reliability and performance.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## Android
 
 ### Overview
@@ -101,6 +131,21 @@ Developed by Google, Android is the leading operating system for mobile devices 
 - **Customization**: Ability to personalize interface and features.
 - **App Ecosystem**: Extensive library of applications.
 - **Integration**: Seamless integration with Google services.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ## iOS/iPadOS
 
@@ -127,3 +172,12 @@ To be among the first to hear about future updates of the course materials, simp
 
 <iframe src="https://embeds.beehiiv.com/5fc7c425-9c7e-4e08-a514-ad6c22beee74?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent; width: 100%;" ></iframe>
 </div>
+
+<h2>What's on your mind? Put it in the comments!</h2>
+<script src="https://utteranc.es/client.js"
+        repo="jumashafara/jumashafara"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

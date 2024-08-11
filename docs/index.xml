@@ -10,7 +10,202 @@
 <atom:link href="https://jumashafara.dataidea.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Juma Shafara&#39;s Blog</description>
 <generator>quarto-1.5.55</generator>
-<lastBuildDate>Tue, 06 Aug 2024 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 10 Aug 2024 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>SQL vs. NoSQL, Understanding the Differences, Uses, Advantages, and Disadvantages</title>
+  <dc:creator>Juma Shafara</dc:creator>
+  <link>https://jumashafara.dataidea.org/posts/2024/sql-vs-nosql-dabases/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/sql-vs-nosql-dabases/thumbnail.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by DATAIDEA</figcaption>
+</figure>
+</div>
+<p>When working on a data-driven project, one of the crucial decisions I often face is choosing between SQL and NoSQL databases. Both have their strengths and weaknesses, and the right choice depends on the specific requirements of the project. Here’s a brief overview of the key differences, uses, advantages, and disadvantages of SQL and NoSQL databases.</p>
+<section id="understanding-sql-and-nosql" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-sql-and-nosql">1. Understanding SQL and NoSQL</h2>
+<ul>
+<li><p><strong>SQL (Structured Query Language)</strong> databases are relational databases that use structured query language to define and manipulate data. They are table-based and enforce a predefined schema, ensuring data integrity and consistency.</p></li>
+<li><p><strong>NoSQL (Not Only SQL)</strong> databases are non-relational and can handle a variety of data models, including document, key-value, graph, and column-family. They are more flexible, allowing for dynamic schemas and scalability.</p></li>
+</ul>
+</section>
+<section id="differences-between-sql-and-nosql" class="level2">
+<h2 class="anchored" data-anchor-id="differences-between-sql-and-nosql">2. Differences Between SQL and NoSQL</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 38%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>SQL Databases</th>
+<th>NoSQL Databases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data Model</strong></td>
+<td>Relational (tables with rows and columns)</td>
+<td>Non-relational (documents, key-value, etc.)</td>
+</tr>
+<tr class="even">
+<td><strong>Schema</strong></td>
+<td>Fixed, predefined schema</td>
+<td>Dynamic, flexible schema</td>
+</tr>
+<tr class="odd">
+<td><strong>Query Language</strong></td>
+<td>SQL</td>
+<td>Varies (e.g., MongoDB uses JSON-like queries)</td>
+</tr>
+<tr class="even">
+<td><strong>Transactions</strong></td>
+<td>ACID-compliant (Atomicity, Consistency, Isolation, Durability)</td>
+<td>Often eventually consistent, but not always ACID</td>
+</tr>
+<tr class="odd">
+<td><strong>Scalability</strong></td>
+<td>Vertical (adding more resources to a single server)</td>
+<td>Horizontal (adding more servers)</td>
+</tr>
+<tr class="even">
+<td><strong>Examples</strong></td>
+<td>MySQL, PostgreSQL, Oracle</td>
+<td>MongoDB, Cassandra, Redis</td>
+</tr>
+</tbody>
+</table>
+<!-- Newsletter -->
+<div class="newsletter">
+<div class="newsletter-heading">
+<h4 class="anchored">
+<i class="bi bi-info-circle-fill"></i> Don’t Miss Any Updates!
+</h4>
+</div>
+<div class="newsletter-body">
+<p>
+Before we continue, I have a humble request, to be among the first to hear about future updates of the course materials, simply enter your email below, follow us on <a href="https://x.com/dataideaorg"><i class="bi bi-twitter-x"></i> (formally Twitter)</a>, or subscribe to our <a href="https://www.youtube.com/@dataideaorg"><i class="bi bi-youtube"></i> YouTube channel</a>.
+</p>
+<iframe class="newsletter-frame" src="https://embeds.beehiiv.com/5fc7c425-9c7e-4e08-a514-ad6c22beee74?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+</section>
+<section id="uses-of-sql-and-nosql" class="level2">
+<h2 class="anchored" data-anchor-id="uses-of-sql-and-nosql">3. Uses of SQL and NoSQL</h2>
+<ul>
+<li><p><strong>SQL</strong> is ideal for applications that require multi-row transactions, such as banking systems, enterprise applications, and e-commerce platforms where data integrity is paramount.</p></li>
+<li><p><strong>NoSQL</strong> is perfect for handling large volumes of unstructured or semi-structured data, such as social media, big data analytics, real-time applications, and IoT where scalability and flexibility are crucial.</p></li>
+</ul>
+</section>
+<section id="advantages-and-disadvantages" class="level2">
+<h2 class="anchored" data-anchor-id="advantages-and-disadvantages">4. Advantages and Disadvantages</h2>
+<section id="sql" class="level3">
+<h3 class="anchored" data-anchor-id="sql">SQL</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>SQL Advantages</strong></th>
+<th><strong>SQL Disadvantages</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Strong consistency and data integrity</td>
+<td>Less flexible due to rigid schema</td>
+</tr>
+<tr class="even">
+<td>Mature technology with extensive tools</td>
+<td>Can struggle with large-scale, distributed systems</td>
+</tr>
+<tr class="odd">
+<td>ACID compliance ensures reliable transactions</td>
+<td>Vertical scalability can become costly</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="nosql" class="level3">
+<h3 class="anchored" data-anchor-id="nosql">NoSQL</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>NoSQL Advantages</strong></th>
+<th><strong>NoSQL Disadvantages</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Highly scalable and flexible</td>
+<td>Weaker consistency, depending on the database</td>
+</tr>
+<tr class="even">
+<td>Handles large volumes of unstructured data</td>
+<td>Less mature with fewer standardized tools</td>
+</tr>
+<tr class="odd">
+<td>Schema-less design allows for rapid iteration</td>
+<td>May require more complex data modeling</td>
+</tr>
+</tbody>
+</table>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+</section>
+<section id="which-should-i-choose" class="level2">
+<h2 class="anchored" data-anchor-id="which-should-i-choose">5. Which Should I Choose?</h2>
+<p>In my experience, the choice between SQL and NoSQL depends on the specific needs of the project:</p>
+<ul>
+<li><p><strong>Use SQL</strong> if the project demands strong consistency, complex queries, and structured data with clear relationships.</p></li>
+<li><p><strong>Use NoSQL</strong> if the project requires high scalability, flexibility, and the ability to handle large volumes of unstructured data.</p></li>
+</ul>
+<p>Each option has its place, and sometimes, using a combination of both in a polyglot persistence architecture might be the best approach.</p>
+<p>Understanding the trade-offs helps me make an informed decision, ensuring that the database choice aligns with the project’s goals and requirements.</p>
+<h2 class="anchored">
+What’s on your mind? Put it in the comments!
+</h2>
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+<div class="p-3">
+<h2 class="anchored">
+You may also like:
+</h2>
+<a href="../../../posts/2024/warp-review/">
+<h4 class="anchored">
+Warp Review
+</h4>
+</a><p><a href="../../../posts/2024/warp-review/"><img src="https://jumashafara.dataidea.org/posts/2024/warp-review/thumbnail.jpg" alt="best ai movies" width="100%"> </a></p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <guid>https://jumashafara.dataidea.org/posts/2024/sql-vs-nosql-dabases/</guid>
+  <pubDate>Sat, 10 Aug 2024 21:00:00 GMT</pubDate>
+</item>
 <item>
   <title>My New FPL Selection for the 2024/25 Season</title>
   <dc:creator>Juma Shafara</dc:creator>
@@ -163,7 +358,7 @@ Before we continue, I have a humble request, to be among the first to hear about
 <h2 class="anchored" data-anchor-id="strategy-and-outlook">
 What’s on your mind? Put it in the comments!
 </h2>
-<script src="https://utteranc.es/client.js" repo="dataideaorg/dataidea-science" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 
 
@@ -551,6 +746,13 @@ What’s on your mind? Put it in the comments!
 <section id="raspberry-pi" class="level2">
 <h2 class="anchored" data-anchor-id="raspberry-pi">Raspberry Pi</h2>
 <p>Raspberry Pi is a small, programmable computer board designed to teach children about computer science. It is also favourite among hobbyists and programmers due to its low-cost, versatility and simplicity. In season 1, episode 5 Elliot installs a Raspberry Pi into Steel Mountain’s climate control system so that fsociety at a later point in time can remotely raise the temperature in the storage room where Evil Corp’s tape backups are stored, resulting in the backups of the records of a significant portion of the US’ consumer debt being destroyed.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 <section id="proton-mail" class="level2">
 <h2 class="anchored" data-anchor-id="proton-mail">Proton Mail</h2>
@@ -563,6 +765,13 @@ What’s on your mind? Put it in the comments!
 <section id="bluesniff" class="level2">
 <h2 class="anchored" data-anchor-id="bluesniff">Bluesniff</h2>
 <p>Bluesniff is a Bluetooth device discovery tool. In season 1, episode 6 Elliot uses Bluesniff in combination with btscanner and Metasploit when he connects to the computer in a nearby police car via a MultiBlue Bluetooth USB Dongle to compromise a prison’s network in order to break a drug dealer called Vera out of prison.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 <section id="btscanner" class="level2">
 <h2 class="anchored" data-anchor-id="btscanner">btscanner</h2>
@@ -575,6 +784,13 @@ What’s on your mind? Put it in the comments!
 <section id="vlc-media-player" class="level2">
 <h2 class="anchored" data-anchor-id="vlc-media-player">VLC Media Player</h2>
 <p>VLC Media Player was used in season 2, episode 4 when Elliot and Darlene watched a VHS rip of the fake horror movie Careful Massacre of the Bourgeoisie together. VLC is also used in season 2, episode 8 when fsociety preview the video they are about to upload a leaked FBI conference call about illegal mass surveillance.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 <section id="µtorrent" class="level2">
 <h2 class="anchored" data-anchor-id="µtorrent">µTorrent</h2>
@@ -587,6 +803,13 @@ What’s on your mind? Put it in the comments!
 <section id="kingoroot" class="level2">
 <h2 class="anchored" data-anchor-id="kingoroot">KingoRoot</h2>
 <p>Kingo Root is used by Tyrell Wellick in season 1, episode 3 to root a co-worker’s Android phone so that he can covertly install the FlexiSPY spyware on the phone in order to get access to secret information about who is going to be the next chief technology officer of Evil Corp.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 <section id="kvm-kernel-based-virtual-machine" class="level2">
 <h2 class="anchored" data-anchor-id="kvm-kernel-based-virtual-machine">KVM (Kernel-based Virtual Machine)</h2>
@@ -599,6 +822,13 @@ What’s on your mind? Put it in the comments!
 <section id="framaroot" class="level2">
 <h2 class="anchored" data-anchor-id="framaroot">Framaroot</h2>
 <p>Framaroot - called RooterFrame in the show - is used by Tyrell Wellick in season 1, episode 3 to root a co-worker’s Android phone so that he can covertly install the FlexiSPY spyware on the phone in order to get access to secret information about who is going to be the next chief technology officer of Evil Corp.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 <section id="supersu" class="level2">
 <h2 class="anchored" data-anchor-id="supersu">SuperSU</h2>
@@ -607,17 +837,10 @@ What’s on your mind? Put it in the comments!
 <section id="want-to-learn-programming-and-become-an-expert" class="level1">
 <h1>Want to learn programming and become an expert?</h1>
 <p>If you’re serious about learning Programming and getting a job as a Developer, I highly encourage you to enroll in my programming courses for Python, JavaScript, Data Science and Web Development.</p>
-<p>Don’t waste your time following disconnected, outdated tutorials. I can teach you all that you need to kickstart your career. Contact me at <a href="tel:+256771754118">+256771754118</a> or <a href="mailto:jumashafara@proton.me">jumashafara@proton.me</a></p>
-<p>A few ads maybe displayed for income as resources are now offered freely. 🤝🤝🤝</p>
-<!-- Insert AdSense script dynamically -->
-<script>
-    (function() {
-        var adScript = document.createElement('script');
-        adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238';
-        adScript.async = true;
-        adScript.crossorigin="anonymous"
-        document.head.appendChild(adScript);
-    })();
+<h2 class="anchored" data-anchor-id="want-to-learn-programming-and-become-an-expert">
+What’s on your mind? Put it in the comments!
+</h2>
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 
 
@@ -647,49 +870,104 @@ What’s on your mind? Put it in the comments!
 </div>
 <p>Operating systems are the backbone of modern computing, providing the fundamental software foundation for computers, smartphones, servers, and more. Here’s a comprehensive overview of five prominent operating systems that have made significant impacts in various domains.</p>
 <div class="table-responsive">
-<pre><code>&lt;table class="table table-striped table-bordered"&gt;
-&lt;thead class="thead-dark"&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Name&lt;/th&gt;
-        &lt;th&gt;Supported Architecture&lt;/th&gt;
-        &lt;th&gt;Supported Platforms&lt;/th&gt;
-        &lt;th&gt;Official Website&lt;/th&gt;
-    &lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Windows&lt;/td&gt;
-        &lt;td&gt;x86, x64, ARM&lt;/td&gt;
-        &lt;td&gt;PC, Server, IoT, etc.&lt;/td&gt;
-        &lt;td&gt;&lt;a href="https://www.microsoft.com"&gt;Microsoft Windows&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;macOS&lt;/td&gt;
-        &lt;td&gt;x86, ARM&lt;/td&gt;
-        &lt;td&gt;Mac Computers&lt;/td&gt;
-        &lt;td&gt;&lt;a href="https://www.apple.com/macos"&gt;Apple macOS&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Linux&lt;/td&gt;
-        &lt;td&gt;x86, ARM, PowerPC, etc.&lt;/td&gt;
-        &lt;td&gt;Various&lt;/td&gt;
-        &lt;td&gt;&lt;a href="https://www.linuxfoundation.org"&gt;Linux Foundation&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Android&lt;/td&gt;
-        &lt;td&gt;ARM&lt;/td&gt;
-        &lt;td&gt;Mobile, Tablets, IoT&lt;/td&gt;
-        &lt;td&gt;&lt;a href="https://www.android.com"&gt;Android&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;iOS/iPadOS&lt;/td&gt;
-        &lt;td&gt;ARM&lt;/td&gt;
-        &lt;td&gt;iPhone, iPad, iPod&lt;/td&gt;
-        &lt;td&gt;&lt;a href="https://www.apple.com/ios"&gt;Apple iOS/iPadOS&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;</code></pre>
-
+<table class="table table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+<th>
+Name
+</th>
+<th>
+Supported Architecture
+</th>
+<th>
+Supported Platforms
+</th>
+<th>
+Official Website
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Windows
+</td>
+<td>
+x86, x64, ARM
+</td>
+<td>
+PC, Server, IoT, etc.
+</td>
+<td>
+<a href="https://www.microsoft.com">Microsoft Windows</a>
+</td>
+</tr>
+<tr>
+<td>
+macOS
+</td>
+<td>
+x86, ARM
+</td>
+<td>
+Mac Computers
+</td>
+<td>
+<a href="https://www.apple.com/macos">Apple macOS</a>
+</td>
+</tr>
+<tr>
+<td>
+Linux
+</td>
+<td>
+x86, ARM, PowerPC, etc.
+</td>
+<td>
+Various
+</td>
+<td>
+<a href="https://www.linuxfoundation.org">Linux Foundation</a>
+</td>
+</tr>
+<tr>
+<td>
+Android
+</td>
+<td>
+ARM
+</td>
+<td>
+Mobile, Tablets, IoT
+</td>
+<td>
+<a href="https://www.android.com">Android</a>
+</td>
+</tr>
+<tr>
+<td>
+iOS/iPadOS
+</td>
+<td>
+ARM
+</td>
+<td>
+iPhone, iPad, iPod
+</td>
+<td>
+<a href="https://www.apple.com/ios">Apple iOS/iPadOS</a>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <section id="windows" class="level2">
 <h2 class="anchored" data-anchor-id="windows">Windows</h2>
 <section id="overview" class="level3">
@@ -733,6 +1011,13 @@ What’s on your mind? Put it in the comments!
 <li><strong>Variety</strong>: Diverse distributions catering to different needs.</li>
 <li><strong>Stability</strong>: Known for reliability and performance.</li>
 </ul>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 </section>
 <section id="android" class="level2">
@@ -748,6 +1033,13 @@ What’s on your mind? Put it in the comments!
 <li><strong>App Ecosystem</strong>: Extensive library of applications.</li>
 <li><strong>Integration</strong>: Seamless integration with Google services.</li>
 </ul>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 </section>
 <section id="iosipados" class="level2">
@@ -757,7 +1049,7 @@ What’s on your mind? Put it in the comments!
 <p>Exclusive to Apple’s mobile devices, iOS and iPadOS are renowned for their smooth performance, security features, and seamless integration within the Apple ecosystem.</p>
 </section>
 <section id="features-4" class="level3">
-<h3 class="anchored" data-anchor-id="features-4">Features</h3>
+<h3 class="anchored">Features</h3>
 <ul>
 <li><strong>Performance</strong>: Smooth and efficient operation on Apple devices.</li>
 <li><strong>Security</strong>: Robust security measures and privacy controls.</li>
@@ -775,6 +1067,11 @@ To be among the first to hear about future updates of the course materials, simp
 <iframe src="https://embeds.beehiiv.com/5fc7c425-9c7e-4e08-a514-ad6c22beee74?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent; width: 100%;">
 </iframe>
 </div>
+<h2 class="anchored" data-anchor-id="features-4">
+What’s on your mind? Put it in the comments!
+</h2>
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 
 
 </section>

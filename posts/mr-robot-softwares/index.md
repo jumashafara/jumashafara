@@ -21,6 +21,21 @@ Tor Browser is widely considered to be the best anonymizing tool out there. It w
 
 Raspberry Pi is a small, programmable computer board designed to teach children about computer science. It is also favourite among hobbyists and programmers due to its low-cost, versatility and simplicity. In season 1, episode 5 Elliot installs a Raspberry Pi into Steel Mountain's climate control system so that fsociety at a later point in time can remotely raise the temperature in the storage room where Evil Corp's tape backups are stored, resulting in the backups of the records of a significant portion of the US' consumer debt being destroyed.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## Proton Mail
 
 ProtonMail is a secure, end-to-end encrypted e-mail service based in Switzerland that is used by Elliot in season 1, episode 8.
@@ -34,6 +49,21 @@ PyCharm is a Python and Django IDE (Integrated Developer Environment), which is 
 
 Bluesniff is a Bluetooth device discovery tool. In season 1, episode 6 Elliot uses Bluesniff in combination with btscanner and Metasploit when he connects to the computer in a nearby police car via a MultiBlue Bluetooth USB Dongle to compromise a prison's network in order to break a drug dealer called Vera out of prison.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## btscanner
 
 btscanner is a tool that is included in Kali Linux that extracts as much information as possible about Bluetooth devices without having to pair. In season 1, episode 6 Elliot uses btscanner in combination with Bluesniff and Metasploit when he connects to the computer in a nearby police car using a MultiBlue Bluetooth USB Dongle to compromise a prison's network in order to break a drug dealer called Vera out of prison.
@@ -45,6 +75,21 @@ Elliot uses Firefox as his default web browser. Trenton uses Firefox in season 2
 ## VLC Media Player
 
 VLC Media Player was used in season 2, episode 4 when Elliot and Darlene watched a VHS rip of the fake horror movie Careful Massacre of the Bourgeoisie together. VLC is also used in season 2, episode 8 when fsociety preview the video they are about to upload a leaked FBI conference call about illegal mass surveillance.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ## µTorrent
 
@@ -58,6 +103,21 @@ FlexiSPY is a spyware software for Android, iOS and BlackBerry that lets the use
 
 Kingo Root is used by Tyrell Wellick in season 1, episode 3 to root a co-worker's Android phone so that he can covertly install the FlexiSPY spyware on the phone in order to get access to secret information about who is going to be the next chief technology officer of Evil Corp.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## KVM (Kernel-based Virtual Machine)
 
 KVM is a hypervisor, which is a software that can run other operating systems via virtual machines. Elliot uses KVM to virtualize Windows 7 inside of Kali Linux. In season 1, episode 6 Elliot uses KVM to run Metasploit and Metapreter and in season 1, episode 8 he uses KVM to run DeepSound.
@@ -70,6 +130,21 @@ Metasploit Framework is a software included in Kali Linux that makes it easier t
 
 Framaroot - called RooterFrame in the show - is used by Tyrell Wellick in season 1, episode 3 to root a co-worker's Android phone so that he can covertly install the FlexiSPY spyware on the phone in order to get access to secret information about who is going to be the next chief technology officer of Evil Corp.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238"
+     crossorigin="anonymous"></script>
+<!-- inline-square -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8076040302380238"
+     data-ad-slot="3564352555"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## SuperSU
 
 SuperSU is an app that managed superuser privileges on rooted Android phones. In season 1, episode 3 Tyrell Wellick covertly installs FlexiSPY - which uses SuperSU to give itself superuser access - on a co-worker's Android phone in order to get access to secret information about who is going to be the next chief technology officer of Evil Corp.
@@ -79,17 +154,11 @@ SuperSU is an app that managed superuser privileges on rooted Android phones. In
 If you’re serious about learning Programming and getting a job as a Developer, I
 highly encourage you to enroll in my programming courses for Python, JavaScript, Data Science and Web Development.
 
-Don’t waste your time following disconnected, outdated tutorials. I can teach you all that you need to kickstart your career. Contact me at <a href="tel:+256771754118">+256771754118</a> or <a href="mailto:jumashafara@proton.me">jumashafara@proton.me</a>
-
-A few ads maybe displayed for income as resources are now offered freely. 🤝🤝🤝
-
-<!-- Insert AdSense script dynamically -->
-<script>
-    (function() {
-        var adScript = document.createElement('script');
-        adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238';
-        adScript.async = true;
-        adScript.crossorigin="anonymous"
-        document.head.appendChild(adScript);
-    })();
+<h2>What's on your mind? Put it in the comments!</h2>
+<script src="https://utteranc.es/client.js"
+        repo="jumashafara/jumashafara"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
 </script>
