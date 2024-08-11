@@ -1,5 +1,5 @@
 ---
-title: SQL vs. NoSQL
+title: SQL vs. NoSQL Databases
 author: Juma Shafara
 date: "2024-08-11"
 description: Here's a brief overview of the key differences, uses, advantages, and disadvantages of SQL and NoSQL databases.
