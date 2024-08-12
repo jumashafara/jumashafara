@@ -2,8 +2,18 @@
 title: Linux Mint, A Comprehensive Overview
 author: Juma Shafara
 date: "2024-07-29"
-description:  I recently started using Linux Mint and in this blog, we'll explore what makes Linux Mint special and why it might be the ideal choice for your next operating system.
-keywords: [A User-Friendly Interface, Out-of-the-Box Experience, Stability and Performance, Ease of Use and Configuration, Community and Support, Security and Privacy, Cinnamon Desktop]
+description: I recently started using Linux Mint and in this blog, we'll explore what makes Linux Mint special and why it might be the ideal choice for your next operating system.
+keywords:
+  [
+    A User-Friendly Interface,
+    Out-of-the-Box Experience,
+    Stability and Performance,
+    Ease of Use and Configuration,
+    Community and Support,
+    Security and Privacy,
+    Cinnamon Desktop,
+  ]
+categories: [Review, Software]
 ---
 
 ![Linux Mint Cinnamon](linux_mint_cinnamon.png)

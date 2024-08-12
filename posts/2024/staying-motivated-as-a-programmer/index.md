@@ -4,6 +4,7 @@ author: Juma Shafara
 date: "2024-08-05"
 description: Here are some tips to help you stay motivated and enthusiastic about your work.
 keywords: []
+categories: [Motivation]
 ---
 
 ![Set Clear Goals](./thumbnail.jpg)

@@ -2,7 +2,7 @@
 title: All Software used in Mr. Robot
 author: "Juma Shafara"
 date: "2023-02-20"
-categories: [Software, 2023]
+categories: [Software]
 ---
 
 ![Thumbnail](mr_robot.png)

@@ -2,7 +2,7 @@
 title: To 5 Operating Systems
 author: "Juma Shafara"
 date: "2023-01-10"
-categories: [Software, 2023]
+categories: [Software]
 ---
 
 ![Thumbnail](operating_systems.png)

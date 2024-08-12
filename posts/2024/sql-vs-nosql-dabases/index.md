@@ -4,6 +4,7 @@ author: Juma Shafara
 date: "2024-08-11"
 description: Here's a brief overview of the key differences, uses, advantages, and disadvantages of SQL and NoSQL databases.
 keywords: []
+categories: [Review, Software]
 ---
 
 ![Photo by DATAIDEA](./thumbnail.jpg)
@@ -87,8 +88,6 @@ In my experience, the choice between SQL and NoSQL depends on the specific needs
 
 - **Use SQL** if the project demands strong consistency, complex queries, and structured data with clear relationships.
 - **Use NoSQL** if the project requires high scalability, flexibility, and the ability to handle large volumes of unstructured data.
-
-Each option has its place, and sometimes, using a combination of both in a polyglot persistence architecture might be the best approach.
 
 Understanding the trade-offs helps me make an informed decision, ensuring that the database choice aligns with the project's goals and requirements.
 
