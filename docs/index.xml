@@ -987,6 +987,1390 @@ What’s on your mind? Put it in the comments!
   <pubDate>Wed, 24 Jul 2024 21:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Descriptive Statistics</title>
+  <dc:creator>Juma Shafara</dc:creator>
+  <link>https://jumashafara.dataidea.org/posts/2024/descriptive-statistics-python-tutorial/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/descriptive-statistics-python-tutorial/thumbnail.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by DATAIDEA</figcaption>
+</figure>
+</div>
+<section id="descriptive-statistics-and-summary-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-statistics-and-summary-metrics">Descriptive Statistics and Summary Metrics</h2>
+<p>In this notebook, we will learn to obtain important values that describe our data including:</p>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> Measures of central tendency
+</li>
+<li>
+<i class="bi bi-cursor"></i> Measures of variability
+</li>
+<li>
+<i class="bi bi-cursor"></i> Measures of distribution shape
+</li>
+<li>
+<i class="bi bi-cursor"></i> Measures of association
+</li>
+</ul>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> scipy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> sp</span>
+<span id="cb1-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span></code></pre></div>
+<p>This notebook has been modified to use the Nobel Price Laureates Dataset which you can download from <a href="https://public.opendatasoft.com/explore/dataset/nobel-prize-laureates/export/?disjunctive.category">opendatasoft</a></p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># load the dataset (modify the path to point to your copy of the dataset)</span></span>
+<span id="cb2-2">data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'nobel_prize_year.csv'</span>)</span>
+<span id="cb2-3">data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> data[data.Gender <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'org'</span>] <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># removing organizations</span></span>
+<span id="cb2-4">data.sample(n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span></code></pre></div>
+<div>
+
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+Year
+</th>
+<th>
+Gender
+</th>
+<th>
+Category
+</th>
+<th>
+birth_year
+</th>
+<th>
+age
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+505
+</th>
+<td>
+2014
+</td>
+<td>
+male
+</td>
+<td>
+Physics
+</td>
+<td>
+1929
+</td>
+<td>
+85
+</td>
+</tr>
+<tr>
+<th>
+318
+</th>
+<td>
+1952
+</td>
+<td>
+male
+</td>
+<td>
+Literature
+</td>
+<td>
+1885
+</td>
+<td>
+67
+</td>
+</tr>
+<tr>
+<th>
+883
+</th>
+<td>
+1933
+</td>
+<td>
+male
+</td>
+<td>
+Literature
+</td>
+<td>
+1870
+</td>
+<td>
+63
+</td>
+</tr>
+<tr>
+<th>
+481
+</th>
+<td>
+1995
+</td>
+<td>
+male
+</td>
+<td>
+Peace
+</td>
+<td>
+1908
+</td>
+<td>
+87
+</td>
+</tr>
+<tr>
+<th>
+769
+</th>
+<td>
+2005
+</td>
+<td>
+male
+</td>
+<td>
+Peace
+</td>
+<td>
+1942
+</td>
+<td>
+63
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Newsletter -->
+<div class="newsletter">
+<div class="newsletter-heading">
+<h4 class="anchored">
+<i class="bi bi-info-circle-fill"></i> Don’t Miss Any Updates!
+</h4>
+</div>
+<div class="newsletter-body">
+<p>
+Before we continue, I have a humble request, to be among the first to hear about future updates of the course materials, simply enter your email below, follow us on <a href="https://x.com/dataideaorg"><i class="bi bi-twitter-x"></i> (formally Twitter)</a>, or subscribe to our <a href="https://www.youtube.com/@dataideaorg"><i class="bi bi-youtube"></i> YouTube channel</a>.
+</p>
+<iframe class="newsletter-frame" src="https://embeds.beehiiv.com/5fc7c425-9c7e-4e08-a514-ad6c22beee74?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+</section>
+<section id="what-is-descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-descriptive-statistics">What is Descriptive Statistics</h2>
+<p>Descriptive statistics is a branch of statistics that deals with the presentation and summary of data in a meaningful and informative way. Its primary goal is to describe and summarize the main features of a dataset.</p>
+<p>Commonly used measures in descriptive statistics include:</p>
+<ol type="1">
+<li><p><strong>Measures of central tendency:</strong> These describe the center or average of a dataset and include metrics like mean, median, and mode.</p></li>
+<li><p><strong>Measures of variability:</strong> These indicate the spread or dispersion of the data and include metrics like range, variance, and standard deviation.</p></li>
+<li><p><strong>Measures of distribution shape:</strong> These describe the distribution of data points and include metrics like skewness and kurtosis.</p></li>
+<li><p><strong>Measures of association:</strong> These quantify the relationship between variables and include correlation coefficients.</p></li>
+</ol>
+<p>Descriptive statistics provide simple summaries about the sample and the observations that have been made.</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<section id="measures-of-central-tendency-ie-mean-median-mode" class="level3">
+<h3 class="anchored" data-anchor-id="measures-of-central-tendency-ie-mean-median-mode">1. <strong>Measures of central tendency ie Mean, Median, Mode</strong>:</h3>
+<p><strong>The Center of the Data:</strong></p>
+<p>The center of the data is where most of the values are concentrated.</p>
+<p><i class="bi bi-cursor"></i> <strong>Mean:</strong> It is the average value of a dataset calculated by summing all values(numerical) and dividing by the total count.</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">mean_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.mean(data.age)</span>
+<span id="cb3-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Mean:"</span>, mean_value)</span></code></pre></div>
+<pre><code>Mean: 60.21383647798742</code></pre>
+<p><i class="bi bi-cursor"></i> <strong>Median:</strong> It is the middle value of a dataset when arranged in ascending order. If there is an even number of observations, the median is the average of the two middle values.</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">median_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.median(data.age)</span>
+<span id="cb5-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Median:"</span>, median_value)</span></code></pre></div>
+<pre><code>Median: 60.0</code></pre>
+<p><i class="bi bi-cursor"></i> <strong>Mode:</strong> It is the value that appears most frequently in a dataset.</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">mode_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.stats.mode(data.age)[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]</span>
+<span id="cb7-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Mode:"</span>, mode_value)</span></code></pre></div>
+<pre><code>Mode: 56</code></pre>
+<p><strong>Homework:</strong></p>
+<p><i class="bi bi-cursor"></i> Other ways to find mode (ie using pandas and numpy)</p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+<section id="measures-of-variability" class="level3">
+<h3 class="anchored" data-anchor-id="measures-of-variability">2. <strong>Measures of variability</strong></h3>
+<p><strong>The Variation of the Data:</strong></p>
+<p>The variation of the data is how spread out the data are around the center.</p>
+<p><strong>a) Variance and Standard Deviation</strong>:</p>
+<p><i class="bi bi-cursor"></i> <strong>Variance:</strong> It measures the spread of the data points around the mean.</p>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># how to implement the variance and standard deviation using numpy</span></span>
+<span id="cb9-2">variance_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.var(data.age)</span>
+<span id="cb9-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Variance:"</span>, variance_value)</span></code></pre></div>
+<pre><code>Variance: 159.28551085795658</code></pre>
+<p><i class="bi bi-cursor"></i> <strong>Standard Deviation:</strong> It is the square root of the variance, providing a measure of the average distance between each data point and the mean.</p>
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">std_deviation_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.std(data.age)</span>
+<span id="cb11-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Standard Deviation:"</span>, std_deviation_value)</span></code></pre></div>
+<pre><code>Standard Deviation: 12.620836377116873</code></pre>
+<!-- Alert -->
+<div class="alert text-white rounded">
+<h4 class="anchored">
+<i class="bi bi-info-circle-fill"></i> Summary
+</h4>
+<p>
+In summary, variance provides a measure of dispersion in squared units, while standard deviation provides a measure of dispersion in the original units of the data
+</p>
+</div>
+<!-- Alert -->
+<div class="alert text-white rounded">
+<h4 class="anchored">
+<i class="bi bi-info-circle-fill"></i> Note!
+</h4>
+<p>
+Smaller variances and standard deviation values mean that the data has values similar to each other and closer to the mean and the vice versa is true
+</p>
+</div>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1">plt.hist(x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data.age, bins<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, edgecolor<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'black'</span>)</span>
+<span id="cb13-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># add standard deviation lines</span></span>
+<span id="cb13-3">plt.axvline(mean_value, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'red'</span>, linestyle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Mean'</span>)</span>
+<span id="cb13-4">plt.axvline(mean_value<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span>std_deviation_value, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'orange'</span>, linestyle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>, label<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'1st std Dev'</span>)</span>
+<span id="cb13-5">plt.axvline(mean_value<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>std_deviation_value, color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'orange'</span>, linestyle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'--'</span>)</span>
+<span id="cb13-6">plt.title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Age of Nobel Prize Winners'</span>)</span>
+<span id="cb13-7">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Frequency'</span>)</span>
+<span id="cb13-8">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Age'</span>)</span>
+<span id="cb13-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Adjust the position of the legend</span></span>
+<span id="cb13-10">plt.legend(loc<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'upper left'</span>)</span>
+<span id="cb13-11"></span>
+<span id="cb13-12">plt.show()</span></code></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/descriptive-statistics-python-tutorial/output_26_0.png" class="img-fluid figure-img"></p>
+<figcaption>png</figcaption>
+</figure>
+</div>
+<ol start="2" type="a">
+<li><strong>Range and Interquartile Range (IQR)</strong>:</li>
+</ol>
+<p><i class="bi bi-cursor"></i> <strong>Range:</strong> It is the difference between the maximum and minimum values in a dataset. It is simplest measure of variation</p>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># One way to obtain range</span></span>
+<span id="cb14-2">min_age <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">min</span>(data.age)</span>
+<span id="cb14-3">max_age <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(data.age)</span>
+<span id="cb14-4">age_range <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> max_age <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> min_age</span>
+<span id="cb14-5"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Range:'</span>, age_range)</span></code></pre></div>
+<pre><code>Range: 80</code></pre>
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Calculating the range using numpy</span></span>
+<span id="cb16-2">range_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.ptp(data.age)</span>
+<span id="cb16-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Range:"</span>, range_value)</span></code></pre></div>
+<pre><code>Range: 80</code></pre>
+<p><i class="bi bi-cursor"></i> <strong>Interquartile Range (IQR):</strong> It is the range between the first quartile (25th percentile) and the third quartile (75th percentile) of the dataset.</p>
+<p><strong>Quartiles:</strong></p>
+<p><strong>Calculating Quartiles</strong></p>
+<p>The quartiles (Q0,Q1,Q2,Q3,Q4) are the values that separate each quarter.</p>
+<p>Between Q0 and Q1 are the 25% lowest values in the data. Between Q1 and Q2 are the next 25%. And so on.</p>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> Q0 is the smallest value in the data.
+</li>
+<li>
+<i class="bi bi-cursor"></i> Q1 is the value separating the first quarter from the second quarter of the data.
+</li>
+<li>
+<i class="bi bi-cursor"></i> Q2 is the middle value (median), separating the bottom from the top half.
+</li>
+<li>
+<i class="bi bi-cursor"></i> Q3 is the value separating the third quarter from the fourth quarter
+</li>
+<li>
+<i class="bi bi-cursor"></i> Q4 is the largest value in the data.
+</li>
+</ul>
+<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Calculate the quartile</span></span>
+<span id="cb18-2">quartiles <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.quantile(a<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data.age, q<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.75</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>])</span>
+<span id="cb18-3"></span>
+<span id="cb18-4"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Quartiles:'</span>, quartiles)</span></code></pre></div>
+<pre><code>Quartiles: [17. 51. 60. 69. 97.]</code></pre>
+<p><strong>Percentiles:</strong></p>
+<p>Percentiles are values that separate the data into 100 equal parts.</p>
+<p>For example, The 95th percentile separates the lowest 95% of the values from the top 5%</p>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> The 25th percentile (P25%) is the same as the first quartile (Q1).
+</li>
+<li>
+<i class="bi bi-cursor"></i> The 50th percentile (P50%) is the same as the second quartile (Q2) and the median.
+</li>
+<li>
+<i class="bi bi-cursor"></i> The 75th percentile (P75%) is the same as the third quartile (Q3)
+</li>
+</ul>
+<p><strong>Calculating Percentiles with Python</strong></p>
+<p>To get all the percentile values, we can use <code>np.percentile()</code> method and pass in the data, and the list of the percentiles as showed below.</p>
+<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Getting many percentiles</span></span>
+<span id="cb20-2">percentiles <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.percentile(data.age, [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">75</span>])</span>
+<span id="cb20-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f'Percentiles: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>percentiles<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)</span></code></pre></div>
+<pre><code>Percentiles: [51. 60. 69.]</code></pre>
+<p>To get a single percentile value, we can again use the <code>np.percentile()</code> method and pass in the data, and a the specicific percentile you’re interested in eg:</p>
+<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Getting one percentile at a time</span></span>
+<span id="cb22-2">first_quartile <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.percentile(a<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data.age, q<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 25th percentile</span></span>
+<span id="cb22-3">middle_percentile <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.percentile(data.age, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>)</span>
+<span id="cb22-4">third_quartile <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.percentile(data.age, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">75</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 75th percentile</span></span>
+<span id="cb22-5"></span>
+<span id="cb22-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Q1: '</span>, first_quartile)</span>
+<span id="cb22-7"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Q2: '</span>, middle_percentile)</span>
+<span id="cb22-8"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Q3: '</span>, third_quartile)</span></code></pre></div>
+<pre><code>Q1:  51.0
+Q2:  60.0
+Q3:  69.0</code></pre>
+<div class="alert text-white rounded" style="background: #3a6e68;">
+<h4 class="anchored">
+Note!
+</h4>
+<p>
+Note also that we can be able to use the <code>np.quantile()</code> method to calculate the percentiles which makes logical sense as all the values mark a fraction(percentage) of the data
+</p>
+</div>
+<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1">percentiles <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.quantile(a<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data.age, q<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.50</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.75</span>])</span>
+<span id="cb24-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Percentiles:'</span>, percentiles)</span></code></pre></div>
+<pre><code>Percentiles: [51. 60. 69.]</code></pre>
+<p>Now we can be able to obtain the interquartile range as the difference between the third and first quartiles as predefined.</p>
+<div class="sourceCode" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># obtain the interquartile</span></span>
+<span id="cb26-2">iqr_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> third_quartile <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> first_quartile</span>
+<span id="cb26-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Interquartile range: '</span>, iqr_value)</span></code></pre></div>
+<pre><code>Interquartile range:  18.0</code></pre>
+<p>Note: <em>Quartiles and percentiles are both types of quantiles</em></p>
+<!-- Alert -->
+<div class="alert text-white rounded">
+<h4 class="anchored">
+<i class="bi bi-info-circle-fill"></i> Summary
+</h4>
+<p>
+While the range gives an overview of the entire spread of the data from lowest to highest, the interquartile range focuses s`pecifically on the spread of the middle portion of the data, making it more robust against outliers.
+</p>
+</div>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+<section id="measures-of-distribution-shape-ie-skewness-and-kurtosis" class="level3">
+<h3 class="anchored" data-anchor-id="measures-of-distribution-shape-ie-skewness-and-kurtosis">3. <strong>Measures of distribution shape ie Skewness and Kurtosis</strong>:</h3>
+<p><strong>The shape of the Data:</strong></p>
+<p>The shape of the data refers to how the data are bounded on either side of the center.</p>
+<p><i class="bi bi-cursor"></i> <strong>Skewness:</strong> It measures the asymmetry of the distribution.</p>
+<div class="sourceCode" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># let's get skew from scipy</span></span>
+<span id="cb28-2">skewness_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.stats.skew(data.age)</span>
+<span id="cb28-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Skewness:"</span>, skewness_value)</span></code></pre></div>
+<pre><code>Skewness: -0.028324578326524283</code></pre>
+<p><strong>How to interpret Skewness:</strong></p>
+<p><i class="bi bi-cursor"></i> Positive skewness (&gt; 0) indicates that the tail on the right side of the distribution is longer than the left side (right skewed).</p>
+<p><i class="bi bi-cursor"></i> Negative skewness (&lt; 0) indicates that the tail on the left side of the distribution is longer than the right side (left skewed).</p>
+<div class="sourceCode" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Plot the histogram</span></span>
+<span id="cb30-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Set density=True for normalized histogram</span></span>
+<span id="cb30-3">plt.hist(x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>data.age, bins<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, density<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>, edgecolor<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'black'</span>)</span>
+<span id="cb30-4"></span>
+<span id="cb30-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create a normal distribution curve</span></span>
+<span id="cb30-6">xmin, xmax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.xlim()</span>
+<span id="cb30-7">x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.linspace(xmin, xmax, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb30-8">p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.stats.norm.pdf(x, mean_value, std_deviation_value)</span>
+<span id="cb30-9">plt.plot(x, p, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'k'</span>, linewidth<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb30-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 'k' indicates black color, you can change it to any color</span></span>
+<span id="cb30-11"></span>
+<span id="cb30-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Labels and legend</span></span>
+<span id="cb30-13">plt.xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Age'</span>)</span>
+<span id="cb30-14">plt.ylabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Probability Density'</span>)</span>
+<span id="cb30-15">plt.title(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Histogram with Normal Distribution Curve'</span>)</span>
+<span id="cb30-16">plt.legend([<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Normal Distribution'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Histogram'</span>])</span>
+<span id="cb30-17"></span>
+<span id="cb30-18">plt.show()</span></code></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/descriptive-statistics-python-tutorial/output_51_0.png" class="img-fluid figure-img"></p>
+<figcaption>png</figcaption>
+</figure>
+</div>
+<p><i class="bi bi-cursor"></i> <strong>Kurtosis:</strong> It measures the peakedness or flatness of the distribution.</p>
+<div class="sourceCode" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># let's get kurtosis from scipy</span></span>
+<span id="cb31-2">kurtosis_value <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.stats.kurtosis(data.age)</span>
+<span id="cb31-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Kurtosis:"</span>, kurtosis_value)</span></code></pre></div>
+<pre><code>Kurtosis: -0.3811155702676823</code></pre>
+<p><strong>How to interpret Kurtosis:</strong></p>
+<p><i class="bi bi-cursor"></i> A kurtosis of 3 indicates the normal distribution (mesokurtic), also known as Gaussian distribution.</p>
+<p><i class="bi bi-cursor"></i> Positive kurtosis (&gt; 3) indicates a distribution with heavier tails and a sharper peak than the normal distribution. This is called leptokurtic.</p>
+<p><i class="bi bi-cursor"></i> Negative kurtosis (&lt; 3) indicates a distribution with lighter tails and a flatter peak than the normal distribution. This is called platykurtic.</p>
+<div class="alert text-white rounded">
+<h4 class="anchored">
+<i class="bi bi-info-circle-fill"></i> Note!
+</h4>
+<p>
+In simple terms, skewness tells you if your data is leaning more to one side or the other, while kurtosis tells you if your data has heavy or light tails and how sharply it peaks.
+</p>
+</div>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+<section id="measures-of-association" class="level3">
+<h3 class="anchored" data-anchor-id="measures-of-association">4. <strong>Measures of association</strong></h3>
+<p>a). <strong>Correlation</strong></p>
+<p><i class="bi bi-cursor"></i> Correlation measures the relationship between two numerical variables.</p>
+<p><strong>Correlation Matrix</strong></p>
+<p><i class="bi bi-cursor"></i> A correlation matrix is simply a table showing the correlation coefficients between variables</p>
+<p><strong>Correlation Matrix in Python</strong></p>
+<p>We can use the <code>corrcoef()</code> function in Python to create a correlation matrix.</p>
+<div class="sourceCode" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Generate example data</span></span>
+<span id="cb33-2">x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span>])</span>
+<span id="cb33-3">y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>])</span>
+<span id="cb33-4"></span>
+<span id="cb33-5">correlation_matrix <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.corrcoef(x, y)</span>
+<span id="cb33-6"></span>
+<span id="cb33-7">correlation_matrix_df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.DataFrame(</span>
+<span id="cb33-8">    correlation_matrix,</span>
+<span id="cb33-9">    columns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'x'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'y'</span>],</span>
+<span id="cb33-10">    index<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'x'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'y'</span>]</span>
+<span id="cb33-11">    )</span>
+<span id="cb33-12">correlation_matrix_df</span></code></pre></div>
+<div>
+
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+x
+</th>
+<th>
+y
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+x
+</th>
+<td>
+1.000000
+</td>
+<td>
+0.867722
+</td>
+</tr>
+<tr>
+<th>
+y
+</th>
+<td>
+0.867722
+</td>
+<td>
+1.000000
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Correlation Coefficient</strong>:</p>
+<p><i class="bi bi-cursor"></i> The correlation coefficient measures the strength and direction of the linear relationship between two continuous variables.</p>
+<p><i class="bi bi-cursor"></i> t ranges from -1 to 1, where:</p>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> 1 indicates a perfect positive linear relationship, eg complementary good bread and blueband, battery and torch, fuel and car
+</li>
+<li>
+<i class="bi bi-cursor"></i> -1 indicates a perfect negative linear relationship, eg substitute goods like tea and coffee
+</li>
+<li>
+<i class="bi bi-cursor"></i> 0 indicates no linear relationship, eg phones and socks, house and mouse
+</li>
+</ul>
+<div class="sourceCode" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Calculate correlation coefficient</span></span>
+<span id="cb34-2">correlation <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.corrcoef(x, y)[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb34-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Correlation Coefficient:"</span>, correlation)</span></code></pre></div>
+<pre><code>Correlation Coefficient: 0.8677218312746245</code></pre>
+<p><strong>Correlation vs Causality:</strong></p>
+<p>Correlation measures the numerical relationship between two varaibles</p>
+<p>A high correlation coefficient (close to 1), does not mean that we can for sure conclude an actual relationship between two variables.</p>
+<p>A classic example:</p>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> During the summer, the sale of ice cream at a beach increases
+</li>
+<li>
+<i class="bi bi-cursor"></i> Simultaneously, drowning accidents also increase as well
+</li>
+</ul>
+<p>Does this mean that increase of ice cream sale is a direct cause of increased drowning accidents?</p>
+<p><strong>Measures of Association for Categorical Variables</strong></p>
+<ol start="2" type="a">
+<li><strong>Contingency Tables and Chi-square Test for Independence</strong>:</li>
+</ol>
+<p><i class="bi bi-cursor"></i> Contingency tables are used to summarize the relationship between two categorical variables by counting the frequency of observations for each combination of categories.</p>
+<p><i class="bi bi-cursor"></i> Chi-square test for independence determines whether there is a statistically significant association between the two categorical variables.</p>
+<div class="sourceCode" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1">demo_data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> data[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Gender'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Category'</span>]]</span>
+<span id="cb36-2"></span>
+<span id="cb36-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># We drop all the missing values just for demonstration purposes</span></span>
+<span id="cb36-4">demo_data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> demo_data.dropna()</span></code></pre></div>
+<p>Obtain the cross tabulation of Gender and Category. The cross tabulation is also known as the contingency table</p>
+<div class="sourceCode" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># cross tab</span></span>
+<span id="cb37-2">gender_category_tab <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.crosstab(</span>
+<span id="cb37-3">    demo_data.Gender,</span>
+<span id="cb37-4">    demo_data.Category</span>
+<span id="cb37-5">    )</span>
+<span id="cb37-6"></span>
+<span id="cb37-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Let's have a look at the outcome</span></span>
+<span id="cb37-8">gender_category_tab</span></code></pre></div>
+<div>
+
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+Category
+</th>
+<th>
+Chemistry
+</th>
+<th>
+Economics
+</th>
+<th>
+Literature
+</th>
+<th>
+Medicine
+</th>
+<th>
+Peace
+</th>
+<th>
+Physics
+</th>
+</tr>
+<tr>
+<th>
+Gender
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+female
+</th>
+<td>
+8
+</td>
+<td>
+2
+</td>
+<td>
+17
+</td>
+<td>
+13
+</td>
+<td>
+18
+</td>
+<td>
+5
+</td>
+</tr>
+<tr>
+<th>
+male
+</th>
+<td>
+181
+</td>
+<td>
+87
+</td>
+<td>
+102
+</td>
+<td>
+212
+</td>
+<td>
+90
+</td>
+<td>
+219
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="test-of-independence" class="level3">
+<h3 class="anchored" data-anchor-id="test-of-independence">Test of Independence:</h3>
+<p>This test is used to determine whether there is a significant association between two categorical variables.</p>
+<p>Formula: <img src="https://latex.codecogs.com/png.latex?%CF%87%C2%B2%20=%20%5Csum%20%5Cfrac%7B(O_%7Bij%7D%20-%20E_%7Bij%7D)%5E2%7D%7BE_%7Bij%7D%7D"> where:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?O_%7Bij%7D"> = Observed frequency for each cell in the contingency table</li>
+<li><img src="https://latex.codecogs.com/png.latex?E_%7Bij%7D"> = Expected frequency for each cell under the assumption of independence</li>
+</ul>
+<div class="sourceCode" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1">chi2_stat, p_value, dof, expected <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.stats.chi2_contingency(gender_category_tab)</span>
+<span id="cb38-2"></span>
+<span id="cb38-3"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Chi-square Statistic:'</span>, chi2_stat)</span>
+<span id="cb38-4"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'p-value:'</span>, p_value)</span>
+<span id="cb38-5"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Degrees of freedom (dof):'</span>, dof)</span>
+<span id="cb38-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># print('Expected:', expected)</span></span></code></pre></div>
+<pre><code>Chi-square Statistic: 40.7686907732235
+p-value: 1.044840181761602e-07
+Degrees of freedom (dof): 5</code></pre>
+<p><strong>Interpretation of Chi2 Test Results:</strong></p>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> The Chi-square statistic measures the difference between the observed frequencies in the contingency table and the frequencies that would be expected if the variables were independent.
+</li>
+<li>
+<i class="bi bi-cursor"></i> The p-value is the probability of obtaining a Chi-square statistic as extreme as, or more extreme than, the one observed in the sample, assuming that the null hypothesis is true (i.e., assuming that there is no association between the variables).
+</li>
+<li>
+<i class="bi bi-cursor"></i> A low p-value indicates strong evidence against the null hypothesis, suggesting that there is a significant association between the variables.
+</li>
+<li>
+<i class="bi bi-cursor"></i> A high p-value indicates weak evidence against the null hypothesis, suggesting that there is no significant association between the variables.
+</li>
+</ul>
+<ol start="3" type="a">
+<li><strong>Measures of Association for Categorical Variables</strong>:</li>
+</ol>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> Measures like Cramer’s V or phi coefficient quantify the strength of association between two categorical variables.
+</li>
+<li>
+<i class="bi bi-cursor"></i> These measures are based on chi-square statistics and the dimensions of the contingency table.
+</li>
+</ul>
+</section>
+<section id="the-formula-for-cramers-v-is" class="level3">
+<h3 class="anchored" data-anchor-id="the-formula-for-cramers-v-is">The formula for Cramer’s V is:</h3>
+<p><img src="https://latex.codecogs.com/png.latex?V%20=%20%5Csqrt%7B%5Cfrac%7B%CF%87%C2%B2%7D%7Bn(k%20-%201)%7D%7D"></p>
+<p>Where:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%CF%87%C2%B2"> is the chi-square statistic from the chi-square test of independence.</li>
+<li><img src="https://latex.codecogs.com/png.latex?n"> is the total number of observations in the contingency table.</li>
+<li><img src="https://latex.codecogs.com/png.latex?k"> is the minimum of the number of rows and the number of columns in the contingency table.</li>
+</ul>
+<p>Cramer’s V is a normalized measure of association, making it easier to interpret compared to the raw chi-square statistic. A larger value of Cramer’s V indicates a stronger association between the variables.</p>
+<div class="sourceCode" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb40-2"></span>
+<span id="cb40-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> cramersV(contingency_table):</span>
+<span id="cb40-4"></span>
+<span id="cb40-5">    chi2_statistic <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.stats.chi2_contingency(contingency_table)[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]</span>
+<span id="cb40-6">    total_observations <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> contingency_table.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>().<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>()</span>
+<span id="cb40-7">    phi2 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> chi2_statistic <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> total_observations</span>
+<span id="cb40-8">    rows, columns <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> contingency_table.shape</span>
+<span id="cb40-9"></span>
+<span id="cb40-10">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> np.sqrt(phi2<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">min</span>(rows<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, columns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1">cramersV(contingency_table<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>gender_category_tab)</span></code></pre></div>
+<pre><code>0.20672318859163366</code></pre>
+<div class="sourceCode" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb43-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> scipy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> sp</span>
+<span id="cb43-3"></span>
+<span id="cb43-4"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> cramersVCorrected(contingency_table):</span>
+<span id="cb43-5"></span>
+<span id="cb43-6">    chi2_statistic <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sp.stats.chi2_contingency(contingency_table)[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]</span>
+<span id="cb43-7">    total_observations <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> contingency_table.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>().<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>()</span>
+<span id="cb43-8">    phi2 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> chi2_statistic <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> total_observations</span>
+<span id="cb43-9">    rows, columns <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> contingency_table.shape</span>
+<span id="cb43-10">    phi2_corrected <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, phi2 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> ((columns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>(rows<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>))<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>(total_observations<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>))</span>
+<span id="cb43-11">    rows_corrected <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> rows <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> ((rows<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>(total_observations<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb43-12">    columns_corrected <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> columns <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> ((columns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>(total_observations<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb43-13"></span>
+<span id="cb43-14">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> np.sqrt(phi2_corrected <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">min</span>((columns_corrected<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>), (rows_corrected<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">cramersVCorrected(gender_category_tab)</span></code></pre></div>
+<pre><code>0.19371955249110775</code></pre>
+<p>Cramer’s V is measure of association between two categorical variables. It ranges from 0 to 1 where:</p>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> 0 indicates no association between the variables
+</li>
+<li>
+<i class="bi bi-cursor"></i> 1 indicates a perfect association between the variables
+</li>
+</ul>
+<p>Here’s an interpretation of the Cramer’s V:</p>
+<ul class="cursored-list">
+<li>
+<i class="bi bi-cursor"></i> Small effect: Around 0.1
+</li>
+<li>
+<i class="bi bi-cursor"></i> Medium effect: Around 0.3
+</li>
+<li>
+<i class="bi bi-cursor"></i> Large effect: Around 0.5 or greater
+</li>
+</ul>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+<section id="frequency-tables" class="level3">
+<h3 class="anchored" data-anchor-id="frequency-tables">Frequency Tables</h3>
+<p>Frequency means the number of times a value appears in the data. A table can quickly show us how many times each value appears. If the data has many different values, it is easier to use intervals of values to present them in a table.</p>
+<p>Here’s the age of the 934 Nobel Prize winners up until the year 2020. IN the table, each row is an age interval of 10 years</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Age Interval</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10-19</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>20-29</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>30-39</td>
+<td>48</td>
+</tr>
+<tr class="even">
+<td>40-49</td>
+<td>158</td>
+</tr>
+<tr class="odd">
+<td>50-59</td>
+<td>236</td>
+</tr>
+<tr class="even">
+<td>60-69</td>
+<td>262</td>
+</tr>
+<tr class="odd">
+<td>70-79</td>
+<td>174</td>
+</tr>
+<tr class="even">
+<td>80-89</td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td>90-99</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> <em>The intervals for the values are also called bin</em></p>
+</section>
+<section id="further-reading" class="level3">
+<h3 class="anchored">Further Reading</h3>
+<p>Chapter 3 of <em>An Introduction to Statistical Methods and Data Analysis 7th Edition_New</em></p>
+<h2 class="anchored" data-anchor-id="further-reading">
+What’s on your mind? Put it in the comments!
+</h2>
+<script src="https://utteranc.es/client.js" repo="dataideaorg/dataidea-science" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Tutorial</category>
+  <guid>https://jumashafara.dataidea.org/posts/2024/descriptive-statistics-python-tutorial/</guid>
+  <pubDate>Wed, 31 Jan 2024 21:00:00 GMT</pubDate>
+</item>
+<item>
   <title>All Software used in Mr. Robot</title>
   <dc:creator>Juma Shafara</dc:creator>
   <link>https://jumashafara.dataidea.org/posts/mr-robot-softwares/</link>

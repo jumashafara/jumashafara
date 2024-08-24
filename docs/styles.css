@@ -128,3 +128,31 @@ div.description {
   color: #fff;
   border-radius: 0.25em;
 }
+
+/* icons */
+.cursored-list li {
+  list-style: none;
+}
+
+i {
+  color: #18bc9c;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Video */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (for 100% width) */
+  height: 0;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
