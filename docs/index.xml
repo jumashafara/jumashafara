@@ -35,11 +35,44 @@
 <li><p><strong>Survey</strong> Begin by surveying the material. For a programming topic, this could involve skimming through documentation, reading over code examples, or reviewing the structure of a programming tutorial. This initial survey gives you a broad overview of what you’re about to dive into.</p></li>
 <li><p><strong>Question</strong> Formulate specific questions about the programming concepts you’re learning. Ask yourself what the main objectives of the topic are, what key functions or methods are involved, and how these concepts fit into the bigger picture of programming. This step helps you focus and directs your learning.</p></li>
 <li><p><strong>Read</strong> Read the material thoroughly, keeping your questions in mind. Whether it’s a textbook, online tutorial, or code documentation, actively engage with the content. Pay close attention to code snippets, explanations, and examples.</p></li>
+</ol>
+<!-- Newsletter -->
+<div class="newsletter">
+<div class="newsletter-heading">
+<h4 class="anchored">
+<i class="bi bi-info-circle-fill"></i> Don’t Miss Any Updates!
+</h4>
+</div>
+<div class="newsletter-body">
+<p>
+Before we continue, I have a humble request, to be among the first to hear about future updates, simply enter your email below, follow me on <a href="https://x.com/juma_shafara"><i class="bi bi-twitter-x"></i> (formally Twitter)</a>, or subscribe to our <a href="https://www.youtube.com/@jumashafara"><i class="bi bi-youtube"></i> YouTube channel</a>.
+</p>
+<iframe class="newsletter-frame" src="https://embeds.beehiiv.com/5fc7c425-9c7e-4e08-a514-ad6c22beee74?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no">
+</iframe>
+</div>
+</div>
+<ol start="4" type="1">
 <li><p><strong>Recite</strong> After reading a section, try to recite or write down the key points and code snippets you’ve learned. This could involve explaining how a function works or outlining the steps in an algorithm. Reciting helps reinforce your understanding and ensures you’ve grasped the core concepts.</p></li>
 <li><p><strong>Relate</strong> Relate new programming concepts to what you already know. For example, if you’re learning about object-oriented programming, relate it to real-world objects or previous programming paradigms you’re familiar with. Making these connections helps solidify your understanding and makes the material more meaningful.</p></li>
+</ol>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<ol start="6" type="1">
 <li><p><strong>Review</strong> Periodically review the material you’ve covered. Revisit your notes, code examples, and key concepts. Regular reviews help reinforce your learning and keep information fresh, which is crucial for programming, where concepts build on each other.</p></li>
 <li><p><strong>Reflect</strong> Reflect on how the new programming concepts fit into your overall skill set. Consider how they apply to real-world problems or projects you’re working on. Reflection helps you see the bigger picture and understand the practical applications of what you’ve learned.</p></li>
 </ol>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
+<!-- inline-square -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </section>
 <section id="why-sq5r-works-for-programming" class="level3">
 <h3 class="anchored" data-anchor-id="why-sq5r-works-for-programming">Why SQ5R Works for Programming</h3>
@@ -49,6 +82,8 @@
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
 <p>For anyone looking to improve their programming skills, the SQ5R formula is a valuable tool. It encourages active learning and deeper comprehension, making it easier to grasp and retain complex programming concepts. Give it a try in your next study session and see how it enhances your programming mastery!</p>
 <p>Feel free to share your experiences with the SQ5R method or ask questions in the comments below!</p>
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 
 
 </section>
@@ -1691,7 +1726,7 @@ Before we continue, I have a humble request, to be among the first to hear about
 <h2 class="anchored">
 What’s on your mind? Put it in the comments!
 </h2>
-<script src="https://utteranc.es/client.js" repo="dataideaorg/dataidea-science" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 <div class="p-3">
 <h2 class="anchored">

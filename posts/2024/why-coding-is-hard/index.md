@@ -124,12 +124,14 @@ Before we continue, I have a humble request, to be among the first to hear about
 
 <h2>What's on your mind? Put it in the comments!</h2>
 <script src="https://utteranc.es/client.js"
-        repo="dataideaorg/dataidea-science"
+        repo="jumashafara/jumashafara"
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"
         async>
 </script>
+
+
 
 <div class="p-3">
 <h2>You may also like:</h2>
