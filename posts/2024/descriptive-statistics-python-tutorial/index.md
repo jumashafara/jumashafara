@@ -1,8 +1,7 @@
 ---
 title: Descriptive Statistics
 author: Juma Shafara
-date: "2024-02"
-date-modified: "2024-08-23"
+date: "2024-08-23"
 description: Descriptive statistics is a branch of statistics that deals with the presentation and summary of data in a meaningful and informative way.
 keywords:
   [

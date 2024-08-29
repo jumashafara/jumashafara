@@ -7,6 +7,8 @@ keywords: [Programming]
 categories: [Motivation]
 ---
 
+![Photo by DATAIDEA](./thumbnail.jpg)
+
 Learning to program is like picking up a new language—one that's not only spoken but also written and logically structured. For many, it's a journey filled with excitement, challenges, and, at times, frustration. But why is programming so difficult to learn, and how can you make the process smoother? Let's dive in.
 
 ## Why Is Learning Programming So Hard?
