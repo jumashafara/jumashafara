@@ -98,3 +98,11 @@ Feel free to share your experiences with the SQ5R method or ask questions in the
         crossorigin="anonymous"
         async>
 </script>
+
+<div class="p-3">
+<h2>You may also like:</h2>
+<a href="/posts/2024/why-coding-is-hard/">
+<h4>Why Learning Programming Can Be Hard and How to Make It Easier</h4>
+<img src="../why-coding-is-hard/thumbnail.jpg" alt="staying motivated" width="100%">
+</a>
+</div>
