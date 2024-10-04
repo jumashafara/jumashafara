@@ -136,7 +136,7 @@ Before we continue, I have a humble request, to be among the first to hear about
 <div class="p-3">
 <h2>You may also like:</h2>
 <a href="/posts/2024/staying-motivated-as-a-programmer/">
-<h4>Warp Review</h4>
+<h4>How to stay motivated as a Programmer</h4>
 <img src="../staying-motivated-as-a-programmer/thumbnail.jpg" alt="staying motivated" width="100%">
 </a>
 </div>
