@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024/setting-up-dotenv/index.html",
       "/posts/2024/sq5r-formula/index.html",
       "/posts/2024/descriptive-statistics-python-tutorial/index.html",
       "/posts/2024/overfitting-in-machine-learning/index.html",

@@ -7,9 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Juma Shafara">
-<meta name="dcterms.date" content="2023-01-10">
+<meta name="dcterms.date" content="2024-10-31">
+<meta name="keywords" content="What is Dotenv?, Load Environment Variables in Your Application, Why Use Dotenv?">
+<meta name="description" content="Environment variables are crucial in programming for storing sensitive information">
 
-<title>To 5 Operating Systems – Juma Shafara</title>
+<title>Using Dotenv for Secure Environment Variable Management – Juma Shafara</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,28 +24,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../assets/profile.jpg" rel="icon" type="image/jpeg">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/profile.jpg" rel="icon" type="image/jpeg">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -83,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Juma Shafara</span>
     </a>
   </div>
@@ -94,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -119,11 +155,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">To 5 Operating Systems</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Software</div>
-              </div>
-                  </div>
+      <h1 class="title">Using Dotenv for Secure Environment Variable Management</h1>
+                  <div>
+        <div class="description">
+          Environment variables are crucial in programming for storing sensitive information
+        </div>
+      </div>
+                </div>
   </div>
     
   
@@ -139,13 +177,20 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 10, 2023</p>
+        <p class="date">October 31, 2024</p>
       </div>
     </div>
     
       
     </div>
     
+
+  <div>
+    <div class="keywords">
+      <div class="block-title">Keywords</div>
+      <p>What is Dotenv?, Load Environment Variables in Your Application, Why Use Dotenv?</p>
+    </div>
+  </div>
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
@@ -155,31 +200,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of Contents</h2>
    
   <ul>
-  <li><a href="#windows" id="toc-windows" class="nav-link active" data-scroll-target="#windows">Windows</a>
-  <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
-  </ul></li>
-  <li><a href="#macos" id="toc-macos" class="nav-link" data-scroll-target="#macos">macOS</a>
-  <ul class="collapse">
-  <li><a href="#overview-1" id="toc-overview-1" class="nav-link" data-scroll-target="#overview-1">Overview</a></li>
-  <li><a href="#features-1" id="toc-features-1" class="nav-link" data-scroll-target="#features-1">Features</a></li>
-  </ul></li>
-  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux">Linux</a>
-  <ul class="collapse">
-  <li><a href="#overview-2" id="toc-overview-2" class="nav-link" data-scroll-target="#overview-2">Overview</a></li>
-  <li><a href="#features-2" id="toc-features-2" class="nav-link" data-scroll-target="#features-2">Features</a></li>
-  </ul></li>
-  <li><a href="#android" id="toc-android" class="nav-link" data-scroll-target="#android">Android</a>
-  <ul class="collapse">
-  <li><a href="#overview-3" id="toc-overview-3" class="nav-link" data-scroll-target="#overview-3">Overview</a></li>
-  <li><a href="#features-3" id="toc-features-3" class="nav-link" data-scroll-target="#features-3">Features</a></li>
-  </ul></li>
-  <li><a href="#iosipados" id="toc-iosipados" class="nav-link" data-scroll-target="#iosipados">iOS/iPadOS</a>
-  <ul class="collapse">
-  <li><a href="#overview-4" id="toc-overview-4" class="nav-link" data-scroll-target="#overview-4">Overview</a></li>
-  <li><a href="#features-4" id="toc-features-4" class="nav-link" data-scroll-target="#features-4">Features</a></li>
-  </ul></li>
+  <li><a href="#what-is-dotenv" id="toc-what-is-dotenv" class="nav-link active" data-scroll-target="#what-is-dotenv">What is Dotenv?</a></li>
+  <li><a href="#setting-up-dotenv" id="toc-setting-up-dotenv" class="nav-link" data-scroll-target="#setting-up-dotenv">Setting Up Dotenv</a></li>
+  <li><a href="#why-use-dotenv" id="toc-why-use-dotenv" class="nav-link" data-scroll-target="#why-use-dotenv">Why Use Dotenv?</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
   </ul>
 </nav>
     </div>
@@ -192,217 +216,80 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="operating_systems.png" class="img-fluid figure-img"></p>
-<figcaption>Thumbnail</figcaption>
+<p><img src="thumbnail.jpg" class="img-fluid figure-img"></p>
+<figcaption>Photo by DATAIDEA</figcaption>
 </figure>
 </div>
-<p>Operating systems are the backbone of modern computing, providing the fundamental software foundation for computers, smartphones, servers, and more. Here’s a comprehensive overview of five prominent operating systems that have made significant impacts in various domains.</p>
-<div class="table-responsive">
-<table class="table table-striped table-bordered">
-<thead class="thead-dark">
-<tr>
-<th>
-Name
-</th>
-<th>
-Supported Architecture
-</th>
-<th>
-Supported Platforms
-</th>
-<th>
-Official Website
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-Windows
-</td>
-<td>
-x86, x64, ARM
-</td>
-<td>
-PC, Server, IoT, etc.
-</td>
-<td>
-<a href="https://www.microsoft.com">Microsoft Windows</a>
-</td>
-</tr>
-<tr>
-<td>
-macOS
-</td>
-<td>
-x86, ARM
-</td>
-<td>
-Mac Computers
-</td>
-<td>
-<a href="https://www.apple.com/macos">Apple macOS</a>
-</td>
-</tr>
-<tr>
-<td>
-Linux
-</td>
-<td>
-x86, ARM, PowerPC, etc.
-</td>
-<td>
-Various
-</td>
-<td>
-<a href="https://www.linuxfoundation.org">Linux Foundation</a>
-</td>
-</tr>
-<tr>
-<td>
-Android
-</td>
-<td>
-ARM
-</td>
-<td>
-Mobile, Tablets, IoT
-</td>
-<td>
-<a href="https://www.android.com">Android</a>
-</td>
-</tr>
-<tr>
-<td>
-iOS/iPadOS
-</td>
-<td>
-ARM
-</td>
-<td>
-iPhone, iPad, iPod
-</td>
-<td>
-<a href="https://www.apple.com/ios">Apple iOS/iPadOS</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
-<!-- inline-square -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<section id="windows" class="level2">
-<h2 class="anchored" data-anchor-id="windows">Windows</h2>
-<section id="overview" class="level3">
-<h3 class="anchored" data-anchor-id="overview">Overview</h3>
-<p>Developed by Microsoft, Windows is one of the most widely used operating systems across PCs, servers, and embedded systems. Known for its user-friendly interface and extensive software compatibility, Windows offers a variety of versions tailored for different devices and use cases.</p>
+<p><strong>Environment variables</strong> are crucial in programming for storing sensitive information, such as API keys, database credentials, or any configuration details that should not be hard-coded into your source code. Using a <code>.env</code> file with <code>dotenv</code> allows you to keep these variables outside of your codebase, making your application more secure and flexible.</p>
+<section id="what-is-dotenv" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-dotenv">What is Dotenv?</h3>
+<p><code>dotenv</code> is a popular package that loads environment variables from a <code>.env</code> file into your application’s environment. This package can be used in various programming environments but is especially common in Node.js and Python projects.</p>
 </section>
-<section id="features" class="level3">
-<h3 class="anchored" data-anchor-id="features">Features</h3>
+<section id="setting-up-dotenv" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-dotenv">Setting Up Dotenv</h3>
+<section id="install-dotenv" class="level4">
+<h4 class="anchored" data-anchor-id="install-dotenv">1. Install Dotenv</h4>
+<p>In Node.js or Python, you can install <code>dotenv</code> as follows:</p>
 <ul>
-<li><strong>GUI</strong>: Graphical User Interface for intuitive navigation.</li>
-<li><strong>Compatibility</strong>: Broad support for software and hardware.</li>
-<li><strong>Security</strong>: Regular updates and security features.</li>
+<li><p><strong>Node.js:</strong> Run the following command in your terminal.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install dotenv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Python:</strong> Install using <code>pip</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install python-dotenv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+</section>
+<section id="create-a-.env-file" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-.env-file">2. Create a <code>.env</code> File</h4>
+<p>In the root directory of your project, create a file named <code>.env</code>. Inside this file, define your environment variables using key-value pairs. For example:</p>
+<pre class="plaintext"><code>API_KEY=your_api_key_here
+DB_HOST=localhost
+DB_USER=user
+DB_PASS=secret_password</code></pre>
+<p>Remember:</p>
+<ul>
+<li>No spaces around the <code>=</code>.</li>
+<li>Add this file to your <code>.gitignore</code> to keep it from being pushed to version control.</li>
+</ul>
+</section>
+<section id="load-environment-variables-in-your-application" class="level4">
+<h4 class="anchored" data-anchor-id="load-environment-variables-in-your-application">3. Load Environment Variables in Your Application</h4>
+<p>Here’s how to load these variables in Node.js and Python.</p>
+<ul>
+<li><p><strong>Node.js:</strong> Add the following at the beginning of your main file (e.g., <code>app.js</code> or <code>index.js</code>).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">require</span>(<span class="st">"dotenv"</span>)<span class="op">.</span><span class="fu">config</span>()<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">// Now you can access the environment variables</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">API_KEY</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Python:</strong> Load the environment variables at the top of your script.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dotenv <span class="im">import</span> load_dotenv</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>load_dotenv()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Now you can access the environment variables</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>api_key <span class="op">=</span> os.getenv(<span class="st">"API_KEY"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(api_key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </section>
 </section>
-<section id="macos" class="level2">
-<h2 class="anchored" data-anchor-id="macos">macOS</h2>
-<section id="overview-1" class="level3">
-<h3 class="anchored" data-anchor-id="overview-1">Overview</h3>
-<p>Exclusive to Apple’s hardware, macOS offers a sleek and intuitive user experience. It is known for its stability, design aesthetics, and seamless integration with other Apple devices and services.</p>
-</section>
-<section id="features-1" class="level3">
-<h3 class="anchored" data-anchor-id="features-1">Features</h3>
+<section id="why-use-dotenv" class="level3">
+<h3 class="anchored" data-anchor-id="why-use-dotenv">Why Use Dotenv?</h3>
 <ul>
-<li><strong>Integration</strong>: Seamless integration with other Apple devices.</li>
-<li><strong>Performance</strong>: Optimized for Mac hardware.</li>
-<li><strong>Security</strong>: Built-in encryption and privacy features.</li>
+<li><strong>Security:</strong> Sensitive data is kept out of the codebase.</li>
+<li><strong>Portability:</strong> You can use different <code>.env</code> files for different environments (e.g., development, testing, production).</li>
+<li><strong>Convenience:</strong> It simplifies configuration management across different environments.</li>
 </ul>
 </section>
-</section>
-<section id="linux" class="level2">
-<h2 class="anchored" data-anchor-id="linux">Linux</h2>
-<section id="overview-2" class="level3">
-<h3 class="anchored" data-anchor-id="overview-2">Overview</h3>
-<p>Linux is an open-source operating system available in various distributions (distros), catering to diverse user needs. Its flexibility, stability, and robustness have made it a favorite among developers, server administrators, and tech enthusiasts.</p>
-</section>
-<section id="features-2" class="level3">
-<h3 class="anchored" data-anchor-id="features-2">Features</h3>
-<ul>
-<li><strong>Open Source</strong>: Community-driven development and customization.</li>
-<li><strong>Variety</strong>: Diverse distributions catering to different needs.</li>
-<li><strong>Stability</strong>: Known for reliability and performance.</li>
-</ul>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
-<!-- inline-square -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</section>
-</section>
-<section id="android" class="level2">
-<h2 class="anchored" data-anchor-id="android">Android</h2>
-<section id="overview-3" class="level3">
-<h3 class="anchored" data-anchor-id="overview-3">Overview</h3>
-<p>Developed by Google, Android is the leading operating system for mobile devices globally. Its open-source nature, customizable interface, and extensive app ecosystem have made it a dominant force in the mobile market.</p>
-</section>
-<section id="features-3" class="level3">
-<h3 class="anchored" data-anchor-id="features-3">Features</h3>
-<ul>
-<li><strong>Customization</strong>: Ability to personalize interface and features.</li>
-<li><strong>App Ecosystem</strong>: Extensive library of applications.</li>
-<li><strong>Integration</strong>: Seamless integration with Google services.</li>
-</ul>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
-<!-- inline-square -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</section>
-</section>
-<section id="iosipados" class="level2">
-<h2 class="anchored" data-anchor-id="iosipados">iOS/iPadOS</h2>
-<section id="overview-4" class="level3">
-<h3 class="anchored" data-anchor-id="overview-4">Overview</h3>
-<p>Exclusive to Apple’s mobile devices, iOS and iPadOS are renowned for their smooth performance, security features, and seamless integration within the Apple ecosystem.</p>
-</section>
-<section id="features-4" class="level3">
-<h3 class="anchored">Features</h3>
-<ul>
-<li><strong>Performance</strong>: Smooth and efficient operation on Apple devices.</li>
-<li><strong>Security</strong>: Robust security measures and privacy controls.</li>
-<li><strong>Ecosystem Integration</strong>: Seamless integration with other Apple devices.</li>
-</ul>
-<p>In conclusion, these operating systems showcase diversity in terms of architecture, platform support, and features, catering to the varied needs of users across different devices and industries.</p>
-<!-- Newsletter -->
-<div style="background-color: #3a6e68; border:1px solid #3a6e68; color: #fff; font-weight: 700; padding-left: 10px; padding-top: 5px; padding-bottom: 5px">
-<strong>Don’t Miss Any Updates!</strong>
-</div>
-<div style="background-color: #f3f4f7; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; padding-right: 10px">
-<p class="pb-1">
-To be among the first to hear about future updates of the course materials, simply enter your email below, follow us on <a href="https://x.com/dataideaorg"><i class="bi bi-twitter-x"></i> (formally Twitter)</a>, or subscribe to our <a href="https://www.youtube.com/@dataideaorg"><i class="bi bi-youtube"></i> YouTube channel</a>.
-</p>
-<iframe src="https://embeds.beehiiv.com/5fc7c425-9c7e-4e08-a514-ad6c22beee74?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent; width: 100%;">
-</iframe>
-</div>
-<h2 class="anchored" data-anchor-id="features-4">
-What’s on your mind? Put it in the comments!
-</h2>
-<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
-</script>
+<section id="best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices">Best Practices</h3>
+<ol type="1">
+<li><strong>Never Commit <code>.env</code> Files:</strong> Use <code>.gitignore</code> to keep <code>.env</code> out of your version control.</li>
+<li><strong>Use Environment Variables for Secrets Only:</strong> Avoid storing non-sensitive data, like configuration that is unlikely to change, in <code>.env</code>.</li>
+<li><strong>Create a <code>.env.example</code> File:</strong> This file should contain all the variable names without values, helping other developers see which variables are needed.</li>
+</ol>
+<hr>
+<p>This tutorial will make it easy for your blog readers to secure their projects with environment variables using <code>dotenv</code>. Let me know if you’d like any more sections or adjustments!</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
