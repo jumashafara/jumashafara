@@ -89,7 +89,3 @@ Here’s how to load these variables in Node.js and Python.
 1. **Never Commit `.env` Files:** Use `.gitignore` to keep `.env` out of your version control.
 2. **Use Environment Variables for Secrets Only:** Avoid storing non-sensitive data, like configuration that is unlikely to change, in `.env`.
 3. **Create a `.env.example` File:** This file should contain all the variable names without values, helping other developers see which variables are needed.
-
----
-
-This tutorial will make it easy for your blog readers to secure their projects with environment variables using `dotenv`. Let me know if you'd like any more sections or adjustments!

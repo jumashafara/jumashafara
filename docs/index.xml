@@ -141,8 +141,6 @@ font-style: inherit;">print</span>(api_key)</span></code></pre></div></li>
 <li><strong>Use Environment Variables for Secrets Only:</strong> Avoid storing non-sensitive data, like configuration that is unlikely to change, in <code>.env</code>.</li>
 <li><strong>Create a <code>.env.example</code> File:</strong> This file should contain all the variable names without values, helping other developers see which variables are needed.</li>
 </ol>
-<hr>
-<p>This tutorial will make it easy for your blog readers to secure their projects with environment variables using <code>dotenv</code>. Let me know if you’d like any more sections or adjustments!</p>
 
 
 </section>
