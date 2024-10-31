@@ -11,6 +11,8 @@ keywords:
   ]
 ---
 
+![Photo by DATAIDEA](thumbnail.jpg)
+
 **Environment variables** are crucial in programming for storing sensitive information, such as API keys, database credentials, or any configuration details that should not be hard-coded into your source code. Using a `.env` file with `dotenv` allows you to keep these variables outside of your codebase, making your application more secure and flexible.
 
 ### What is Dotenv?
