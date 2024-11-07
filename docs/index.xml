@@ -10,7 +10,932 @@
 <atom:link href="https://jumashafara.dataidea.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Juma Shafara&#39;s Blog</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 30 Oct 2024 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 06 Nov 2024 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>React + TypeScript - Navigation</title>
+  <dc:creator>Juma Shafara</dc:creator>
+  <link>https://jumashafara.dataidea.org/posts/2024/react-naviagaion/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jumashafara.dataidea.org/posts/2024/react-naviagaion/react-thumbnails.jpg" class="img-fluid figure-img"></p>
+<figcaption>Image by DATAIDEA</figcaption>
+</figure>
+</div>
+<p>In this guide, we’ll create a new React project with Vite, set up TypeScript, integrate Tailwind CSS for styling, and add a basic navigation bar using React components.</p>
+<section id="step-1-set-up-the-project-with-vite-and-typescript" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-set-up-the-project-with-vite-and-typescript">Step 1: Set Up the Project with Vite and TypeScript</h2>
+<p>First, let’s create our React app using Vite, a fast front-end build tool.</p>
+<ol type="1">
+<li><p>Open your terminal and run:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">npm</span> create vite@latest</span></code></pre></div></li>
+<li><p>You’ll be prompted to name your project. Enter a name, such as <code>react-navigation</code>.</p></li>
+<li><p>Select <strong>React</strong> as the framework and <strong>TypeScript</strong> as the variant.</p></li>
+<li><p>Navigate into the project folder:</p>
+<pre class="bashs"><code>cd react-navigation</code></pre></li>
+<li><p>Install dependencies:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">npm</span> install</span></code></pre></div></li>
+</ol>
+<p>Your project is now set up with Vite and TypeScript!</p>
+</section>
+<section id="step-2-install-and-configure-tailwind-css" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-install-and-configure-tailwind-css">Step 2: Install and Configure Tailwind CSS</h2>
+<p>To add Tailwind CSS for styling:</p>
+<ol type="1">
+<li><p>Install Tailwind and its dependencies:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">npm</span> install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-D</span> tailwindcss postcss autoprefixer</span>
+<span id="cb4-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">npx</span> tailwindcss init <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-p</span></span></code></pre></div></li>
+<li><p>Configure Tailwind by updating the <code>tailwind.config.js</code> file to include your template paths:</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// tailwind.config.js</span></span>
+<span id="cb5-2">module<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">exports</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb5-3">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">content</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./index.html"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./src/**/*.{js,ts,jsx,tsx}"</span>]<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-4">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">theme</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> {</span>
+<span id="cb5-5">    <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">extend</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> {}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-6">  }<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-7">  <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">plugins</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> []<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb5-8">}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div></li>
+<li><p>Add Tailwind’s directives to your CSS file. Open <code>src/index.css</code> and replace its content with:</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/* src/index.css */</span></span>
+<span id="cb6-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">@tailwind</span> base<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb6-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">@tailwind</span> components<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb6-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">@tailwind</span> utilities<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div></li>
+</ol>
+<p>With Tailwind configured, you’re ready to style your app!</p>
+</section>
+<section id="step-3-set-up-react-router" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-set-up-react-router">Step 3: Set Up React Router</h2>
+<p>We’ll use <code>react-router-dom</code> to create navigation between different pages in our app.</p>
+<ol type="1">
+<li><p>Install <code>react-router-dom</code>:</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">npm</span> install react-router-dom</span></code></pre></div></li>
+<li><p>Wrap the app with <code>BrowserRouter</code> in <code>main.tsx</code> to enable routing:</p>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// main.tsx</span></span>
+<span id="cb8-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> React <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb8-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> ReactDOM <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react-dom/client"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb8-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> { BrowserRouter } <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react-router-dom"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb8-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> App <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./App"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb8-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./index.css"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb8-7"></span>
+<span id="cb8-8">ReactDOM<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">createRoot</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">document</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">getElementById</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"root"</span>) <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">HTMLElement</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">render</span>(</span>
+<span id="cb8-9">  <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>React<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">StrictMode</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb8-10">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>BrowserRouter<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb8-11">      <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>App <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span></span>
+<span id="cb8-12">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>BrowserRouter<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb8-13">  <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>React<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">StrictMode</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb8-14">)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div></li>
+</ol>
+</section>
+<section id="step-4-create-basic-page-components" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-create-basic-page-components">Step 4: Create Basic Page Components</h2>
+<p>In the <code>src</code> folder, create a <code>pages</code> folder, and inside it, create three files for the pages of our app:</p>
+<ul>
+<li><strong>Home.tsx</strong></li>
+<li><strong>TermsOfService.tsx</strong></li>
+<li><strong>PrivacyPolicy.tsx</strong></li>
+</ul>
+<p>Each file will export a simple functional component with a title. Here’s an example for each:</p>
+<section id="home.tsx" class="level3">
+<h3 class="anchored" data-anchor-id="home.tsx"><code>Home.tsx</code></h3>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> React <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb9-2"></span>
+<span id="cb9-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> Home<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> React<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">FC</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> () <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">=&gt;</span> {</span>
+<span id="cb9-4">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>h1<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>Home Page<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>h1<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;;</span></span>
+<span id="cb9-5">}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb9-6"></span>
+<span id="cb9-7"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">export</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">default</span> Home<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div>
+</section>
+<section id="termsofservice.tsx" class="level3">
+<h3 class="anchored" data-anchor-id="termsofservice.tsx"><code>TermsOfService.tsx</code></h3>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> React <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb10-2"></span>
+<span id="cb10-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> TermsOfService<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> React<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">FC</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> () <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">=&gt;</span> {</span>
+<span id="cb10-4">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>h1<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>Terms <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">of</span> Service<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>h1<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;;</span></span>
+<span id="cb10-5">}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb10-6"></span>
+<span id="cb10-7"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">export</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">default</span> TermsOfService<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div>
+</section>
+<section id="privacypolicy.tsx" class="level3">
+<h3 class="anchored" data-anchor-id="privacypolicy.tsx"><code>PrivacyPolicy.tsx</code></h3>
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> React <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb11-2"></span>
+<span id="cb11-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> PrivacyPolicy<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> React<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">FC</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> () <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">=&gt;</span> {</span>
+<span id="cb11-4">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>h1<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>Privacy Policy<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>h1<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;;</span></span>
+<span id="cb11-5">}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb11-6"></span>
+<span id="cb11-7"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">export</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">default</span> PrivacyPolicy<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div>
+</section>
+</section>
+<section id="step-5-define-routes-in-app.tsx" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-define-routes-in-app.tsx">Step 5: Define Routes in <code>App.tsx</code></h2>
+<p>With the pages ready, we’ll define routes in <code>App.tsx</code> to make each page accessible.</p>
+<ol type="1">
+<li><p>Import the pages and set up routing using <code>Routes</code> and <code>Route</code> from <code>react-router-dom</code>:</p>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// App.tsx</span></span>
+<span id="cb12-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> React <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb12-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> { Routes<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> Route } <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react-router-dom"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb12-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Home <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./pages/Home"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb12-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> TermsOfService <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./pages/TermsOfService"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb12-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> PrivacyPolicy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./pages/PrivacyPolicy"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb12-7"></span>
+<span id="cb12-8"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> App<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> React<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">FC</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> () <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">=&gt;</span> {</span>
+<span id="cb12-9">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> (</span>
+<span id="cb12-10">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>div<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb12-11">      <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Routes<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb12-12">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Route path<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/"</span> element<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Home <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span>} <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span></span>
+<span id="cb12-13">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Route path<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/terms-of-service"</span> element<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>TermsOfService <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span>} <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span></span>
+<span id="cb12-14">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Route path<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/privacy-policy"</span> element<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>PrivacyPolicy <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span>} <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span></span>
+<span id="cb12-15">      <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>Routes<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb12-16">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>div<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb12-17">  )<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb12-18">}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb12-19"></span>
+<span id="cb12-20"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">export</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">default</span> App<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div></li>
+<li><p>This code enables navigation to:</p>
+<ul>
+<li><strong>Home</strong> at <code>/</code></li>
+<li><strong>Terms of Service</strong> at <code>/terms-of-service</code></li>
+<li><strong>Privacy Policy</strong> at <code>/privacy-policy</code></li>
+</ul></li>
+</ol>
+</section>
+<section id="step-6-create-a-reusable-navbar-component" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-create-a-reusable-navbar-component">Step 6: Create a Reusable Navbar Component</h2>
+<p>Next, let’s build a reusable navigation bar component for our pages.</p>
+<ol type="1">
+<li><p>Inside <code>src</code>, create a <code>components</code> folder, and add a file called <code>Navbar.tsx</code>.</p></li>
+<li><p>In <code>Navbar.tsx</code>, create a functional component with links to each page:</p>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// src/components/Navbar.tsx</span></span>
+<span id="cb13-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> React <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb13-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> { Link } <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react-router-dom"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb13-4"></span>
+<span id="cb13-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> Navbar<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> React<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">FC</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> () <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">=&gt;</span> {</span>
+<span id="cb13-6">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> (</span>
+<span id="cb13-7">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>nav className<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"p-4 bg-blue-500 text-white"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-8">      <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>ul className<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"flex space-x-4"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-9">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>li<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-10">          <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Link to<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>Home<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>Link<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-11">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>li<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-12">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>li<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-13">          <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Link to<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/terms-of-service"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>Terms <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">of</span> Service<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>Link<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-14">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>li<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-15">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>li<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-16">          <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Link to<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/privacy-policy"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span>Privacy Policy<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>Link<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-17">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>li<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-18">      <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>ul<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-19">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>nav<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb13-20">  )<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb13-21">}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb13-22"></span>
+<span id="cb13-23"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">export</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">default</span> Navbar<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div></li>
+</ol>
+<p>This code:</p>
+<ul>
+<li>Defines a <code>Navbar</code> component with links to each page using the <code>Link</code> component from <code>react-router-dom</code>.</li>
+<li>Applies Tailwind classes for basic styling.</li>
+</ul>
+</section>
+<section id="step-7-integrate-the-navbar-in-app.tsx" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-integrate-the-navbar-in-app.tsx">Step 7: Integrate the Navbar in <code>App.tsx</code></h2>
+<p>Finally, we’ll add the <code>Navbar</code> component to <code>App.tsx</code>:</p>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// App.tsx</span></span>
+<span id="cb14-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> React <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb14-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> { Routes<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> Route } <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"react-router-dom"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb14-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Home <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./pages/Home"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb14-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> TermsOfService <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./pages/TermsOfService"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb14-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> PrivacyPolicy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./pages/PrivacyPolicy"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb14-7"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> Navbar <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./components/Navbar"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Import Navbar</span></span>
+<span id="cb14-8"></span>
+<span id="cb14-9"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">const</span> App<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> React<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">FC</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> () <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">=&gt;</span> {</span>
+<span id="cb14-10">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> (</span>
+<span id="cb14-11">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>div<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb14-12">      <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Navbar <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span> {<span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/* Use Navbar component */</span>}</span>
+<span id="cb14-13">      <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Routes<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb14-14">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Route path<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/"</span> element<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Home <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span>} <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span></span>
+<span id="cb14-15">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Route path<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/terms-of-service"</span> element<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>TermsOfService <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span>} <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span></span>
+<span id="cb14-16">        <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Route path<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/privacy-policy"</span> element<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>PrivacyPolicy <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span>} <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/&gt;</span></span>
+<span id="cb14-17">      <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>Routes<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb14-18">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;/</span>div<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb14-19">  )<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb14-20">}<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb14-21"></span>
+<span id="cb14-22"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">export</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">default</span> App<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div>
+<p>This approach makes the <code>Navbar</code> reusable and keeps <code>App.tsx</code> clean and modular.</p>
+</section>
+<section id="testing-the-setup" class="level2">
+<h2 class="anchored" data-anchor-id="testing-the-setup">Testing the Setup</h2>
+<p>Run the app and try navigating between links in the navbar. You should see the page content change without reloading.</p>
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">npm</span> run dev</span></code></pre></div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In this guide, we started from scratch to build a React app using Vite, added TypeScript for type safety, styled with Tailwind CSS, and created a basic navigation bar as a reusable component. By creating and organizing components, we’ve built a foundation for scalable, maintainable code in React.</p>
+<p>This is just the beginning! In future guides, we’ll explore more advanced features, add functionality, and dive deeper into component design.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Reat + TypeScript Series</category>
+  <guid>https://jumashafara.dataidea.org/posts/2024/react-naviagaion/</guid>
+  <pubDate>Wed, 06 Nov 2024 21:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Using Dotenv for Secure Environment Variable Management</title>
   <dc:creator>Juma Shafara</dc:creator>
