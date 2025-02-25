@@ -7,10 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Juma Shafara">
-<meta name="dcterms.date" content="2024-08-11">
-<meta name="description" content="Here’s a brief overview of the key differences, uses, advantages, and disadvantages of SQL and NoSQL databases.">
+<meta name="dcterms.date" content="2025-02-08">
+<meta name="keywords" content="Statistics, Statistics Concepts, Data Science">
+<meta name="description" content="Statistics plays a crucial role in data science, these seven fundamental statistical concepts will serve as your foundation.">
 
-<title>SQL vs.&nbsp;NoSQL Databases – Juma Shafara</title>
+<title>7 Basic Statistics Concepts Every Data Scientist Should Know – Juma Shafara</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,15 +122,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">SQL vs.&nbsp;NoSQL Databases</h1>
+      <h1 class="title">7 Basic Statistics Concepts Every Data Scientist Should Know</h1>
                   <div>
         <div class="description">
-          Here’s a brief overview of the key differences, uses, advantages, and disadvantages of SQL and NoSQL databases.
+          Statistics plays a crucial role in data science, these seven fundamental statistical concepts will serve as your foundation.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Review</div>
-                <div class="quarto-category">Software</div>
+                <div class="quarto-category">Statistics</div>
               </div>
                   </div>
   </div>
@@ -147,13 +148,20 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 11, 2024</p>
+        <p class="date">February 8, 2025</p>
       </div>
     </div>
     
       
     </div>
     
+
+  <div>
+    <div class="keywords">
+      <div class="block-title">Keywords</div>
+      <p>Statistics, Statistics Concepts, Data Science</p>
+    </div>
+  </div>
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
@@ -163,15 +171,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of Contents</h2>
    
   <ul>
-  <li><a href="#understanding-sql-and-nosql" id="toc-understanding-sql-and-nosql" class="nav-link active" data-scroll-target="#understanding-sql-and-nosql">1. Understanding SQL and NoSQL</a></li>
-  <li><a href="#differences-between-sql-and-nosql" id="toc-differences-between-sql-and-nosql" class="nav-link" data-scroll-target="#differences-between-sql-and-nosql">2. Differences Between SQL and NoSQL</a></li>
-  <li><a href="#uses-of-sql-and-nosql" id="toc-uses-of-sql-and-nosql" class="nav-link" data-scroll-target="#uses-of-sql-and-nosql">3. Uses of SQL and NoSQL</a></li>
-  <li><a href="#advantages-and-disadvantages" id="toc-advantages-and-disadvantages" class="nav-link" data-scroll-target="#advantages-and-disadvantages">4. Advantages and Disadvantages</a>
-  <ul class="collapse">
-  <li><a href="#sql" id="toc-sql" class="nav-link" data-scroll-target="#sql">SQL</a></li>
-  <li><a href="#nosql" id="toc-nosql" class="nav-link" data-scroll-target="#nosql">NoSQL</a></li>
-  </ul></li>
-  <li><a href="#which-should-i-choose" id="toc-which-should-i-choose" class="nav-link" data-scroll-target="#which-should-i-choose">5. Which Should I Choose?</a></li>
+  <li><a href="#probability-measuring-uncertainty" id="toc-probability-measuring-uncertainty" class="nav-link active" data-scroll-target="#probability-measuring-uncertainty">1. Probability: Measuring Uncertainty</a></li>
+  <li><a href="#central-tendency-understanding-the-average" id="toc-central-tendency-understanding-the-average" class="nav-link" data-scroll-target="#central-tendency-understanding-the-average">2. Central Tendency: Understanding the Average</a></li>
+  <li><a href="#variability-measuring-data-spread" id="toc-variability-measuring-data-spread" class="nav-link" data-scroll-target="#variability-measuring-data-spread">3. Variability: Measuring Data Spread</a></li>
+  <li><a href="#relationship-between-variables-correlation-and-causation" id="toc-relationship-between-variables-correlation-and-causation" class="nav-link" data-scroll-target="#relationship-between-variables-correlation-and-causation">4. Relationship Between Variables: Correlation and Causation</a></li>
+  <li><a href="#probability-distribution-modeling-data-patterns" id="toc-probability-distribution-modeling-data-patterns" class="nav-link" data-scroll-target="#probability-distribution-modeling-data-patterns">5. Probability Distribution: Modeling Data Patterns</a></li>
+  <li><a href="#hypothesis-testing-and-statistical-significance" id="toc-hypothesis-testing-and-statistical-significance" class="nav-link" data-scroll-target="#hypothesis-testing-and-statistical-significance">6. Hypothesis Testing and Statistical Significance</a></li>
+  <li><a href="#regression-predicting-continuous-outcomes" id="toc-regression-predicting-continuous-outcomes" class="nav-link" data-scroll-target="#regression-predicting-continuous-outcomes">7. Regression: Predicting Continuous Outcomes</a></li>
   </ul>
 </nav>
     </div>
@@ -188,176 +194,64 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Photo by DATAIDEA</figcaption>
 </figure>
 </div>
-<p>When working on a data-driven project, one of the crucial decisions I often face is choosing between SQL and NoSQL databases. Both have their strengths and weaknesses, and the right choice depends on the specific requirements of the project. Here’s a brief overview of the key differences, uses, advantages, and disadvantages of SQL and NoSQL databases.</p>
-<section id="understanding-sql-and-nosql" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-sql-and-nosql">1. Understanding SQL and NoSQL</h2>
+<p>Statistics plays a crucial role in data science. Without a solid grasp of statistical concepts, it becomes challenging to extract meaningful insights from data. Whether you’re building machine learning models, analyzing datasets, or making data-driven decisions, these seven fundamental statistical concepts will serve as your foundation.</p>
+<section id="probability-measuring-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="probability-measuring-uncertainty">1. Probability: Measuring Uncertainty</h2>
+<p>Probability helps us quantify uncertainty and make predictions in the real world, where we often have incomplete information. In machine learning, probability models help us assess risk, understand randomness, and make informed decisions. For example, probability is widely used in financial transactions, recommendation systems, and fraud detection.</p>
+</section>
+<section id="central-tendency-understanding-the-average" class="level2">
+<h2 class="anchored" data-anchor-id="central-tendency-understanding-the-average">2. Central Tendency: Understanding the Average</h2>
+<p>Central tendency refers to measures that summarize a dataset by identifying its center. The three common measures of central tendency are:</p>
 <ul>
-<li><p><strong>SQL (Structured Query Language)</strong> databases are relational databases that use structured query language to define and manipulate data. They are table-based and enforce a predefined schema, ensuring data integrity and consistency.</p></li>
-<li><p><strong>NoSQL (Not Only SQL)</strong> databases are non-relational and can handle a variety of data models, including document, key-value, graph, and column-family. They are more flexible, allowing for dynamic schemas and scalability.</p></li>
+<li><strong>Mean</strong>: The arithmetic average of all values.</li>
+<li><strong>Median</strong>: The middle value when the data is arranged in order.</li>
+<li><strong>Mode</strong>: The most frequently occurring value. These metrics help in understanding the typical value within a dataset.</li>
 </ul>
 </section>
-<section id="differences-between-sql-and-nosql" class="level2">
-<h2 class="anchored" data-anchor-id="differences-between-sql-and-nosql">2. Differences Between SQL and NoSQL</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 48%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Aspect</th>
-<th>SQL Databases</th>
-<th>NoSQL Databases</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Data Model</strong></td>
-<td>Relational (tables with rows and columns)</td>
-<td>Non-relational (documents, key-value, etc.)</td>
-</tr>
-<tr class="even">
-<td><strong>Schema</strong></td>
-<td>Fixed, predefined schema</td>
-<td>Dynamic, flexible schema</td>
-</tr>
-<tr class="odd">
-<td><strong>Query Language</strong></td>
-<td>SQL</td>
-<td>Varies (e.g., MongoDB uses JSON-like queries)</td>
-</tr>
-<tr class="even">
-<td><strong>Transactions</strong></td>
-<td>ACID-compliant (Atomicity, Consistency, Isolation, Durability)</td>
-<td>Often eventually consistent, but not always ACID</td>
-</tr>
-<tr class="odd">
-<td><strong>Scalability</strong></td>
-<td>Vertical (adding more resources to a single server)</td>
-<td>Horizontal (adding more servers)</td>
-</tr>
-<tr class="even">
-<td><strong>Examples</strong></td>
-<td>MySQL, PostgreSQL, Oracle</td>
-<td>MongoDB, Cassandra, Redis</td>
-</tr>
-</tbody>
-</table>
-<!-- Newsletter -->
-<div class="newsletter">
-<div class="newsletter-heading">
-<h4 class="anchored">
-<i class="bi bi-info-circle-fill"></i> Don’t Miss Any Updates!
-</h4>
-</div>
-<div class="newsletter-body">
-<p>
-Before we continue, I have a humble request, to be among the first to hear about future updates of the course materials, simply enter your email below, follow us on <a href="https://x.com/dataideaorg"><i class="bi bi-twitter-x"></i> (formally Twitter)</a>, or subscribe to our <a href="https://www.youtube.com/@dataideaorg"><i class="bi bi-youtube"></i> YouTube channel</a>.
-</p>
-<iframe class="newsletter-frame" src="https://embeds.beehiiv.com/5fc7c425-9c7e-4e08-a514-ad6c22beee74?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no">
-</iframe>
-</div>
-</div>
-</section>
-<section id="uses-of-sql-and-nosql" class="level2">
-<h2 class="anchored" data-anchor-id="uses-of-sql-and-nosql">3. Uses of SQL and NoSQL</h2>
+<section id="variability-measuring-data-spread" class="level2">
+<h2 class="anchored" data-anchor-id="variability-measuring-data-spread">3. Variability: Measuring Data Spread</h2>
+<p>Variability describes how spread out or dispersed the data points are in a dataset. Key measures include:</p>
 <ul>
-<li><p><strong>SQL</strong> is ideal for applications that require multi-row transactions, such as banking systems, enterprise applications, and e-commerce platforms where data integrity is paramount.</p></li>
-<li><p><strong>NoSQL</strong> is perfect for handling large volumes of unstructured or semi-structured data, such as social media, big data analytics, real-time applications, and IoT where scalability and flexibility are crucial.</p></li>
+<li><strong>Range</strong>: The difference between the maximum and minimum values.</li>
+<li><strong>Variance</strong>: Measures how far each data point is from the mean.</li>
+<li><strong>Standard Deviation</strong>: The square root of variance, providing a more interpretable measure of spread. High variability can indicate noise or inconsistencies in data, which might lead to overfitting in machine learning models.</li>
 </ul>
 </section>
-<section id="advantages-and-disadvantages" class="level2">
-<h2 class="anchored" data-anchor-id="advantages-and-disadvantages">4. Advantages and Disadvantages</h2>
-<section id="sql" class="level3">
-<h3 class="anchored" data-anchor-id="sql">SQL</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 47%">
-<col style="width: 52%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>SQL Advantages</strong></th>
-<th><strong>SQL Disadvantages</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Strong consistency and data integrity</td>
-<td>Less flexible due to rigid schema</td>
-</tr>
-<tr class="even">
-<td>Mature technology with extensive tools</td>
-<td>Can struggle with large-scale, distributed systems</td>
-</tr>
-<tr class="odd">
-<td>ACID compliance ensures reliable transactions</td>
-<td>Vertical scalability can become costly</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="nosql" class="level3">
-<h3 class="anchored" data-anchor-id="nosql">NoSQL</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>NoSQL Advantages</strong></th>
-<th><strong>NoSQL Disadvantages</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Highly scalable and flexible</td>
-<td>Weaker consistency, depending on the database</td>
-</tr>
-<tr class="even">
-<td>Handles large volumes of unstructured data</td>
-<td>Less mature with fewer standardized tools</td>
-</tr>
-<tr class="odd">
-<td>Schema-less design allows for rapid iteration</td>
-<td>May require more complex data modeling</td>
-</tr>
-</tbody>
-</table>
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8076040302380238" crossorigin="anonymous"></script>
-<!-- inline-square -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8076040302380238" data-ad-slot="3564352555" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</section>
-</section>
-<section id="which-should-i-choose" class="level2">
-<h2 class="anchored" data-anchor-id="which-should-i-choose">5. Which Should I Choose?</h2>
-<p>In my experience, the choice between SQL and NoSQL depends on the specific needs of the project:</p>
+<section id="relationship-between-variables-correlation-and-causation" class="level2">
+<h2 class="anchored" data-anchor-id="relationship-between-variables-correlation-and-causation">4. Relationship Between Variables: Correlation and Causation</h2>
+<p>Understanding how variables relate to each other is essential in data science. Relationships can be:</p>
 <ul>
-<li><strong>Use SQL</strong> if the project demands strong consistency, complex queries, and structured data with clear relationships.</li>
-<li><strong>Use NoSQL</strong> if the project requires high scalability, flexibility, and the ability to handle large volumes of unstructured data.</li>
+<li><strong>Positive Correlation</strong>: When one variable increases, the other also increases.</li>
+<li><strong>Negative Correlation</strong>: When one variable increases, the other decreases.</li>
+<li><strong>No Correlation</strong>: No apparent relationship between variables. Correlation does not imply causation; a strong relationship between two variables does not mean one causes the other.</li>
 </ul>
-<p>Understanding the trade-offs helps me make an informed decision, ensuring that the database choice aligns with the project’s goals and requirements.</p>
-<h2 class="anchored">
-What’s on your mind? Put it in the comments!
-</h2>
-<script src="https://utteranc.es/client.js" repo="jumashafara/jumashafara" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
-</script>
-<div class="p-3">
-<h2 class="anchored">
-You may also like:
-</h2>
-<a href="../../../posts/2024/warp-review/">
-<h4 class="anchored">
-Warp Review
-</h4>
-</a><p><a href="../../../posts/2024/warp-review/"><img src="../warp-review/thumbnail.jpg" alt="best ai movies" width="100%"> </a></p>
-</div>
+</section>
+<section id="probability-distribution-modeling-data-patterns" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distribution-modeling-data-patterns">5. Probability Distribution: Modeling Data Patterns</h2>
+<p>Probability distributions describe how values in a dataset are distributed. Common types include:</p>
+<ul>
+<li><strong>Normal Distribution</strong>: Bell-shaped curve commonly seen in natural data.</li>
+<li><strong>Binomial Distribution</strong>: Used for binary outcomes (e.g., success/failure).</li>
+<li><strong>Poisson Distribution</strong>: Models rare events over time or space. Understanding probability distributions helps in designing predictive models and analyzing uncertainties in data.</li>
+</ul>
+</section>
+<section id="hypothesis-testing-and-statistical-significance" class="level2">
+<h2 class="anchored" data-anchor-id="hypothesis-testing-and-statistical-significance">6. Hypothesis Testing and Statistical Significance</h2>
+<p>Hypothesis testing is a method for making inferences about data. It involves:</p>
+<ul>
+<li><strong>Null Hypothesis (H₀)</strong>: Assumes no effect or relationship exists.</li>
+<li><strong>Alternative Hypothesis (H₁)</strong>: Suggests an effect or relationship exists.</li>
+<li><strong>P-value</strong>: Helps determine the statistical significance of results. This technique is widely used in A/B testing, model comparison, and scientific experiments.</li>
+</ul>
+</section>
+<section id="regression-predicting-continuous-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="regression-predicting-continuous-outcomes">7. Regression: Predicting Continuous Outcomes</h2>
+<p>Regression analysis is a statistical approach used to model relationships between variables. Common types include:</p>
+<ul>
+<li><strong>Linear Regression</strong>: Predicts a continuous outcome using one or more predictors.</li>
+<li><strong>Logistic Regression</strong>: Used for binary classification problems.</li>
+<li><strong>Multiple Regression</strong>: Uses multiple independent variables to predict an outcome. Regression helps in forecasting trends, making financial predictions, and analyzing dependencies between variables.</li>
+</ul>
 
 
 </section>
