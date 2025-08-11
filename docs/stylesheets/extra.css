@@ -1,0 +1,74 @@
+/* Set primary and accent colors */
+:root {
+    --md-primary-fg-color: #008374;
+    --md-accent-fg-color: #008374;
+}
+
+/* Blog post styling */
+.blog-post {
+    margin-bottom: 2rem;
+}
+
+.blog-post-meta {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Blog listing styles */
+.md-typeset h3 a {
+    text-decoration: none;
+    color: var(--md-primary-fg-color);
+}
+
+.md-typeset h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Blog post excerpts */
+.md-typeset em {
+    color: var(--md-default-fg-color--light);
+    font-style: italic;
+}
+
+/* Blog post separators */
+.md-typeset hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Custom admonition styles */
+.md-typeset .admonition.tip {
+    border-color: #00c853;
+}
+
+.md-typeset .admonition.warning {
+    border-color: #ff9800;
+}
+
+.md-typeset .admonition.info {
+    border-color: #2196f3;
+}
+
+/* Code block enhancements */
+.md-typeset .highlight pre {
+    border-radius: 8px;
+}
+
+/* Table styling */
+.md-typeset table:not([class]) {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation enhancements */
+.md-nav__title {
+    font-weight: 600;
+}
+
+/* Footer customization */
+.md-footer-meta {
+    background-color: var(--md-footer-bg-color);
+} 
