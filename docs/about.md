@@ -30,7 +30,7 @@ I'm always interested in connecting with fellow data scientists, developers, and
 **📱 Mobile:** +256 774 128 257  
 **🌐 Website:** [jumashafara.dataidea.org](https://jumashafara.dataidea.org)  
 **💻 GitHub:** [github.com/jumashafara](https://github.com/jumashafara)  
-**📄 CV:** [View my full CV](/cv/)
+**📄 CV:** [View my full CV](cv/)
 
 ## Let's Connect
 
