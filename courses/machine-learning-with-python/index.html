@@ -1,0 +1,1324 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Master machine learning algorithms and techniques using Python and Scikit-Learn, from supervised learning to model deployment">
+      
+      
+        <meta name="author" content="Juma Shafara">
+      
+      
+        <link rel="canonical" href="https://jumashafara.dataidea.org/courses/machine-learning-with-python/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Machine Learning with Python + Scikit-Learn - Juma Shafara</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#008374" data-md-color-accent="#008374">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#machine-learning-with-python-scikit-learn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Juma Shafara" class="md-header__button md-logo" aria-label="Juma Shafara" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Juma Shafara
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Machine Learning with Python + Scikit-Learn
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="#008374" data-md-color-accent="#008374"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="#008374" data-md-color-accent="#008374"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="#008374" data-md-color-accent="#008374"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jumashafara/jumashafara" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jumashafara/jumashafara
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../projects/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Projects
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Courses
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cv/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CV
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Juma Shafara" class="md-nav__button md-logo" aria-label="Juma Shafara" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Juma Shafara
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jumashafara/jumashafara" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jumashafara/jumashafara
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Courses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#course-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-curriculum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Curriculum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Course Curriculum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#week-1-machine-learning-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1: Machine Learning Fundamentals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-2-supervised-learning-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 2: Supervised Learning - Regression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-3-supervised-learning-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 3: Supervised Learning - Classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-4-advanced-classification-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 4: Advanced Classification Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-5-model-evaluation-and-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 5: Model Evaluation and Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-6-unsupervised-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 6: Unsupervised Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-7-feature-engineering-and-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 7: Feature Engineering and Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-8-advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 8: Advanced Topics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-9-model-deployment-and-mlops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 9: Model Deployment and MLOps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#week-10-capstone-project-and-advanced-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 10: Capstone Project and Advanced Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hands-on Projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hands-on Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-1-house-price-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 1: House Price Prediction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-2-customer-churn-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 2: Customer Churn Prediction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-3-market-segmentation-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 3: Market Segmentation Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-4-recommendation-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 4: Recommendation System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capstone-project-complete-ml-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capstone Project: Complete ML Solution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-world Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-world Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#business-and-finance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business and Finance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healthcare-and-life-sciences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Healthcare and Life Sciences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-and-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology and Internet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marketing-and-retail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketing and Retail
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-and-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools and Technologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools and Technologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Libraries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Course Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practical-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Focus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#career-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Career Preparation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Skills
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Preparation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#career-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Career Outcomes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Career Outcomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job Roles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salary-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salary Expectations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industry-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry Demand
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment-and-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessment and Certification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assessment and Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certification-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certification Value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuing-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuing Education
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="machine-learning-with-python-scikit-learn">Machine Learning with Python + Scikit-Learn<a class="headerlink" href="#machine-learning-with-python-scikit-learn" title="Permanent link">&para;</a></h1>
+<p>Master the art and science of machine learning using Python's most powerful ML library. Build, evaluate, and deploy machine learning models that solve real-world problems.</p>
+<h2 id="course-overview">Course Overview<a class="headerlink" href="#course-overview" title="Permanent link">&para;</a></h2>
+<p>This comprehensive course takes you from machine learning fundamentals to advanced model deployment. Using Scikit-Learn and the broader Python ecosystem, you'll learn to build predictive models, classify data, discover patterns, and create intelligent systems that learn from data.</p>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<p>By the end of this course, you will be able to:</p>
+<ul>
+<li>Understand core machine learning concepts and algorithms</li>
+<li>Build and evaluate supervised learning models</li>
+<li>Apply unsupervised learning techniques for pattern discovery</li>
+<li>Perform feature engineering and selection</li>
+<li>Optimize model performance through hyperparameter tuning</li>
+<li>Deploy machine learning models to production environments</li>
+</ul>
+<h2 id="course-curriculum">Course Curriculum<a class="headerlink" href="#course-curriculum" title="Permanent link">&para;</a></h2>
+<h3 id="week-1-machine-learning-fundamentals">Week 1: Machine Learning Fundamentals<a class="headerlink" href="#week-1-machine-learning-fundamentals" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ML Overview</strong>: Types of machine learning and problem formulation</li>
+<li><strong>Scikit-Learn Ecosystem</strong>: Library structure and key components</li>
+<li><strong>Data Preparation</strong>: Feature scaling, encoding, and preprocessing</li>
+<li><strong>Train-Test Split</strong>: Proper data splitting and validation strategies</li>
+</ul>
+<h3 id="week-2-supervised-learning-regression">Week 2: Supervised Learning - Regression<a class="headerlink" href="#week-2-supervised-learning-regression" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Linear Regression</strong>: Simple and multiple linear regression</li>
+<li><strong>Polynomial Regression</strong>: Non-linear relationships and feature engineering</li>
+<li><strong>Regularization</strong>: Ridge, Lasso, and Elastic Net regression</li>
+<li><strong>Model Evaluation</strong>: Metrics for regression problems</li>
+</ul>
+<h3 id="week-3-supervised-learning-classification">Week 3: Supervised Learning - Classification<a class="headerlink" href="#week-3-supervised-learning-classification" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Logistic Regression</strong>: Binary and multiclass classification</li>
+<li><strong>Decision Trees</strong>: Tree-based classification and interpretation</li>
+<li><strong>Random Forest</strong>: Ensemble methods and feature importance</li>
+<li><strong>Support Vector Machines</strong>: SVM for classification tasks</li>
+</ul>
+<h3 id="week-4-advanced-classification-algorithms">Week 4: Advanced Classification Algorithms<a class="headerlink" href="#week-4-advanced-classification-algorithms" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Naive Bayes</strong>: Probabilistic classification methods</li>
+<li><strong>K-Nearest Neighbors</strong>: Instance-based learning</li>
+<li><strong>Gradient Boosting</strong>: XGBoost and advanced ensemble methods</li>
+<li><strong>Neural Networks</strong>: Multi-layer perceptrons with Scikit-Learn</li>
+</ul>
+<h3 id="week-5-model-evaluation-and-selection">Week 5: Model Evaluation and Selection<a class="headerlink" href="#week-5-model-evaluation-and-selection" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cross-Validation</strong>: K-fold and stratified cross-validation</li>
+<li><strong>Performance Metrics</strong>: Accuracy, precision, recall, F1-score, ROC-AUC</li>
+<li><strong>Confusion Matrices</strong>: Understanding classification errors</li>
+<li><strong>Hyperparameter Tuning</strong>: Grid search and random search</li>
+</ul>
+<h3 id="week-6-unsupervised-learning">Week 6: Unsupervised Learning<a class="headerlink" href="#week-6-unsupervised-learning" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Clustering</strong>: K-means, hierarchical, and DBSCAN clustering</li>
+<li><strong>Dimensionality Reduction</strong>: PCA, t-SNE, and feature selection</li>
+<li><strong>Association Rules</strong>: Market basket analysis and recommendation systems</li>
+<li><strong>Anomaly Detection</strong>: Identifying outliers and unusual patterns</li>
+</ul>
+<h3 id="week-7-feature-engineering-and-selection">Week 7: Feature Engineering and Selection<a class="headerlink" href="#week-7-feature-engineering-and-selection" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Feature Creation</strong>: Polynomial features, interactions, and transformations</li>
+<li><strong>Feature Selection</strong>: Univariate selection, recursive feature elimination</li>
+<li><strong>Feature Importance</strong>: Tree-based and permutation importance</li>
+<li><strong>Handling Categorical Data</strong>: Encoding strategies and best practices</li>
+</ul>
+<h3 id="week-8-advanced-topics">Week 8: Advanced Topics<a class="headerlink" href="#week-8-advanced-topics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Imbalanced Datasets</strong>: SMOTE, class weights, and sampling techniques</li>
+<li><strong>Pipeline Creation</strong>: Scikit-Learn pipelines for reproducible workflows</li>
+<li><strong>Model Persistence</strong>: Saving and loading trained models</li>
+<li><strong>Performance Optimization</strong>: Efficient model training and prediction</li>
+</ul>
+<h3 id="week-9-model-deployment-and-mlops">Week 9: Model Deployment and MLOps<a class="headerlink" href="#week-9-model-deployment-and-mlops" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Model Serialization</strong>: Pickle and joblib for model persistence</li>
+<li><strong>Web APIs</strong>: Flask and FastAPI for model serving</li>
+<li><strong>Containerization</strong>: Docker for model deployment</li>
+<li><strong>Monitoring</strong>: Model performance tracking and drift detection</li>
+</ul>
+<h3 id="week-10-capstone-project-and-advanced-applications">Week 10: Capstone Project and Advanced Applications<a class="headerlink" href="#week-10-capstone-project-and-advanced-applications" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>End-to-End Project</strong>: Complete ML pipeline from data to deployment</li>
+<li><strong>Advanced Techniques</strong>: Ensemble methods and model stacking</li>
+<li><strong>Industry Applications</strong>: Real-world case studies and best practices</li>
+<li><strong>Career Preparation</strong>: Portfolio development and interview preparation</li>
+</ul>
+<h2 id="hands-on-projects">Hands-on Projects<a class="headerlink" href="#hands-on-projects" title="Permanent link">&para;</a></h2>
+<h3 id="project-1-house-price-prediction">Project 1: House Price Prediction<a class="headerlink" href="#project-1-house-price-prediction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Build regression models to predict real estate prices</li>
+<li>Practice feature engineering and model selection</li>
+<li>Compare multiple algorithms and evaluation metrics</li>
+</ul>
+<h3 id="project-2-customer-churn-prediction">Project 2: Customer Churn Prediction<a class="headerlink" href="#project-2-customer-churn-prediction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Develop classification models for customer retention</li>
+<li>Handle imbalanced datasets and business constraints</li>
+<li>Create actionable insights for business stakeholders</li>
+</ul>
+<h3 id="project-3-market-segmentation-analysis">Project 3: Market Segmentation Analysis<a class="headerlink" href="#project-3-market-segmentation-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Apply clustering techniques to customer data</li>
+<li>Discover hidden patterns and customer segments</li>
+<li>Develop targeted marketing strategies based on findings</li>
+</ul>
+<h3 id="project-4-recommendation-system">Project 4: Recommendation System<a class="headerlink" href="#project-4-recommendation-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Build collaborative filtering recommendation engine</li>
+<li>Implement content-based and hybrid approaches</li>
+<li>Evaluate recommendation quality and business impact</li>
+</ul>
+<h3 id="capstone-project-complete-ml-solution">Capstone Project: Complete ML Solution<a class="headerlink" href="#capstone-project-complete-ml-solution" title="Permanent link">&para;</a></h3>
+<ul>
+<li>End-to-end machine learning project of your choice</li>
+<li>Include data collection, preprocessing, modeling, and deployment</li>
+<li>Present findings and demonstrate business value</li>
+</ul>
+<h2 id="real-world-applications">Real-world Applications<a class="headerlink" href="#real-world-applications" title="Permanent link">&para;</a></h2>
+<h3 id="business-and-finance">Business and Finance<a class="headerlink" href="#business-and-finance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Credit Scoring</strong>: Assess loan default risk</li>
+<li><strong>Fraud Detection</strong>: Identify suspicious transactions</li>
+<li><strong>Algorithmic Trading</strong>: Automated investment strategies</li>
+<li><strong>Price Optimization</strong>: Dynamic pricing strategies</li>
+</ul>
+<h3 id="healthcare-and-life-sciences">Healthcare and Life Sciences<a class="headerlink" href="#healthcare-and-life-sciences" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Medical Diagnosis</strong>: Assist in disease detection</li>
+<li><strong>Drug Discovery</strong>: Identify potential therapeutic compounds</li>
+<li><strong>Personalized Medicine</strong>: Tailor treatments to individuals</li>
+<li><strong>Epidemiology</strong>: Track and predict disease outbreaks</li>
+</ul>
+<h3 id="technology-and-internet">Technology and Internet<a class="headerlink" href="#technology-and-internet" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Recommendation Systems</strong>: Personalized content and products</li>
+<li><strong>Search Engines</strong>: Improve search relevance and ranking</li>
+<li><strong>Computer Vision</strong>: Image recognition and analysis</li>
+<li><strong>Natural Language Processing</strong>: Text analysis and understanding</li>
+</ul>
+<h3 id="marketing-and-retail">Marketing and Retail<a class="headerlink" href="#marketing-and-retail" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Customer Segmentation</strong>: Targeted marketing campaigns</li>
+<li><strong>Demand Forecasting</strong>: Inventory optimization</li>
+<li><strong>A/B Testing</strong>: Optimize marketing strategies</li>
+<li><strong>Sentiment Analysis</strong>: Brand monitoring and reputation management</li>
+</ul>
+<h2 id="tools-and-technologies">Tools and Technologies<a class="headerlink" href="#tools-and-technologies" title="Permanent link">&para;</a></h2>
+<h3 id="core-libraries">Core Libraries<a class="headerlink" href="#core-libraries" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scikit-Learn</strong>: Primary machine learning library</li>
+<li><strong>Pandas</strong>: Data manipulation and analysis</li>
+<li><strong>NumPy</strong>: Numerical computing foundation</li>
+<li><strong>Matplotlib/Seaborn</strong>: Data visualization</li>
+</ul>
+<h3 id="advanced-tools">Advanced Tools<a class="headerlink" href="#advanced-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>XGBoost/LightGBM</strong>: Gradient boosting frameworks</li>
+<li><strong>Imbalanced-Learn</strong>: Handling imbalanced datasets</li>
+<li><strong>Optuna</strong>: Hyperparameter optimization</li>
+<li><strong>SHAP</strong>: Model interpretability and explainability</li>
+</ul>
+<h3 id="deployment-tools">Deployment Tools<a class="headerlink" href="#deployment-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Flask/FastAPI</strong>: Web framework for model APIs</li>
+<li><strong>Docker</strong>: Containerization for deployment</li>
+<li><strong>AWS/GCP/Azure</strong>: Cloud platforms for scaling</li>
+<li><strong>MLflow</strong>: Experiment tracking and model management</li>
+</ul>
+<h2 id="course-features">Course Features<a class="headerlink" href="#course-features" title="Permanent link">&para;</a></h2>
+<h3 id="practical-focus">Practical Focus<a class="headerlink" href="#practical-focus" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Real Datasets</strong>: Work with industry-standard datasets</li>
+<li><strong>Business Context</strong>: Understand ML applications in business</li>
+<li><strong>Best Practices</strong>: Learn professional ML development workflows</li>
+<li><strong>Code Quality</strong>: Write clean, maintainable ML code</li>
+</ul>
+<h3 id="interactive-learning">Interactive Learning<a class="headerlink" href="#interactive-learning" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Jupyter Notebooks</strong>: Interactive development environment</li>
+<li><strong>Live Coding</strong>: Follow instructor demonstrations</li>
+<li><strong>Peer Learning</strong>: Collaborate on challenging problems</li>
+<li><strong>Office Hours</strong>: Direct access to instructors</li>
+</ul>
+<h3 id="career-preparation">Career Preparation<a class="headerlink" href="#career-preparation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Portfolio Projects</strong>: Showcase your ML skills</li>
+<li><strong>Industry Insights</strong>: Learn from experienced practitioners</li>
+<li><strong>Interview Preparation</strong>: Technical interview practice</li>
+<li><strong>Networking</strong>: Connect with ML professionals</li>
+</ul>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="technical-skills">Technical Skills<a class="headerlink" href="#technical-skills" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Python Programming</strong>: Solid Python fundamentals</li>
+<li><strong>Data Analysis</strong>: Proficiency with Pandas and NumPy</li>
+<li><strong>Statistics</strong>: Understanding of statistical concepts</li>
+<li><strong>Mathematics</strong>: Basic linear algebra and calculus</li>
+</ul>
+<h3 id="recommended-preparation">Recommended Preparation<a class="headerlink" href="#recommended-preparation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Completion of "Data Analysis with Python" course</li>
+<li>Understanding of probability and statistics</li>
+<li>Familiarity with data visualization</li>
+<li>Basic knowledge of algorithms and data structures</li>
+</ul>
+<h2 id="career-outcomes">Career Outcomes<a class="headerlink" href="#career-outcomes" title="Permanent link">&para;</a></h2>
+<h3 id="job-roles">Job Roles<a class="headerlink" href="#job-roles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Machine Learning Engineer</strong>: Build and deploy ML systems</li>
+<li><strong>Data Scientist</strong>: Extract insights using advanced analytics</li>
+<li><strong>AI Researcher</strong>: Develop new ML algorithms and techniques</li>
+<li><strong>Product Manager (AI/ML)</strong>: Guide AI product development</li>
+</ul>
+<h3 id="salary-expectations">Salary Expectations<a class="headerlink" href="#salary-expectations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Entry Level</strong>: $70,000 - $95,000 annually</li>
+<li><strong>Mid Level</strong>: $95,000 - $130,000 annually</li>
+<li><strong>Senior Level</strong>: $130,000 - $180,000+ annually</li>
+<li><strong>Principal/Staff</strong>: $180,000 - $300,000+ annually</li>
+</ul>
+<h3 id="industry-demand">Industry Demand<a class="headerlink" href="#industry-demand" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>High Growth</strong>: ML roles growing 22% annually</li>
+<li><strong>Diverse Industries</strong>: Opportunities across all sectors</li>
+<li><strong>Remote Work</strong>: Many positions offer remote flexibility</li>
+<li><strong>Startup to Enterprise</strong>: Opportunities at all company sizes</li>
+</ul>
+<h2 id="assessment-and-certification">Assessment and Certification<a class="headerlink" href="#assessment-and-certification" title="Permanent link">&para;</a></h2>
+<h3 id="evaluation-methods">Evaluation Methods<a class="headerlink" href="#evaluation-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Weekly Assignments</strong>: Hands-on ML implementation exercises</li>
+<li><strong>Project Portfolio</strong>: Collection of ML projects</li>
+<li><strong>Peer Reviews</strong>: Collaborative learning and code review</li>
+<li><strong>Final Capstone</strong>: Comprehensive ML solution</li>
+</ul>
+<h3 id="certification-value">Certification Value<a class="headerlink" href="#certification-value" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Industry Recognition</strong>: Credential valued by top employers</li>
+<li><strong>Skill Verification</strong>: Demonstrate ML proficiency</li>
+<li><strong>Portfolio Enhancement</strong>: Professional project showcase</li>
+<li><strong>Career Advancement</strong>: Qualification for ML roles</li>
+</ul>
+<h3 id="continuing-education">Continuing Education<a class="headerlink" href="#continuing-education" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Deep Learning</strong>: Advanced neural networks with PyTorch</li>
+<li><strong>MLOps Specialization</strong>: Production ML systems</li>
+<li><strong>Domain Expertise</strong>: Industry-specific ML applications</li>
+<li><strong>Research Opportunities</strong>: Academic and industrial research</li>
+</ul>
+<hr />
+<p><strong>Launch your machine learning career!</strong> This course provides the comprehensive skills and practical experience needed to succeed as an ML professional in today's AI-driven world.</p>
+<p><em>Join the next generation of machine learning practitioners and help build the future of intelligent systems.</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
