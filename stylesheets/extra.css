@@ -1,0 +1,281 @@
+/* Set primary and accent colors */
+:root {
+    --md-primary-fg-color: #008374;
+    --md-accent-fg-color: #008374;
+}
+
+/* Blog post styling */
+.blog-post {
+    margin-bottom: 2rem;
+}
+
+.blog-post-meta {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Blog listing styles */
+.md-typeset h3 a {
+    text-decoration: none;
+    color: var(--md-primary-fg-color);
+}
+
+.md-typeset h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Blog post excerpts */
+.md-typeset em {
+    color: var(--md-default-fg-color--light);
+    font-style: italic;
+}
+
+/* Blog post separators */
+.md-typeset hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Custom admonition styles */
+.md-typeset .admonition.tip {
+    border-color: #00c853;
+}
+
+.md-typeset .admonition.warning {
+    border-color: #ff9800;
+}
+
+.md-typeset .admonition.info {
+    border-color: #2196f3;
+}
+
+/* Code block enhancements */
+.md-typeset .highlight pre {
+    border-radius: 8px;
+}
+
+/* Table styling */
+.md-typeset table:not([class]) {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation enhancements */
+.md-nav__title {
+    font-weight: 600;
+}
+
+/* Footer customization */
+.md-footer-meta {
+    background-color: var(--md-footer-bg-color);
+} 
+/* H
+ome page enhancements */
+.home-section {
+    margin: 2.5rem 0;
+    padding: 1.5rem 0;
+}
+
+.home-section h2 {
+    color: var(--md-primary-fg-color);
+    border-bottom: 2px solid var(--md-primary-fg-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Project and course cards */
+.project-card, .course-card {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.project-card:hover, .course-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 131, 116, 0.15);
+    transform: translateY(-2px);
+}
+
+.project-card h3, .course-card h3 {
+    margin-top: 0;
+    color: var(--md-primary-fg-color);
+}
+
+.project-meta, .course-meta {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.project-links, .course-links {
+    margin-top: 1rem;
+}
+
+.project-links a, .course-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-links a:hover, .course-links a:hover {
+    text-decoration: underline;
+}
+
+/* Technology tags */
+.tech-tags {
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: var(--md-primary-fg-color);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin: 0.2rem 0.3rem 0.2rem 0;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status-completed {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.status-in-progress {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.status-planned {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+/* Difficulty badges */
+.difficulty-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.difficulty-beginner {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.difficulty-intermediate {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.difficulty-advanced {
+    background: #ffebee;
+    color: #c62828;
+}
+
+/* Featured content highlighting */
+.featured-content {
+    border-left: 4px solid var(--md-primary-fg-color);
+    padding-left: 1rem;
+    background: rgba(0, 131, 116, 0.05);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Call-to-action buttons */
+.cta-button {
+    display: inline-block;
+    background: var(--md-primary-fg-color);
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #006b5d;
+}
+
+/* Filter sections */
+.filter-section {
+    background: var(--md-code-bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.filter-section h3 {
+    margin-top: 0;
+    color: var(--md-primary-fg-color);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .project-card, .course-card {
+        padding: 1rem;
+    }
+    
+    .project-links a, .course-links a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .tech-tag {
+        margin: 0.2rem 0.2rem 0.2rem 0;
+    }
+}
+
+/* Blog post preview styling */
+.blog-preview {
+    border-left: 3px solid var(--md-primary-fg-color);
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+.blog-preview h3 {
+    margin-top: 0;
+}
+
+.blog-date {
+    color: var(--md-default-fg-color--light);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Social links styling */
+.social-links {
+    margin: 1.5rem 0;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
