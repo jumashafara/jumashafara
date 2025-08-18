@@ -4,9 +4,9 @@ site_author: Juma Shafara
 site_url: https://jumashafara.dataidea.org/
 
 # Repository
-repo_name: jumashafara/jumashafara
-repo_url: https://github.com/jumashafara/jumashafara
-edit_uri: edit/main/docs/
+# repo_name: jumashafara/jumashafara
+# repo_url: https://github.com/jumashafara/jumashafara
+# edit_uri: edit/main/docs/
 
 # Theme
 theme:
