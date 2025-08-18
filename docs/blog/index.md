@@ -13,13 +13,6 @@ _Explore topics including:_
 
 ---
 
-## Categories
-
-Browse posts by category to find content that interests you most:
-
-- [Statistics](../category/statistics/)
-- [Data Science](../category/data-science/)
-
 ## Search & Filter
 
 Use the search functionality above to find specific topics or keywords across all blog posts.
