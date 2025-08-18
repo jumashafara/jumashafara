@@ -15,14 +15,11 @@ Currently, I'm teaching **Programming for Data Science** - a comprehensive cours
 
 ---
 
-## 📝 Latest Blog Posts
+## 📝 Featured Blog Post
 
-Here are my most recent articles and insights:
+# [What Teaching Programming Taught Me About Learning — Lessons from *Learning How to Learn*](/blog/2025/07/30/what-teaching-programming-taught-me-about-learning--lessons-from-learning-how-to-learn/)
 
-### [7 Basic Statistics Concepts Every Data Scientist Should Know](posts/01_statistical_concepts_for_data_science/)
-*July 30, 2025*
-
-Statistics plays a crucial role in data science. This comprehensive guide covers the fundamental statistical concepts that every data scientist should master, from probability and central tendency to hypothesis testing and regression analysis.
+As a programming educator, one thing I’ve realized is that teaching code is less about syntax and more about **helping people learn how to learn**. Programming is a field where you’re constantly picking up new ... [Read full post](/blog/2025/07/30/what-teaching-programming-taught-me-about-learning--lessons-from-learning-how-to-learn/)
 
 ---
 
@@ -32,13 +29,7 @@ Statistics plays a crucial role in data science. This comprehensive guide covers
 
 ---
 
-## 🚀 Featured Projects
-
-Explore some of my notable work and technical achievements:
-
-### [Open Price Engine API](projects/open-price-engine-api/)
-A comprehensive resource providing real-time & historical food, groceries, restaurant and retail energy prices with a simple API interface.  
-**Technologies**: Django, Python, PostgreSQL, FastAPI, AWS
+## 🚀 Featured Project
 
 ### [Dataidea Logger](projects/dataidea-logger/)
 Full-stack logging platform to track and visualize user and system events, designed for educational and analytical environments.  
@@ -50,19 +41,14 @@ Full-stack logging platform to track and visualize user and system events, desig
 
 ---
 
-## 🎓 Featured Courses
+## 🎓 Featured Course
 
-Learn with me through these comprehensive educational programs:
+## 🎓 Featured Course
 
-### [Python Programming](courses/python-programming/)
-Master Python programming fundamentals from basics to advanced concepts, building a solid foundation for data science and web development.  
-**Level**: Beginner | **Duration**: 6 weeks  
-**Topics**: Python Basics, Data Structures, Functions, OOP, File Handling
-
-### [Data Analysis with Python](courses/data-analysis-with-python/)
-Learn to analyze, manipulate, and visualize data using Python's powerful libraries including Pandas, NumPy, and Matplotlib.  
-**Level**: Intermediate | **Duration**: 8 weeks  
-**Topics**: Pandas, NumPy, Data Cleaning, Data Visualization, Statistical Analysis
+### [Programming for Data Science](courses/programming-for-data-science/)
+Learn the core programming skills every data scientist needs. This course introduces you to Python from the ground up, focusing on writing clean code, working with data structures, and building a strong foundation for data analysis and machine learning.  
+**Level**: Beginner to Intermediate | **Duration**: Self-paced  
+**Topics**: Python Basics, Functions, Data Structures, Object-Oriented Programming, Introduction to Libraries (NumPy & Pandas)
 
 ---
 
@@ -75,7 +61,7 @@ Learn to analyze, manipulate, and visualize data using Python's powerful librari
 Ready to collaborate or learn together? Here's how to reach me:
 
 - **Essential Links**: [linktr.ee/jumashafara](https://linktr.ee/jumashafara)
-- **Twitter**: [@jumashafara](https://twitter.com/jumashafara)
+- **Twitter**: [@juma_shafara](https://twitter.com/jumashafara)
 - **LinkedIn**: [jumashafara](https://www.linkedin.com/in/jumashafara/)
 - **GitHub**: [jumashafara](https://github.com/jumashafara)
 
