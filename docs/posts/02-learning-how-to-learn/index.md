@@ -1,8 +1,7 @@
 ---
-date: 2025-07-30
+date: 2025-08-18
 categories:
-  - Statistics
-  - Data Science
+  - Motivation
 authors:
   - jumashafara
 featured: true
