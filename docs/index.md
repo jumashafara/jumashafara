@@ -31,7 +31,7 @@ As a programming educator, one thing I’ve realized is that teaching code is le
 
 ## 🚀 Featured Project
 
-### [Dataidea Logger](projects/dataidea-logger/)
+# [Dataidea Logger](projects/dataidea-logger/)
 Full-stack logging platform to track and visualize user and system events, designed for educational and analytical environments.  
 **Technologies**: React, TypeScript, Django, Python, PostgreSQL, REST API
 
@@ -43,9 +43,7 @@ Full-stack logging platform to track and visualize user and system events, desig
 
 ## 🎓 Featured Course
 
-## 🎓 Featured Course
-
-### [Programming for Data Science](courses/programming-for-data-science/)
+# [Programming for Data Science](courses/programming-for-data-science/)
 Learn the core programming skills every data scientist needs. This course introduces you to Python from the ground up, focusing on writing clean code, working with data structures, and building a strong foundation for data analysis and machine learning.  
 **Level**: Beginner to Intermediate | **Duration**: Self-paced  
 **Topics**: Python Basics, Functions, Data Structures, Object-Oriented Programming, Introduction to Libraries (NumPy & Pandas)
