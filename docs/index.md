@@ -17,9 +17,9 @@ Currently, I'm teaching **Programming for Data Science** - a comprehensive cours
 
 ## 📝 Featured Blog Post
 
-# [What Teaching Programming Taught Me About Learning — Lessons from *Learning How to Learn*](/blog/2025/07/30/what-teaching-programming-taught-me-about-learning--lessons-from-learning-how-to-learn/)
+# [What Teaching Programming Taught Me About Learning — Lessons from *Learning How to Learn*](/blog/2025/08/18/what-teaching-programming-taught-me-about-learning--lessons-from-learning-how-to-learn/)
 
-As a programming educator, one thing I’ve realized is that teaching code is less about syntax and more about **helping people learn how to learn**. Programming is a field where you’re constantly picking up new ... [Read full post](/blog/2025/07/30/what-teaching-programming-taught-me-about-learning--lessons-from-learning-how-to-learn/)
+As a programming educator, one thing I’ve realized is that teaching code is less about syntax and more about **helping people learn how to learn**. Programming is a field where you’re constantly picking up new ... [Read full post](/blog/2025/08/18/what-teaching-programming-taught-me-about-learning--lessons-from-learning-how-to-learn/)
 
 ---
 
