@@ -2,78 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jumashafara.dataidea.org/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/about/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/cv/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/blog/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/courses/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/courses/data-analysis-with-python/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/courses/deep-learning-with-pytorch/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/courses/machine-learning-with-python/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/courses/python-programming/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/courses/web-development-python-javascript/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/includes/mkdocs/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/blog/2025/07/30/7-basic-statistics-concepts-every-data-scientist-should-know/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
-         <loc>https://jumashafara.dataidea.org/blog/2025/07/30/what-teaching-programming-taught-me-about-learning--lessons-from-learning-how-to-learn/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <loc>https://jumashafara.dataidea.org/blog/2025/08/18/what-teaching-programming-taught-me-about-learning--lessons-from-learning-how-to-learn/</loc>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/projects/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/projects/dataidea-logger/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/projects/open-price-engine-api/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/projects/programming-for-data-science-course/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jumashafara.dataidea.org/blog/category/motivation/</loc>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/blog/category/statistics/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
     <url>
          <loc>https://jumashafara.dataidea.org/blog/category/data-science/</loc>
-         <lastmod>2025-08-18</lastmod>
+         <lastmod>2025-08-19</lastmod>
     </url>
 </urlset>
