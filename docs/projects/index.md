@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Projects
 
 Welcome to my project portfolio! Here you'll find a collection of my work spanning data science, web development, and technical projects.

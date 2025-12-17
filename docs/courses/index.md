@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Courses
 
 Explore my educational content and courses designed to help you master data science, programming, and technical skills.

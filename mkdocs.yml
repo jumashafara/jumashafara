@@ -14,30 +14,21 @@ theme:
     material
     # palette
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
+    # Palette toggle for dark mode (default)
+    - scheme: slate
       toggle:
-        icon: material/brightness-auto
+        icon: material/brightness-4
         name: Switch to light mode
-      primary: "#008374"
-      accent: "#008374"
+      primary: grey
+      accent: grey
 
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-      primary: "#008374"
-      accent: "#008374"
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
-      primary: "#008374"
-      accent: "#008374"
+      primary: grey
+      accent: grey
   features:
     - navigation.tabs
     - navigation.sections

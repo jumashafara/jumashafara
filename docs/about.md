@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # About Me
 
 Hello! I'm **Juma Shafara**, a passionate Data Scientist and Instructor based in Uganda. With over 4 years of experience in data analysis, machine learning, and web development, I'm dedicated to leveraging data to solve real-world problems in education, environment, and finance sectors.

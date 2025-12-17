@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Blog
 
 Welcome to my blog! Here I share insights, tutorials, and thoughts on data science, programming, and technology.

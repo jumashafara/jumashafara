@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Welcome to My World! 👋
 
 Hello, I'm **Juma Shafara**, a passionate Data Scientist at [Raising the Village](https://raisingthevillage.org) and Instructor at [DATAIDEA](https://www.dataidea.org/). 

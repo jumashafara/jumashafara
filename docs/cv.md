@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Juma Shafara
 
 **Data Scientist, Instructor**
