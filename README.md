@@ -118,10 +118,21 @@ A comprehensive course designed to equip learners with essential skills in:
 <!-- BLOG-POST-LIST:START -->
 <div align="left">
 
-📝 [**Scikit-Learn Unsupervised Machine Learning**](https://blog.dataidea.org/posts/sklearn_unsupervised_learning/)
-*A comprehensive guide to unsupervised learning techniques using Scikit-Learn*
+### 📝 Recent Articles
 
-🔗 [**Visit My Blog**](https://blog.dataidea.org) for more articles on Data Science, Machine Learning, and Web Development
+**[What Teaching Programming Taught Me About Learning — Lessons from Learning How to Learn](https://jumashafara.dataidea.org/blog/posts/02-learning-how-to-learn/)**
+*Published: August 18, 2025*
+As a programming educator, one thing I've realized is that teaching code is less about syntax and more about helping people learn how to learn. A reflection on the powerful lessons from Barbara Oakley's "Learning How to Learn" and how they apply to programming education.
+
+---
+
+**[7 Basic Statistics Concepts Every Data Scientist Should Know](https://jumashafara.dataidea.org/blog/posts/01-statistical-concepts/)**
+*Published: July 30, 2025*
+A comprehensive guide covering fundamental statistical concepts that every data scientist should master, from probability and central tendency to hypothesis testing and regression analysis.
+
+---
+
+🔗 [**Visit My Blog**](https://jumashafara.dataidea.org/blog/) for more articles on Data Science, Machine Learning, Web Development, and Learning Strategies
 
 </div>
 <!-- BLOG-POST-LIST:END -->
