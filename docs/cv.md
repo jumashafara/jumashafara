@@ -12,10 +12,12 @@ hide:
 **Email:** jumashafara0@gmail.com  
 **Github:** [github.com/jumashafara](https://github.com/jumashafara)
 
+---
 ## Profile
 
-Data Scientist with 4+ years of experience in data analysis, machine learning, predictive modeling and web development. Passionate about leveraging data to solve problems in education, environment, and finance sectors. Proven instructor with 2+ years of experience teaching programming for data science.
+Data Scientist with 4+ years of experience in data analysis, machine learning, predictive modeling and web development. Passionate about leveraging data to solve problems in education, environment, and finance sectors. Proven instructor with 2+ years of experience teaching programming for data science. 
 
+---
 ## Education & Qualifications
 
 **2019 – 2022**  
@@ -26,7 +28,7 @@ St Joseph's Senior Secondary School Naggalama, Uganda: Advanced Level of Educati
 
 **2013 – 2016**  
 St Peter's College Tororo, Uganda: Ordinary Level of Education
-
+---
 ## Technical Skills
 
 - **Programming:** Python, JavaScript
@@ -36,13 +38,8 @@ St Peter's College Tororo, Uganda: Ordinary Level of Education
 - **Database Management:** PostgreSQL, MongoDB
 - **Project Management and Cloud Platforms:** Clickup, GitHub, AWS
 
+---
 ## Professional Experience
-
-### Centre For Policy Analysis: Consultant (Website Development)
-**August 2025 - Present**
-
-- Leading the redevelopment of CEPA's official websites to use the latest technologies and conventions and in the process rebranded the organization's online presence, doubling the targeted visits.
-- Guiding the revamp of the Parliament Watch website, reorganizing the structure of the records the organization was keeping from the proceedings of the Ugandan parliament
 
 ### Raising The Village, Uganda: Data Scientist
 **October 2024 - Present**
@@ -53,6 +50,12 @@ St Peter's College Tororo, Uganda: Ordinary Level of Education
 - Managing data processing pipelines, building a package to improve retrieval time, perform data wrangling and EDA, and communicate insights via data visualizations using Python.
 - Building interactive interfaces to streamline model interaction, accessibility and interpretability.
 
+### Centre For Policy Analysis: Consultant (Website Development)
+**August 2025 - Present**
+
+- Leading the redevelopment of CEPA's official websites to use the latest technologies and conventions and in the process rebranded the organization's online presence, doubling the targeted visits.
+- Guiding the revamp of the Parliament Watch website, reorganizing the structure of the records the organization was keeping from the proceedings of the Ugandan parliament
+
 ### East African Statistics Institute, Uganda: Systems Administrator (Part Time)
 **July 2024 - Present**
 
@@ -62,7 +65,7 @@ St Peter's College Tororo, Uganda: Ordinary Level of Education
 - Conducting training on Data Science and how to use AI tools to increase productivity is day-to-day tasks including planning, researching among others.
 
 ### DATAIDEA, Uganda: Data Scientist, Instructor
-**September 2022 - October 2024**
+**September 2022 - Present**
 
 - Designed and implemented educational content (courses, datasets) and an online student assessment platform, improving efficiency by decreasing interaction time by 30%.
 - Designed and delivered training sessions in programming and data science for 100s of learners across various levels.
@@ -88,6 +91,7 @@ St Peter's College Tororo, Uganda: Ordinary Level of Education
 - Conducted a comprehensive analysis of internet usage patterns in Uganda, identifying key trends and recommendations for policy improvements.
 - Built statistical models that helped identify the significant factors determining levels and trends of internet use in Uganda
 
+---
 ## Other Projects
 
 ### Open Price Engine API
@@ -111,6 +115,7 @@ Developed a full-stack logging platform to track and visualize user and system e
 
 **View Live:** [logger.dataidea.org](https://logger.dataidea.org)
 
+---
 ## Certificates
 
 ### Deep Learning Specialization: Coursera (deeplearning.ai) – Taught by Andrew Ng
@@ -145,6 +150,7 @@ Developed a full-stack logging platform to track and visualize user and system e
 - The project management life cycle and methodologies
 - Organizational structure and culture
 
+---
 ## Languages
 
 - **English** — Full Professional Proficiency
@@ -152,6 +158,7 @@ Developed a full-stack logging platform to track and visualize user and system e
 - **Luganda** — Native Proficiency
 - **Lusoga** — Native Proficiency
 
+---
 ## References
 
 **Dr Olimi Expedito**  
