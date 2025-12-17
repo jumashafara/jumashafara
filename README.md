@@ -102,7 +102,7 @@ A comprehensive course designed to equip learners with essential skills in:
 <table>
 <tr>
   <td colspan="2" align="center">
-    <img width="900"
+    <img width="800"
       src="https://github-readme-stats.vercel.app/api?username=jumashafara&show_icons=true&hide_border=true&bg_color=1a1a1a&title_color=008374&icon_color=008374&text_color=e0e0e0&ring_color=008374&include_all_commits=true&count_private=true&theme=github_dark" />
   </td>
 </tr>
