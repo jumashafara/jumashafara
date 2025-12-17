@@ -113,7 +113,7 @@ A comprehensive course designed to equip learners with essential skills in:
 <img width="450" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumashafara&layout=compact&hide_border=true&bg_color=1a1a1a&title_color=008374&text_color=e0e0e0&langs_count=8" />
 </td>
 <td align="center">
-<img width="450" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jumashafara&theme=nord_dark&utcOffset=3" />
+<img width="450" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jumashafara&theme=gray&utcOffset=3" />
 </td>
 </tr>
 </table>
