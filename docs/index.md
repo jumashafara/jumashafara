@@ -5,19 +5,18 @@ hide:
 
 # Welcome to My World! 👋
 
-Hello, I'm **Juma Shafara**, a passionate Data Scientist at [Raising the Village](https://raisingthevillage.org) and Instructor at [DATAIDEA](https://www.dataidea.org/). 
+Hello, I'm **Juma Shafara**, a passionate Data Scientist with 4+ years of experience in data analysis, machine learning, predictive modeling and web development. I'm currently a Data Scientist at [Raising the Village](https://raisingthevillage.org), and an Instructor at [DATAIDEA](https://www.dataidea.org), teaching people [Programming for Data Science](https://science.dataidea.org)
 
-I specialize in transforming complex data into actionable insights and empowering others through education. My expertise spans across Python programming, JavaScript development, data science, web development, and technical writing.
+I'm passionate about leveraging data to solve problems in education, environment, and finance sectors, and I'm a proven instructor with 2+ years of experience teaching programming for data science.
+
+My expertise spans across Python programming, JavaScript development, data science, web development, and technical writing. 
 
 ## What I Do
 
 🔸 **Data Science**: Building predictive models, conducting statistical analysis, and creating data-driven solutions  
 🔸 **Education**: Teaching programming and data science to aspiring professionals  
 🔸 **Development**: Creating web applications and automation tools  
-🔸 **Technical Writing**: Sharing knowledge through blogs, tutorials, and documentation  
-
-Currently, I'm teaching **Programming for Data Science** - a comprehensive course designed to equip students with the skills needed to thrive in the data science field.
-
+🔸 **Technical Writing**: Sharing knowledge through blogs, tutorials, and documentation
 ---
 
 ## 📝 Featured Blog Post
