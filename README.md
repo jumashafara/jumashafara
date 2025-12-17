@@ -18,9 +18,9 @@ I'm a passionate Data Scientist and Instructor who loves turning data into insig
 ### 🌐 Connect With Me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jumashafara/)
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/jumashafara)
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/juma_shafara)
 [![Website](https://img.shields.io/badge/Website-008374?style=for-the-badge&logo=google-chrome&logoColor=white)](https://jumashafara.dataidea.org/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jumashafara@gmail.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jumashafara0@gmail.com)
 
 ![Profile Views](https://komarev.com/ghpvc/?username=jumashafara&color=008374&style=for-the-badge&label=Profile+Views)
 [![GitHub Followers](https://img.shields.io/github/followers/jumashafara?style=for-the-badge&color=008374&labelColor=1a1a1a)](https://github.com/jumashafara)
