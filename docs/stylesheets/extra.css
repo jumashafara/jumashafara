@@ -155,6 +155,45 @@ code, pre, .highlight, .highlight pre, .md-typeset code, .md-typeset pre {
 /* Footer customization */
 .md-footer-meta {
     background-color: var(--md-footer-bg-color);
+}
+
+/* Enhanced footer copyright styling */
+.md-footer-copyright {
+    color: #b0b0b0 !important;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.md-footer-copyright__highlight {
+    color: #008374 !important;
+    font-weight: 600;
+}
+
+/* Style DATAIDEA in footer */
+.md-footer-copyright:has(text) {
+    font-weight: 500;
+}
+
+/* Additional footer styling to match header */
+.md-footer {
+    background-color: #2a2a2a !important;
+}
+
+.md-footer-meta {
+    background-color: #2a2a2a !important;
+}
+
+/* Style footer links */
+.md-footer-copyright a {
+    color: #008374 !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.md-footer-copyright a:hover {
+    color: #00a592 !important;
+    text-decoration: underline;
 } 
 /* H
 ome page enhancements */

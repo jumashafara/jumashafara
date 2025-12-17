@@ -63,10 +63,8 @@ Learn the core programming skills every data scientist needs. This course introd
 Ready to collaborate or learn together? Here's how to reach me:
 
 - **Essential Links**: [linktr.ee/jumashafara](https://linktr.ee/jumashafara)
-- **Twitter**: [@juma_shafara](https://twitter.com/jumashafara)
-- **LinkedIn**: [jumashafara](https://www.linkedin.com/in/jumashafara/)
-- **GitHub**: [jumashafara](https://github.com/jumashafara)
-
+- **Email**: [jumashafara0gmail.com](mailto:jumashafara0@gmail.com)
+- **Contact**: [+256774128257](tel:+256774128257)
 ---
 
 *Thank you for visiting! Explore the site to discover more about my work, read my latest insights, and find learning opportunities that can help advance your career in data science and technology.*

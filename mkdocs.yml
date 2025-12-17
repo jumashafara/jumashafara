@@ -10,25 +10,12 @@ site_url: https://jumashafara.dataidea.org/
 
 # Theme
 theme:
-  name:
-    material
-    # palette
+  name: material
   palette:
-    # Palette toggle for dark mode (default)
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-      primary: grey
-      accent: grey
-
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-      primary: grey
-      accent: grey
+    scheme: slate
+    primary: grey
+    accent: grey
+  logo: https://github.com/jumashafara.png
   features:
     - navigation.tabs
     - navigation.sections
@@ -39,9 +26,15 @@ theme:
     - content.code.copy
     - content.code.annotate
   icon:
-    # repo: fontawesome/brands/github
+    repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye
+
+# Copyright notice
+copyright: Powered by <a href="https://www.dataidea.org" target="_blank" rel="noopener">DATAIDEA</a>
+
+extra:
+  generator: false
 
 # Navigation
 nav:
@@ -76,6 +69,7 @@ extra_css:
 # Extra JavaScript
 extra_javascript:
   - javascripts/mathjax.js
+  - javascripts/footer.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
