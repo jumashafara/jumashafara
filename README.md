@@ -101,22 +101,23 @@ A comprehensive course designed to equip learners with essential skills in:
 
 <table>
 <tr>
-<td width="50%" align="center">
-<img width="100%" height="200px" src="https://github-readme-stats.vercel.app/api?username=jumashafara&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&icon_color=008374&text_color=e0e0e0&include_all_commits=true&count_private=true" />
+<td align="center">
+<img width="450" src="https://github-readme-stats.vercel.app/api?username=jumashafara&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&icon_color=008374&text_color=e0e0e0&include_all_commits=true&count_private=true" />
 </td>
-<td width="50%" align="center">
-<img width="100%" height="200px" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jumashafara&theme=tokyonight&utcOffset=3" />
+<td align="center">
+<img width="450" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jumashafara&theme=tokyonight&utcOffset=3" />
 </td>
 </tr>
 <tr>
-<td width="50%" align="center">
-<img width="100%" height="200px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumashafara&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&text_color=e0e0e0&langs_count=8" />
+<td align="center">
+<img width="450" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumashafara&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&text_color=e0e0e0&langs_count=8" />
 </td>
-<td width="50%" align="center">
-<img width="100%" height="200px" src="https://github-readme-activity-graph.vercel.app/graph?username=jumashafara&theme=tokyo-night&hide_border=true&bg_color=1a1a1a&color=008374&line=008374&point=e0e0e0" />
+<td align="center">
+<img width="450" src="https://github-readme-activity-graph.vercel.app/graph?username=jumashafara&theme=tokyo-night&hide_border=true&bg_color=1a1a1a&color=008374&line=008374&point=e0e0e0" />
 </td>
 </tr>
 </table>
+
 
 ### 🐍 Contribution Snake
 
