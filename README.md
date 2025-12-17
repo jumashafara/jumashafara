@@ -100,10 +100,10 @@ A comprehensive course designed to equip learners with essential skills in:
 <div align="center">
 
 <img width="49%" src="https://github-readme-stats.vercel.app/api?username=jumashafara&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&icon_color=008374&text_color=e0e0e0&include_all_commits=true&count_private=true" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=jumashafara&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&icon_color=008374&text_color=e0e0e0&rank_icon=github&include_all_commits=true" />
+<img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=jumashafara&theme=tokyo-night&hide_border=true&bg_color=1a1a1a&color=008374&line=008374&point=e0e0e0" />
 
 <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumashafara&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&text_color=e0e0e0&langs_count=8" />
-<img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=jumashafara&theme=tokyo-night&hide_border=true&bg_color=1a1a1a&color=008374&line=008374&point=e0e0e0" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jumashafara&theme=tokyonight&utcOffset=3" />
 
 ### 🐍 Contribution Snake
 
