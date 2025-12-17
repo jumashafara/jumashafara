@@ -102,18 +102,18 @@ A comprehensive course designed to equip learners with essential skills in:
 <table>
 <tr>
 <td align="center">
-<img width="450" src="https://github-readme-stats.vercel.app/api?username=jumashafara&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&icon_color=008374&text_color=e0e0e0&include_all_commits=true&count_private=true" />
+<img width="450" src="https://github-readme-stats.vercel.app/api?username=jumashafara&show_icons=true&hide_border=true&bg_color=1a1a1a&title_color=008374&icon_color=008374&text_color=e0e0e0&ring_color=008374&include_all_commits=true&count_private=true" />
 </td>
 <td align="center">
-<img width="450" src="https://github-readme-activity-graph.vercel.app/graph?username=jumashafara&theme=tokyo-night&hide_border=true&bg_color=1a1a1a&color=008374&line=008374&point=e0e0e0" />
+<img width="450" src="https://github-readme-activity-graph.vercel.app/graph?username=jumashafara&bg_color=1a1a1a&color=008374&line=008374&point=008374&area_color=008374&area=true&hide_border=true&custom_title=Contribution%20Activity" />
 </td>
 </tr>
 <tr>
 <td align="center">
-<img width="450" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumashafara&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&text_color=e0e0e0&langs_count=8" />
+<img width="450" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumashafara&layout=compact&hide_border=true&bg_color=1a1a1a&title_color=008374&text_color=e0e0e0&langs_count=8" />
 </td>
 <td align="center">
-<img width="450" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jumashafara&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&text_color=e0e0e0" />
+<img width="450" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=jumashafara&theme=nord_dark&utcOffset=3" />
 </td>
 </tr>
 </table>
