@@ -100,7 +100,7 @@ A comprehensive course designed to equip learners with essential skills in:
 <div align="center">
 
 <img width="49%" src="https://github-readme-stats.vercel.app/api?username=jumashafara&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&icon_color=008374&text_color=e0e0e0" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=jumashafara&theme=tokyonight&hide_border=true&background=1a1a1a&ring=008374&fire=008374&currStreakLabel=008374&sideNums=e0e0e0&sideLabels=e0e0e0&dates=b0b0b0" />
+<img width="49%" src="https://streak-stats.demolab.com?user=jumashafara&theme=dark&hide_border=true&background=1a1a1a&ring=008374&fire=008374&currStreakLabel=008374&sideNums=e0e0e0&sideLabels=e0e0e0&dates=b0b0b0&stroke=008374" />
 
 <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jumashafara&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1a1a&title_color=008374&text_color=e0e0e0&langs_count=8" />
 <img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=jumashafara&theme=tokyo-night&hide_border=true&bg_color=1a1a1a&color=008374&line=008374&point=e0e0e0" />
