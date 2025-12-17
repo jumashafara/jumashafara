@@ -38,13 +38,28 @@ St Peter's College Tororo, Uganda: Ordinary Level of Education
 
 ## Professional Experience
 
+### Centre For Policy Analysis: Consultant (Website Development)
+**August 2025 - Present**
+
+- Leading the redevelopment of CEPA's official websites to use the latest technologies and conventions and in the process rebranded the organization's online presence, doubling the targeted visits.
+- Guiding the revamp of the Parliament Watch website, reorganizing the structure of the records the organization was keeping from the proceedings of the Ugandan parliament
+
 ### Raising The Village, Uganda: Data Scientist
 **October 2024 - Present**
 
-- Developed Machine Learning models and Dashboards for risk assessment. Implemented AWS deployment pipelines that increased model iteration frequency.
-- Applied ML techniques to identify key drivers influencing income and production in last mile communities to optimize poverty alleviation strategies.
-- Managed data processing pipelines, building a package to improve retrieval time, performed data wrangling and EDA, and communicated insights via data visualizations using Python.
-- Built interactive interfaces to streamline model interaction, accessibility and interpretability.
+- Leading the development of Machine Learning models and Dashboards for risk assessment.
+- Implementing AWS deployment pipelines that increased model iteration frequency.
+- Applying ML techniques to identify key drivers influencing income and production in last mile communities to optimize poverty alleviation strategies.
+- Managing data processing pipelines, building a package to improve retrieval time, perform data wrangling and EDA, and communicate insights via data visualizations using Python.
+- Building interactive interfaces to streamline model interaction, accessibility and interpretability.
+
+### East African Statistics Institute, Uganda: Systems Administrator (Part Time)
+**July 2024 - Present**
+
+- Redeveloped and enhanced existing websites including landing site, blog site, and courses site. This helped reorient the platforms to communicate the changing strategy of the organization
+- Fully manage Google Workspaces and user accounts of the personnel and students under the organizations. This includes handling payments, authentication, and information access throughout the organization.
+- Built evaluation tools for tutors and students under EASI, this eased submission, grading and returning of learner exercises and course materials
+- Conducting training on Data Science and how to use AI tools to increase productivity is day-to-day tasks including planning, researching among others.
 
 ### DATAIDEA, Uganda: Data Scientist, Instructor
 **September 2022 - October 2024**
@@ -63,17 +78,17 @@ St Peter's College Tororo, Uganda: Ordinary Level of Education
 ### OpenPriceEngine, South Africa: Junior Developer
 **December 2021 - July 2022**
 
-- Analyzed retail pricing data to identify trends and inform pricing strategies.
 - Developed dashboards using HTML/CSS/JS for visualizing price movements.
 - Supported backend development of a pricing API with Django and Python.
+- Analyzed retail pricing data to identify trends and inform pricing strategies.
 
-### Makerere University, Uganda: Research Internship
+### Makerere University, Uganda: Research Intern
 **December 2021 - March 2022**
 
 - Conducted a comprehensive analysis of internet usage patterns in Uganda, identifying key trends and recommendations for policy improvements.
 - Built statistical models that helped identify the significant factors determining levels and trends of internet use in Uganda
 
-## Projects
+## Other Projects
 
 ### Open Price Engine API
 **Technologies:** Django, Python, PostgreSQL, FastAPI, AWS
@@ -124,6 +139,12 @@ Developed a full-stack logging platform to track and visualize user and system e
 
 **Issued in January 2024** - [verify](https://coursera.org/verify/...)
 
+### Fundamentals of Project Management: Coursera – Taught by Google
+- Embarking on a career in project management
+- Becoming an effective project manager
+- The project management life cycle and methodologies
+- Organizational structure and culture
+
 ## Languages
 
 - **English** — Full Professional Proficiency
@@ -143,7 +164,7 @@ Data Engineer, Monocle Solutions
 **Tel:** +27 76 471 4796  
 **Email:** mudau7tony3@gmail.com
 
-**Mr Morris Twinomugisha**  
-Machine Learning Engineer, Raising The Village  
-**Tel:** +256 757 005504  
-**Email:** morristwinomugisha2000@gmail.com 
+**Mr Wamozo Cosmas**  
+Senior Data Scientist, Raising The Village  
+**Tel:** +256 750 532902  
+**Email:** wcosmas75@gmail.com 
